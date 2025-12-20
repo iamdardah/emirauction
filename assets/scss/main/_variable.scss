@@ -4,31 +4,34 @@
     --heading-font: "Jost", sans-serif;
     --body-font: "Manrope", sans-serif;
 
-    --white-1: #ffffff;
-    --white-2: #fdfdfd;
-    --white-3: #fafafa;
-    --white-4: #f7f7f7;
-    --white-5: #f2f2f2;
-    --white-6: #ededed;
-    --white-7: #e6e6e6;
-    --white-8: #dedede;
-    --white-9: #d6d6d6;
+    /* Whites */
+    --white-1: rgb(255, 255, 255);
+    --white-2: rgb(253, 253, 253);
+    --white-3: rgb(250, 250, 250);
+    --white-4: rgb(247, 247, 247);
+    --white-5: rgb(242, 242, 242);
+    --white-6: rgb(237, 237, 237);
+    --white-7: rgb(230, 230, 230);
+    --white-8: rgb(222, 222, 222);
+    --white-9: rgb(214, 214, 214);
 
-    --black-1: #000000;
-    --black-2: #0a0a0a;
-    --black-3: #141414;
-    --black-4: #1f1f1f;
-    --black-5: #2a2a2a;
-    --black-6: #333333;
-    --black-7: #4d4d4d;
-    --black-8: #666666;
-    --black-9: #808080;
+    /* Blacks */
+    --black-1: rgb(0, 0, 0);
+    --black-2: rgb(10, 10, 10);
+    --black-3: rgb(20, 20, 20);
+    --black-4: rgb(31, 31, 31);
+    --black-5: rgb(42, 42, 42);
+    --black-6: rgb(51, 51, 51);
+    --black-7: rgb(77, 77, 77);
+    --black-8: rgb(102, 102, 102);
+    --black-9: rgb(128, 128, 128);
 
-    --light-1: #E5E5E5;
+    /* Accent & Lights */
+    --light-1: rgb(229, 229, 229);
+    --base-1: rgb(220, 186, 88);
+    --base-2: rgb(186, 123, 7);
 
-    --base-1: #DCBA58;
-    --base-2: #BA7B07;
-
-    --black-gradient: linear-gradient(to left, #03070a96, #03070aab, #03070a96);
+    /* Gradients */
+    --black-gradient: linear-gradient(to left, rgba(3, 7, 10, 0.59), rgba(3, 7, 10, 0.67), rgba(3, 7, 10, 0.59));
     --gradient-1: linear-gradient(to left, var(--base-2), var(--base-1), var(--base-2));
 }
