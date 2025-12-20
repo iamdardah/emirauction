@@ -1,0 +1,89 @@
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 136px;
+    position: relative;
+    z-index: 2;
+    &--overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--black-gradient);
+        z-index: -1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 340px;
+            background: linear-gradient(var(--black-2) 50%, transparent);
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 230px;
+            background: linear-gradient(transparent, var(--black-2));
+            z-index: -1;
+        }
+    }
+    &--content {
+        text-align: center;
+        padding: 200px 0;
+        &--title {
+            font-size: 110px;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -5px;
+            color: var(--white-1);
+            margin-bottom: 31px;
+            span {
+                color: transparent;
+                background: var(--gradient-1);
+                background-clip: text;
+            }
+        }
+        &--desc {
+            display: flex;
+            justify-content: center;
+            &--icon {
+                font-size: 170px;
+                line-height: 1;
+                color: var(--white-1);
+            }
+            &--content {
+                width: 475px;
+                text-align: left;
+                p {
+                    font-size: 18px;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    color: var(--white-1);
+                    padding-bottom: 25px;
+                    border-bottom: 1px solid var(--white-1);
+                    margin-bottom: 40px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100px;
+                        height: 3px;
+                        background: var(--white-1);
+                    }
+                }
+            }
+            &--btn {
+                display: flex;
+                gap: 12px;
+            }
+        }
+    }
+}

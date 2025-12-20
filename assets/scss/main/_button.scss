@@ -1,0 +1,62 @@
+.btn {
+    padding: 8px 24px;
+    border: 0;
+    border-radius: 60px;
+    font-size: 16px;
+    line-height: 2.25;
+    font-weight: 500;
+    background-repeat: no-repeat !important;
+    background-size: 150% !important;
+    background-position-x: left !important;
+    transition: .3s;
+    &--icon {
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        background: var(--white-1);
+        border-radius: 50%;
+        color: initial;
+        transform: translateX(16px);
+        transition: .3s;
+        i {
+            transform: translateY(5%);
+        }
+    }
+    &-primary {
+        color: var(--black-1);
+        background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+        &:hover, &:focus, &:active {
+            color: var(--black-1) !important;
+        }
+    }
+    &-secondary {
+        color: var(--base-1);
+        background: var(--black-1);
+        .btn--icon {
+            background: var(--gradient-1);
+        }
+        &:hover, &:focus, &:active {
+            color: var(--base-1) !important;
+            background: var(--black-2) !important;
+        }
+    }
+    &-danger {
+        background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+    }
+    &-success {
+        background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+    }
+    &-warning {
+        background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+    }
+    &-info {
+        background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+    }
+    &:hover, &:focus, &:active {
+        background-position-x: right !important;
+        .btn--icon {
+            transform: translateX(16px) rotate(45deg);
+        }
+    }
+}
