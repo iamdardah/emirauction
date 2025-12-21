@@ -26,6 +26,10 @@
     &-primary {
         color: var(--black-1);
         background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+        .btn--icon {
+            background: var(--black-1);
+            color: var(--base-1);
+        }
         &:hover, &:focus, &:active {
             color: var(--black-1) !important;
         }

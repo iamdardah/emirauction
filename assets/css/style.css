@@ -278,6 +278,18 @@ section {
   margin-bottom: 0;
 }
 
+.section-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 60px;
+}
+
 .btn {
   padding: 8px 24px;
   border: 0;
@@ -312,6 +324,10 @@ section {
   color: var(--black-1);
   background: -webkit-gradient(linear, left top, right top, from(var(--base-2)), color-stop(var(--base-1)), color-stop(var(--base-2)), to(var(--base-1)));
   background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+}
+.btn-primary .btn--icon {
+  background: var(--black-1);
+  color: var(--base-1);
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: var(--black-1) !important;
@@ -1216,8 +1232,8 @@ section {
           flex-direction: column;
   gap: 8px;
   backdrop-filter: blur(3px);
-  background: -webkit-gradient(linear, left top, left bottom, from(color-mix(in srgb, var(--base-2), transparent 80%)), to(color-mix(in srgb, var(--black-1), transparent 80%)));
-  background: linear-gradient(color-mix(in srgb, var(--base-2), transparent 80%), color-mix(in srgb, var(--black-1), transparent 80%));
+  background: -webkit-gradient(linear, left top, left bottom, from(color-mix(in srgb, var(--base-2), transparent 80%)), to(color-mix(in srgb, var(--black-1), transparent 90%)));
+  background: linear-gradient(color-mix(in srgb, var(--base-2), transparent 80%), color-mix(in srgb, var(--black-1), transparent 90%));
   border: 1px solid color-mix(in srgb, var(--base-2), transparent 70%);
   border-radius: 20px;
   padding: 4px;
@@ -1253,7 +1269,7 @@ section {
 .referral::before {
   content: "";
   position: absolute;
-  top: -260px;
+  top: -160px;
   left: -280px;
   width: 560px;
   height: 560px;
@@ -1267,7 +1283,7 @@ section {
 .referral::after {
   content: "";
   position: absolute;
-  top: -260px;
+  top: -160px;
   right: -280px;
   width: 560px;
   height: 560px;
