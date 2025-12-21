@@ -1363,6 +1363,15 @@ section {
   overflow: hidden;
   z-index: 2;
 }
+.why-choose--card.active {
+  width: 100%;
+}
+.why-choose--card.active .why-choose--card--title {
+  position: static;
+}
+.why-choose--card.active .why-choose--card--desc {
+  position: static;
+}
 .why-choose--card::before {
   content: "";
   position: absolute;
@@ -1398,6 +1407,7 @@ section {
   margin-bottom: 58px;
 }
 .why-choose--card--title {
+  position: absolute;
   font-size: 24px;
   line-height: 1.4;
   font-weight: 700;
@@ -1409,6 +1419,7 @@ section {
   margin-left: 100px;
 }
 .why-choose--card--desc {
+  position: absolute;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;

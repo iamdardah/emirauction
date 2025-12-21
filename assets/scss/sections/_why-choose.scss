@@ -60,6 +60,17 @@
         position: relative;
         overflow: hidden;
         z-index: 2;
+        &.active {
+            width: 100%;
+            .why-choose--card--img {}
+            .why-choose--card--number {}
+            .why-choose--card--title {
+                position: static;
+            }
+            .why-choose--card--desc {
+                position: static;
+            }
+        }
         &::before {
             content: "";
             position: absolute;
@@ -92,6 +103,7 @@
             margin-bottom: 58px;
         }
         &--title {
+            position: absolute;
             font-size: 24px;
             line-height: 1.4;
             font-weight: 700;
@@ -103,6 +115,7 @@
             }
         }
         &--desc {
+            position: absolute;
             font-size: 16px;
             line-height: 1.5;
             font-weight: 500;
