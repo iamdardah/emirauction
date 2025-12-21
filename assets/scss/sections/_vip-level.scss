@@ -1,4 +1,32 @@
 .vip-level {
+    position: relative;
+    z-index: 2;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -260px;
+        left: -280px;
+        width: 560px;
+        height: 560px;
+        background: var(--gradient-1);
+        border-radius: 50%;
+        opacity: 0.4;
+        filter: blur(200px);
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -260px;
+        right: -280px;
+        width: 560px;
+        height: 560px;
+        background: var(--gradient-1);
+        border-radius: 50%;
+        opacity: 0.4;
+        filter: blur(200px);
+        z-index: -1;
+    }
     &--card {
         padding: 8px;
         background: var(--gradient-1);
@@ -56,15 +84,29 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            backdrop-filter: blur(3px);
+            background: linear-gradient(color-mix(in srgb, var(--base-2), transparent 80%), color-mix(in srgb, var(--black-1), transparent 80%));
             border: 1px solid color-mix(in srgb, var(--base-2), transparent 70%);
             border-radius: 20px;
             padding: 4px;
             li {
-                background:color-mix(in srgb, var(--white-1), transparent 95%);
+                background:color-mix(in srgb, var(--white-1), transparent 94%);
                 border-radius: 16px;
                 text-align: center;
+                font-size: 15px;
+                line-height: 1.2;
+                color: var(--white-1);
+                font-weight: 500;
+                padding: 12px;
                 span {
+                    width: max-content;
                     display: block;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: transparent;
+                    background: var(--gradient-1);
+                    background-clip: text;
+                    margin: 8px auto 0;
                 }
             }
         }

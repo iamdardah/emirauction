@@ -1118,6 +1118,38 @@ section {
   opacity: 1;
 }
 
+.vip-level {
+  position: relative;
+  z-index: 2;
+}
+.vip-level::before {
+  content: "";
+  position: absolute;
+  top: -260px;
+  left: -280px;
+  width: 560px;
+  height: 560px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  opacity: 0.4;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  z-index: -1;
+}
+.vip-level::after {
+  content: "";
+  position: absolute;
+  top: -260px;
+  right: -280px;
+  width: 560px;
+  height: 560px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  opacity: 0.4;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  z-index: -1;
+}
 .vip-level--card {
   padding: 8px;
   background: var(--gradient-1);
@@ -1183,15 +1215,33 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
+  backdrop-filter: blur(3px);
+  background: -webkit-gradient(linear, left top, left bottom, from(color-mix(in srgb, var(--base-2), transparent 80%)), to(color-mix(in srgb, var(--black-1), transparent 80%)));
+  background: linear-gradient(color-mix(in srgb, var(--base-2), transparent 80%), color-mix(in srgb, var(--black-1), transparent 80%));
   border: 1px solid color-mix(in srgb, var(--base-2), transparent 70%);
   border-radius: 20px;
   padding: 4px;
 }
 .vip-level--card--list li {
-  background: color-mix(in srgb, var(--white-1), transparent 95%);
+  background: color-mix(in srgb, var(--white-1), transparent 94%);
   border-radius: 16px;
   text-align: center;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--white-1);
+  font-weight: 500;
+  padding: 12px;
 }
 .vip-level--card--list li span {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: transparent;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+          background-clip: text;
+  margin: 8px auto 0;
 }
