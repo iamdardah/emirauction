@@ -1245,3 +1245,36 @@ section {
           background-clip: text;
   margin: 8px auto 0;
 }
+
+.referral {
+  position: relative;
+  z-index: 2;
+}
+.referral::before {
+  content: "";
+  position: absolute;
+  top: -260px;
+  left: -280px;
+  width: 560px;
+  height: 560px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  opacity: 0.4;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  z-index: -1;
+}
+.referral::after {
+  content: "";
+  position: absolute;
+  top: -260px;
+  right: -280px;
+  width: 560px;
+  height: 560px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  opacity: 0.4;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  z-index: -1;
+}
