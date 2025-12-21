@@ -44,6 +44,43 @@
         updateCountdown();
         let timer = setInterval(updateCountdown, 1000);
     });
+
+    var totalWidth = $('.why-choose--cards').width();
+    var textWidth = totalWidth - 532;
+    var hoverTimer; // Variable to hold the timer
+
+    // Set initial widths
+    $('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
+
+    $('.why-choose--card').each(function() {
+        $(this).on('mouseenter', function() {
+            var $self = $(this);
+            
+            // 1. Clear any pending timers from previous hovers
+            clearTimeout(hoverTimer);
+
+            // 2. Immediate actions
+            $self.addClass('active').siblings().removeClass('active');
+            
+            // Reset siblings immediately (10ms is practically instant)
+            $self.siblings().find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
+
+            // 3. Delayed action for the current active card
+            hoverTimer = setTimeout(function() {
+                // Check if it's still active before applying 100%
+                if ($self.hasClass('active')) {
+                    $self.find('.why-choose--card--title, .why-choose--card--desc').css('width', '100%');
+                }
+            }, 650);
+        });
+
+        $(this).on('mouseleave', function() {
+            // Clear timer so it doesn't expand after the mouse has already left
+            clearTimeout(hoverTimer);
+            
+            $(this).find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
+        });
+    });
     // ==========================================
     //      End Document Ready function
     // ==========================================
