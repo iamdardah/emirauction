@@ -1,0 +1,19 @@
+.testimonial {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -160px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 560px;
+        height: 560px;
+        background: var(--gradient-1);
+        border-radius: 50%;
+        opacity: 0.3;
+        filter: blur(200px);
+        z-index: -1;
+    }
+}
