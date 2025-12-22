@@ -76,28 +76,64 @@
         });
     });
 
+    // Testimonial Slider
     $('.testimonial--slider').each(function () {
         if ($(this).hasClass('testimonial--slider-rtl')) {
-          $(this).bxSlider({
-            minSlides: 6,
-            maxSlides: 6,
-            slideMargin: 0,
-            ticker: true,
-            speed: 50000,
-            responsive: true,
-            autoDirection: 'prev',
-          });
+            $(this).bxSlider({
+                minSlides: 6,
+                maxSlides: 6,
+                slideMargin: 0,
+                ticker: true,
+                speed: 50000,
+                responsive: true,
+                autoDirection: 'prev',
+            });
         } else {
-          $(this).bxSlider({
-            minSlides: 6,
-            maxSlides: 6,
-            slideMargin: 0,
-            ticker: true,
-            speed: 50000,
-            responsive: true,
-          });
+            $(this).bxSlider({
+                minSlides: 6,
+                maxSlides: 6,
+                slideMargin: 0,
+                ticker: true,
+                speed: 50000,
+                responsive: true,
+            });
         }
-      });
+    });
+
+    // ========================= Odometer Counter Js End =====================
+    function formatNumber(num) {
+        let suffix = '';
+        if (num >= 1000000000) {
+            num = (num / 1000000000).toFixed(1).replace(/\.0$/, '');
+            suffix = 'b';
+        } else if (num >= 1000000) {
+            num = (num / 1000000).toFixed(1).replace(/\.0$/, '');
+            suffix = 'm';
+        } else if (num >= 1000) {
+            num = (num / 1000).toFixed(1).replace(/\.0$/, '');
+            suffix = 'k';
+        }
+        return { num: num, suffix: suffix };
+    }
+    function animateOdometer(element) {
+        var count = parseInt($(element).attr("data-count"), 10);
+        var formattedData = formatNumber(count);
+        $(element).html(formattedData.num);
+        $(element).siblings('.odometer-suffix').html(formattedData.suffix);
+    }
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateOdometer(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    $(".odometer").each(function() {
+        observer.observe(this);
+    });
     // ==========================================
     //      End Document Ready function
     // ==========================================

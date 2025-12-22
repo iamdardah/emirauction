@@ -1704,3 +1704,54 @@ section {
   font-weight: 700;
   margin-bottom: 2px;
 }
+.overview--grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+}
+.overview--card {
+  width: calc(50% - 6px);
+  padding: 35px 40px;
+  border: 1px solid color-mix(in srgb, var(--white-1), transparent 93%);
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.overview--card--bg {
+  position: absolute;
+  inset: 12px;
+  border-radius: 26px;
+  overflow: hidden;
+  opacity: 0.25;
+  z-index: -1;
+}
+.overview--card--bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, color-mix(in srgb, var(--black-2), transparent 90%) 60%, var(--base-1));
+}
+.overview--card p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--white-1);
+  margin-bottom: 20px;
+}
+.overview--card h3 {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: var(--base-2);
+  margin: -3px 0;
+}
+.overview--card h3 span {
+  margin: -5px 0;
+}
