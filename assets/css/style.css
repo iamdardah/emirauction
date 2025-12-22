@@ -1516,10 +1516,10 @@ section {
 .testimonial::before {
   content: "";
   position: absolute;
-  top: -160px;
+  top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   width: 560px;
   height: 560px;
   background: var(--gradient-1);
@@ -1662,4 +1662,11 @@ section {
 }
 .testimonial--card:hover::before {
   opacity: 0;
+}
+
+.overview--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }

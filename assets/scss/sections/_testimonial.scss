@@ -5,9 +5,9 @@
     &::before {
         content: "";
         position: absolute;
-        top: -160px;
+        top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-50%);
         width: 560px;
         height: 560px;
         background: var(--gradient-1);
