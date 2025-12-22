@@ -4,6 +4,7 @@
     // ==========================================
     //      Start Document Ready function
     // ==========================================
+    // Background Image
     $(document).ready(function () {
         $(".bg-img").css("background-image", function () {
             var bg = "url(" + $(this).data("bg") + ")";
@@ -11,6 +12,7 @@
         });
     });
 
+    // Countdown
     $(".auction--card--body--counter--countdown").each(function(){
         let $this = $(this);
         let totalSeconds = parseInt($this.data("minute")) * 60;
@@ -45,29 +47,22 @@
         let timer = setInterval(updateCountdown, 1000);
     });
 
+    // Why choose us hover effects
     var totalWidth = $('.why-choose--cards').width();
     var textWidth = totalWidth - 532;
-    var hoverTimer; // Variable to hold the timer
-
-    // Set initial widths
+    var hoverTimer;
     $('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
-
     $('.why-choose--card').each(function() {
         $(this).on('mouseenter', function() {
             var $self = $(this);
             
-            // 1. Clear any pending timers from previous hovers
             clearTimeout(hoverTimer);
 
-            // 2. Immediate actions
             $self.addClass('active').siblings().removeClass('active');
             
-            // Reset siblings immediately (10ms is practically instant)
             $self.siblings().find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
 
-            // 3. Delayed action for the current active card
             hoverTimer = setTimeout(function() {
-                // Check if it's still active before applying 100%
                 if ($self.hasClass('active')) {
                     $self.find('.why-choose--card--title, .why-choose--card--desc').css('width', '100%');
                 }
@@ -75,12 +70,34 @@
         });
 
         $(this).on('mouseleave', function() {
-            // Clear timer so it doesn't expand after the mouse has already left
             clearTimeout(hoverTimer);
             
             $(this).find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
         });
     });
+
+    $('.testimonial--slider').each(function () {
+        if ($(this).hasClass('testimonial--slider-rtl')) {
+          $(this).bxSlider({
+            minSlides: 6,
+            maxSlides: 6,
+            slideMargin: 0,
+            ticker: true,
+            speed: 50000,
+            responsive: true,
+            autoDirection: 'prev',
+          });
+        } else {
+          $(this).bxSlider({
+            minSlides: 6,
+            maxSlides: 6,
+            slideMargin: 0,
+            ticker: true,
+            speed: 50000,
+            responsive: true,
+          });
+        }
+      });
     // ==========================================
     //      End Document Ready function
     // ==========================================
