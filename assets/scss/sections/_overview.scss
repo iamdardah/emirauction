@@ -1,6 +1,37 @@
 .overview {
     &--content {
         display: flex;
+        align-items: center;
         gap: 10px;
+        &--img {
+            display: flex;
+            span {
+                text-align: center;
+                width: 47px;
+                height: 47px;
+                line-height: 47px;
+                font-size: 16px;
+                font-weight: 600;
+                background: var(--gradient-1);
+                border-radius: 50%;
+                overflow: hidden;
+                &:not(:first-child) {
+                    margin-left: -16px;
+                }
+            }
+        }
+        &--txt {
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: var(--white-1);
+            span {
+                display: block;
+                font-size: 24px;
+                line-height: 1.1;
+                font-weight: 700;
+                margin-bottom: 2px;
+            }
+        }
     }
 }

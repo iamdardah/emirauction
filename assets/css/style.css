@@ -1630,8 +1630,7 @@ section {
 .testimonial--card--desc {
   font-size: 18px;
   line-height: 1.6;
-  font-weight: 500;
-  color: var(--white-4);
+  color: var(--white-7);
   margin-bottom: 40px;
 }
 .testimonial--card--footer {
@@ -1668,5 +1667,40 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
+}
+.overview--content--img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.overview--content--img span {
+  text-align: center;
+  width: 47px;
+  height: 47px;
+  line-height: 47px;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.overview--content--img span:not(:first-child) {
+  margin-left: -16px;
+}
+.overview--content--txt {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--white-1);
+}
+.overview--content--txt span {
+  display: block;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
