@@ -1875,10 +1875,15 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 150px;
   color: var(--white-1);
 }
 .footer--content--left {
   padding: 60px 0;
+}
+.footer--content--logo {
+  width: 105px;
+  margin-bottom: 25px;
 }
 .footer--menu {
   text-align: center;
@@ -1904,9 +1909,11 @@ section {
 .footer--menu ul li a::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
   background: var(--gradient-1);
-  opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: -1;
@@ -1915,5 +1922,5 @@ section {
   color: var(--black-1);
 }
 .footer--menu ul li a:hover::after {
-  opacity: 1;
+  width: 100%;
 }
