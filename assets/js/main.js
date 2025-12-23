@@ -100,7 +100,7 @@
         }
     });
 
-    // ========================= Odometer Counter Js End =====================
+    // Odometer Counter Js
     function formatNumber(num) {
         let suffix = '';
         if (num >= 1000000000) {
@@ -133,6 +133,14 @@
     });
     $(".odometer").each(function() {
         observer.observe(this);
+    });
+
+    // Mobile menu
+    $('.mobile-menu-btn').on('click', function(){
+        $('.header--bottom--menu-sm').addClass('active');
+    });
+    $('.header--bottom--menu-sm--close').on('click', function(){
+        $('.header--bottom--menu-sm').removeClass('active');
     });
     // ==========================================
     //      End Document Ready function

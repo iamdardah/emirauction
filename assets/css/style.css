@@ -68,6 +68,10 @@ body {
   }
 }
 
+main {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -372,10 +376,22 @@ section {
   top: 0;
   left: 0;
   width: 100%;
+  padding-bottom: 30px;
+  overflow: hidden;
   z-index: 11;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding-bottom: 10px;
+  }
 }
 .header--top {
   padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  .header--top {
+    padding-bottom: 30px;
+  }
 }
 .header--top--content {
   display: -webkit-box;
@@ -388,6 +404,18 @@ section {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+@media screen and (max-width: 767px) {
+  .header--top--content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+}
 .header--top--content--right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,11 +425,29 @@ section {
           align-items: flex-end;
   gap: 30px;
 }
+@media screen and (max-width: 575px) {
+  .header--top--content--right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 6px;
+  }
+}
 .header--top--content p {
   font-size: 15px;
   color: var(--black-9);
   line-height: 1;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 767px) {
+  .header--top--content p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 .header--top--content p i {
   font-size: 20px;
@@ -463,9 +509,24 @@ section {
   -webkit-transform: skewX(-32deg);
           transform: skewX(-32deg);
 }
+@media screen and (max-width: 767px) {
+  .header--bottom--left-menu::after {
+    left: calc(100% + 15px);
+  }
+}
 .header--bottom--right-menu {
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .header--bottom--right-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 .header--bottom--right-menu::before {
   content: "";
@@ -494,6 +555,11 @@ section {
   -webkit-transform: skewX(32deg);
           transform: skewX(32deg);
 }
+@media screen and (max-width: 767px) {
+  .header--bottom--right-menu::after {
+    right: calc(100% + 15px);
+  }
+}
 .header--bottom--menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -508,6 +574,11 @@ section {
   line-height: 1;
   font-weight: 500;
   padding: 23px 0;
+}
+@media screen and (max-width: 767px) {
+  .header--bottom--menu--item {
+    padding: 18px 0;
+  }
 }
 .header--bottom--menu--item a {
   color: var(--black-1);
@@ -524,6 +595,62 @@ section {
   padding: 0;
   margin: -8px 0;
 }
+.header--bottom--menu-sm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background: var(--black-3);
+  overflow: auto;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  z-index: 1000;
+}
+.header--bottom--menu-sm.active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+.header--bottom--menu-sm--logo {
+  padding: 30px;
+}
+.header--bottom--menu-sm--logo img {
+  width: 90px;
+}
+.header--bottom--menu-sm--close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  color: var(--white-1);
+  border: 1px solid color-mix(in srgb, var(--white-1), transparent 90%);
+  border-radius: 50%;
+}
+.header--bottom--menu-sm ul {
+  padding: 0 30px 30px;
+}
+.header--bottom--menu-sm ul li {
+  padding: 15px 0;
+  border-bottom: 1px dashed color-mix(in srgb, var(--white-1), transparent 90%);
+}
+.header--bottom--menu-sm ul li:first-child {
+  padding-top: 0;
+}
+.header--bottom--menu-sm ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.header--bottom--menu-sm--item {
+  font-size: 15px;
+  line-height: 1;
+  color: var(--white-1);
+}
 .header--bottom .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,6 +660,13 @@ section {
           justify-content: center;
   margin-top: -62px;
   margin-bottom: -30px;
+}
+@media screen and (max-width: 767px) {
+  .header--bottom .logo {
+    height: 80px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
 }
 .header--bottom .logo img {
   height: 100%;
