@@ -200,26 +200,122 @@ section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+@media screen and (max-width: 1199px) {
+  .py-120 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .py-120 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .py-120 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
 .pt-120 {
   padding-top: 120px;
 }
+@media screen and (max-width: 1199px) {
+  .pt-120 {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pt-120 {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pt-120 {
+    padding-top: 60px;
+  }
+}
 
 .pb-120 {
   padding-bottom: 120px;
+}
+@media screen and (max-width: 1199px) {
+  .pb-120 {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pb-120 {
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pb-120 {
+    padding-bottom: 60px;
+  }
 }
 
 .py-60 {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (max-width: 1199px) {
+  .py-60 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .py-60 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .py-60 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
 
 .pt-60 {
   padding-top: 60px;
 }
+@media screen and (max-width: 1199px) {
+  .pt-60 {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pt-60 {
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pt-60 {
+    padding-top: 15px;
+  }
+}
 
 .pb-60 {
   padding-bottom: 60px;
+}
+@media screen and (max-width: 1199px) {
+  .pb-60 {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pb-60 {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pb-60 {
+    padding-bottom: 15px;
+  }
 }
 
 .section-heading {
@@ -1043,6 +1139,21 @@ section {
   border-top: 1px solid var(--base-2);
   border-bottom: 1px solid var(--base-2);
   border-radius: 60px;
+}
+@media screen and (max-width: 1199px) {
+  .auction {
+    border-radius: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction {
+    border-radius: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction {
+    border-radius: 15px;
+  }
 }
 .auction .section-heading--desc {
   margin-bottom: 30px;

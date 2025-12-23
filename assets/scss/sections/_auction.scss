@@ -2,6 +2,15 @@
     border-top: 1px solid var(--base-2);
     border-bottom: 1px solid var(--base-2);
     border-radius: 60px;
+    @include lg-screen {
+        border-radius: 50px;
+    }
+    @include md-screen {
+        border-radius: 35px;
+    }
+    @include sm-screen {
+        border-radius: 15px;
+    }
     .section-heading--desc {
         margin-bottom: 30px;
     }
