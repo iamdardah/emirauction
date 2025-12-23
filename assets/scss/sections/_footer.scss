@@ -33,6 +33,13 @@
         background-position: center center;
         z-index: -1;
     }
+    &--vector {
+        position: absolute;
+        top: 60px;
+        right: 50px;
+        width: 155px;
+        z-index: -1;
+    }
     &--top {
         border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
     }
