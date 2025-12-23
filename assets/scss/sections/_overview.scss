@@ -79,6 +79,9 @@
             margin: -3px 0;
             span {
                 margin: -5px 0;
+                &.odometer-formatting-mark {
+                    transform: translateY(-6px);
+                }
             }
         }
     }
