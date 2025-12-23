@@ -1053,8 +1053,20 @@ section {
   border-radius: 20px;
   padding: 8px;
 }
+@media screen and (max-width: 991px) {
+  .auction--card {
+    max-width: 320px;
+    padding: 5px;
+    margin: auto;
+  }
+}
 .auction--card--top {
   padding: 30px;
+}
+@media screen and (max-width: 991px) {
+  .auction--card--top {
+    padding: 20px;
+  }
 }
 .auction--card--top h3 {
   font-size: 24px;
@@ -1064,12 +1076,29 @@ section {
   color: var(--white-1);
   margin-bottom: 12px;
 }
+@media screen and (max-width: 1399px) {
+  .auction--card--top h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--top h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+}
 .auction--card--top p {
   font-size: 16px;
   line-height: 1.5;
   color: var(--light-1);
   opacity: 0.8;
   margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  .auction--card--top p {
+    font-size: 14px;
+  }
 }
 .auction--card--body {
   padding: 30px;
@@ -1078,6 +1107,11 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body {
+    padding: 20px;
+  }
 }
 .auction--card--body::before {
   content: "";
@@ -1121,10 +1155,34 @@ section {
           align-items: flex-end;
   gap: 10px;
 }
+@media screen and (max-width: 1399px) {
+  .auction--card--body--title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--title {
+    font-size: 30px;
+    line-height: 1;
+    gap: 5px;
+  }
+}
 .auction--card--body--title span {
   font-size: 16px;
   font-weight: 500;
   color: var(--white-1);
+}
+@media screen and (max-width: 1399px) {
+  .auction--card--body--title span {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--title span {
+    font-size: 14px;
+    font-weight: 300;
+  }
 }
 .auction--card--body--title img {
   -ms-flex-negative: 0;
@@ -1154,6 +1212,16 @@ section {
           align-items: center;
   gap: 4px;
 }
+@media screen and (max-width: 1399px) {
+  .auction--card--body--counter--countdown {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--counter--countdown {
+    font-size: 25px;
+  }
+}
 .auction--card--body--counter--countdown span {
   text-align: center;
   width: 40px;
@@ -1165,12 +1233,38 @@ section {
   background: var(--gradient-1);
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
+@media screen and (max-width: 1399px) {
+  .auction--card--body--counter--countdown span {
+    width: 35px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--counter--countdown span {
+    width: 30px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+  }
+}
 .auction--card--body--counter--txt {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 500;
   color: var(--white-1);
   opacity: 0.8;
+}
+@media screen and (max-width: 1399px) {
+  .auction--card--body--counter--txt {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--counter--txt {
+    font-size: 14px;
+  }
 }
 .auction--card--body--list {
   display: -webkit-box;
@@ -1188,6 +1282,16 @@ section {
   line-height: 1.2;
   font-weight: 500;
   color: var(--white-1);
+}
+@media screen and (max-width: 1399px) {
+  .auction--card--body--list li {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--list li {
+    font-size: 14px;
+  }
 }
 .auction--card--body--list li span {
   opacity: 0.8;
@@ -1210,6 +1314,12 @@ section {
   color: var(--white-1);
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--btn {
+    height: 40px;
+    line-height: 38px;
+  }
 }
 .auction--card--body--btn::after {
   content: "";
@@ -1241,6 +1351,15 @@ section {
   transition: 0.3s;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .auction--card--body--btn span {
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    -webkit-transform: translateY(-50%) translateX(17px);
+            transform: translateY(-50%) translateX(17px);
+  }
 }
 .auction--card--body--btn span::after {
   content: "";
