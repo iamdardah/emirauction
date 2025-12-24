@@ -293,6 +293,17 @@
         padding: 20px;
         border: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
         border-radius: 20px;
+        @include md-screen {
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        @include sm-screen {
+            gap: 7px;
+            padding: 10px;
+            border-radius: 15px;
+        }
         select {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 128 128'%3E%3Cg%3E%3Cpath d='M64 88a3.988 3.988 0 0 1-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0L64 78.344l37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40A3.988 3.988 0 0 1 64 88z' fill='%23ffffff' /%3E%3C/g%3E%3C/svg%3E");
             background-repeat: no-repeat;
@@ -303,6 +314,7 @@
         }
         &--item {
             width: 100%;
+            height: 50px;
             display: flex;
             background: var(--black-4);
             padding: 0 20px;
@@ -310,22 +322,58 @@
             border-radius: 12px;
             color: var(--white-1);
             outline: none;
+            @include lg-screen {
+                width: 100%;
+                padding: 0 15px;
+            }
+            @include md-screen {
+                width: calc(50% - 5px);
+                height: 45px;
+                font-size: 16px;
+            }
+            @include sm-screen {
+                width: calc(50% - 3.5px);
+                height: 40px;
+                padding: 0 10px;
+                border-radius: 10px;
+            }
+            @include msm-screen {
+                width: 100%;
+            }
             &:not(:first-child,:last-child) {
                 width: auto;
                 flex-shrink: 0;
+                padding: 0;
+                @include md-screen {
+                    order: 3;
+                }
             }
             label {
                 display: flex;
                 align-items: center;
-                height: 50px;
                 font-size: 15px;
                 line-height: 1.2;
                 font-weight: 300;
                 color: var(--white-1);
+                padding: 0 20px;
                 cursor: pointer;
+                @include md-screen {
+                    font-size: 14px;
+                    padding: 0 15px;
+                }
+                @include sm-screen {
+                    font-size: 13px;
+                    padding: 0 10px;
+                }
                 >span {
                     display: flex;
-                    gap: 4px;
+                    gap: 10px;
+                    @include md-screen {
+                        gap: 7px;
+                    }
+                    @include sm-screen {
+                        gap: 5px;
+                    }
                     span {
                         text-align: center;
                         width: 18px;
@@ -334,6 +382,11 @@
                         font-size: 13px;
                         position: relative;
                         z-index: 2;
+                        @include md-screen {
+                            width: 16px;
+                            height: 16px;
+                            line-height: 16px;
+                        }
                         i {
                             color: transparent;
                             background: var(--gradient-1);
@@ -391,6 +444,21 @@
                 line-height: 34px;
                 background: var(--gradient-1);
                 border-radius: 6px;
+                @include lg-screen {
+                    transform: translateY(-50%) translateX(8px);
+                }
+                @include md-screen {
+                    width: 29px;
+                    height: 29px;
+                    line-height: 30px;
+                    transform: translateY(-50%) translateX(8px);
+                }
+                @include sm-screen {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    transform: translateY(-50%) translateX(6px);
+                }
             }
         }
     }
