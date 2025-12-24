@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emirauctions</title>
+
+    <link rel="stylesheet" href="assets/icon/thin/style.css">
+    <link rel="stylesheet" href="assets/icon/regular/style.css">
+    <link rel="stylesheet" href="assets/icon/bold/style.css">
+    <link rel="stylesheet" href="assets/icon/fill/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header--top">
+            <div class="container">
+                <div class="header--top--content">
+                    <div class="header--top--content--left">
+                        <p><i class="ph ph-map-pin"></i> 3891 Ranchview Dr. Richardson</p>
+                    </div>
+                    <div class="header--top--content--right">
+                        <p><a href="#">Register Now</a></p>
+                        <p><i class="ph ph-envelope-simple-open"></i> deanna.curtis@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header--bottom">
+            <div class="container">
+                <div class="row d-lg-none">
+                    <div class="col-4">
+                        <div class="header--bottom--left-menu">
+                            <div class="header--bottom--menu--item">
+                                <a role="button" class="mobile-menu-btn user-btn"><i class="ph ph-list"></i></a>
+                            </div>
+                        </div>
+                        <div class="header--bottom--menu-sm">
+                            <div class="header--bottom--menu-sm--logo">
+                                <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                            </div>
+                            <button class="header--bottom--menu-sm--close"><i class="ph ph-x"></i></button>
+                            <ul>
+                                <li class="header--bottom--menu-sm--item"><a href="#">Home</a></li>
+                                <li class="header--bottom--menu-sm--item"><a href="#">About Us</a></li>
+                                <li class="header--bottom--menu-sm--item"><a href="#">Auctions</a></li>
+                                <li class="header--bottom--menu-sm--item"><a href="#">VIP Levels</a></li>
+                                <li class="header--bottom--menu-sm--item"><a href="#">Program</a></li>
+                                <li class="header--bottom--menu-sm--item"><a href="#">FAQs</a></li>
+                                <li class="header--bottom--menu-sm--item"><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logo">
+                            <a href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="header--bottom--right-menu">
+                            <div class="header--bottom--menu--item">
+                                <a href="#" class="user-btn"><i class="ph ph-user"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 d-lg-flex d-none">
+                    <div class="col-lg-5">
+                        <div class="header--bottom--left-menu">
+                            <ul class="header--bottom--menu">
+                                <li class="header--bottom--menu--item"><a href="#">Home</a></li>
+                                <li class="header--bottom--menu--item"><a href="#">About Us</a></li>
+                                <li class="header--bottom--menu--item"><a href="#">Auctions</a></li>
+                                <li class="header--bottom--menu--item"><a href="#">VIP Levels</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header--bottom--right-menu">
+                            <ul class="header--bottom--menu">
+                                <li class="header--bottom--menu--item"><a href="#">Program</a></li>
+                                <li class="header--bottom--menu--item"><a href="#">FAQs</a></li>
+                                <li class="header--bottom--menu--item"><a href="#">Contact Us</a></li>
+                                <li class="header--bottom--menu--item"><a href="#" class="user-btn"><i class="ph ph-user"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <div class="container">
+                <h2 class="breadcrumb--title">Explore Live & Upcoming Auctions</h2>
+                <p class="breadcrumb--desc">Join high-yield investment auctions with real-time countdown timers.</p>
+                <ul class="breadcrumb--list">
+                    <li>Home</li>
+                    <li>Auctions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="auction-page py-120">
+            <div class="container">
+                <form class="auction-page--filter">
+                    <select name="status" class="auction-page--filter--item">
+                        <option value="">Status</option>
+                        <option value="1">Status</option>
+                        <option value="2">Status</option>
+                    </select>
+                    <div class="auction-page--filter--item">
+                        <label>
+                            <input type="radio" name="type">
+                            <span>Live</span>
+                        </label>
+                    </div>
+                    <div class="auction-page--filter--item">
+                        <label>
+                            <input type="radio" name="type">
+                            <span>Upcoming</span>
+                        </label>
+                    </div>
+                    <div class="auction-page--filter--item">
+                        <label>
+                            <input type="radio" name="type">
+                            <span>Completed</span>
+                        </label>
+                    </div>
+                    <div class="auction-page--filter--item">
+                        <input type="search" placeholder="Search Auctions">
+                        <button><i class="ph ph-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.bxslider.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
