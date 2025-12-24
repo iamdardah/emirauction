@@ -1725,6 +1725,10 @@ section {
   }
 }
 
+.auction-details {
+  color: var(--white-1);
+}
+
 .vip-level {
   position: relative;
   z-index: 2;
