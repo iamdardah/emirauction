@@ -142,6 +142,14 @@
     $('.header--bottom--menu-sm--close').on('click', function(){
         $('.header--bottom--menu-sm').removeClass('active');
     });
+
+    $('.auction-details--form--quick-select--btn').on('click', function(){
+        var dataValue = $(this).attr('data-val');
+        var inputField = $('#investmentAmount');
+
+        inputField.val(dataValue);
+        $(this).addClass('active').siblings().removeClass('active');
+    });
     // ==========================================
     //      End Document Ready function
     // ==========================================
