@@ -143,12 +143,20 @@
         $('.header--bottom--menu-sm').removeClass('active');
     });
 
+    // Quick select investment amount
     $('.auction-details--form--quick-select--btn').on('click', function(){
         var dataValue = $(this).attr('data-val');
         var inputField = $('#investmentAmount');
 
         inputField.val(dataValue);
         $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    // Progressbar width
+    $('.auction-information--slot--progressbar').each(function(){
+        var width = $(this).data('value');
+
+        $(this).css('width', width);
     });
     // ==========================================
     //      End Document Ready function
