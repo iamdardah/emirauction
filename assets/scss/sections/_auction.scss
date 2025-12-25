@@ -1023,7 +1023,6 @@
 }
 
 .auction-timeline {
-    color: white;
     &--inner {
         margin-bottom: 2px;
         position: relative;
@@ -1148,6 +1147,109 @@
                 }
                 span {
                     color: var(--black-2);
+                }
+            }
+        }
+    }
+}
+
+.auction-result {
+    &--table {
+        background-size: 25%;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            width: 1500px;
+            height: 200px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            width: 1500px;
+            height: 200px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+        }
+        .table {
+            margin-bottom: 0;
+            th {
+                font-family: var(--heading-font);
+                font-size: 24px;
+                line-height: 1.5;
+                font-weight: 500;
+                color: var(--white-1);
+                padding: 20px 32px;
+                background: color-mix(in srgb, var(--black-2), transparent 15%);
+                border-bottom: 5px solid transparent;
+                position: relative;
+                z-index: 2;
+                &:first-child {
+                    &::after {
+                        border-right-width: 6px;
+                    }
+                }
+                &:last-child {
+                    &::after {
+                        border-right-width: 0;
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: -5px;
+                    right: 0;
+                    border-bottom: 5px solid transparent;
+                    border-right: 1px solid transparent;
+                    border-image: var(--gradient-1);
+                    border-image-slice: 1;
+                }
+            }
+            td {
+                width: 25%;
+                font-size: 18px;
+                line-height: 1.5;
+                font-weight: 300;
+                color: var(--light-1);
+                padding: 20px 32px;
+                background: color-mix(in srgb, var(--black-2), transparent 10%);
+                border: 0;
+                position: relative;
+                z-index: 2;
+                &:first-child {
+                    &::after {
+                        border-right-width: 6px;
+                    }
+                }
+                &:last-child {
+                    &::after {
+                        border-right-width: 0;
+                    }
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-top: 1px solid transparent;
+                    border-right: 1px solid transparent;
+                    border-image: var(--gradient-1);
+                    border-image-slice: 1;
                 }
             }
         }
