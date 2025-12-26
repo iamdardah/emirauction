@@ -467,6 +467,7 @@
 .auction-details {
     color: var(--white-1);
     position: relative;
+    overflow: hidden;
     z-index: 2;
     &::before {
         content: "";
