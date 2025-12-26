@@ -3,6 +3,18 @@
     padding-top: 136px;
     position: relative;
     z-index: 2;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 136px;
+        right: 0;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        transform: translateX(calc(100% - 60px));
+        background: var(--gradient-1);
+        border-radius: 50%;
+        z-index: -1;
+    }
     &--bg {
         position: absolute;
         top: 136px;

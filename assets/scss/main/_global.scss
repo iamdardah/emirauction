@@ -272,3 +272,104 @@ section {
     justify-content: center;
     padding-top: 60px;
 }
+
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 36px;
+    @include lg-screen {
+        margin-top: 28px;
+    }
+    @include md-screen {
+        margin-top: 20px;
+    }
+    @include sm-screen {
+        margin-top: 12px;
+    }
+    .page-item {
+        &:first-child {
+            .page-link {
+                font-size: 12px;
+                background: var(--gradient-1);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 1px;
+                    background: var(--black-2);
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+        &:last-child {
+            .page-link {
+                font-size: 12px;
+                background: var(--gradient-1);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 1px;
+                    background: var(--black-2);
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+        &.active {
+            .page-link {
+                color: var(--black-2);
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        .page-link {
+            background: transparent;
+            margin: 0 5px;
+            border: 0;
+            border-radius: 25px;
+            line-height: 40px;
+            height: 40px;
+            min-width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            padding: 0;
+            font-size: 16px;
+            color: var(--white-1);
+            position: relative;
+            z-index: 2;
+            @include sm-screen {
+                border-radius: 20px;
+                line-height: 34px;
+                height: 35px;
+                min-width: 35px;
+                font-size: 14px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--gradient-1);
+                border-radius: 50%;
+                opacity: 0;
+                transition: .3s;
+                z-index: -1;
+            }
+            &:hover {
+                color: var(--black-2);
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            i {
+                transform: translate(0);
+                font-size: 1.5em;
+            }
+        }
+    }
+}
