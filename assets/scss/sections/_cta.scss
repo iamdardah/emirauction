@@ -53,6 +53,9 @@
         background-clip: text;
         padding-bottom: 4px;
         margin: 0 auto 16px;
+        @include md-screen {
+            font-size: 40px;
+        }
         @include sm-screen {
             font-size: 30px;
         }
@@ -62,6 +65,9 @@
         line-height: 1.5;
         color: color-mix(in srgb, var(--light-1), transparent 20%);
         margin-bottom: 32px;
+        @include md-screen {
+            font-size: 16px;
+        }
         @include sm-screen {
             font-size: 14px;
         }

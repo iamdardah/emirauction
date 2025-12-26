@@ -4,6 +4,15 @@
     position: relative;
     overflow: hidden;
     z-index: 2;
+    @include lg-screen {
+        border-radius: 50px 50px 0 0;
+    }
+    @include md-screen {
+        border-radius: 35px 35px 0 0;
+    }
+    @include sm-screen {
+        border-radius: 15px 15px 0 0;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -39,6 +48,15 @@
         right: 50px;
         width: 155px;
         z-index: -1;
+        @include lg-screen {
+            width: 140px;
+        }
+        @include md-screen {
+            width: 120px;
+        }
+        @include sm-screen {
+            width: 100px;
+        }
     }
     &--top {
         border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
@@ -49,6 +67,9 @@
         align-items: center;
         gap: 150px;
         color: var(--white-1);
+        @include sm-screen {
+            gap: 30px;
+        }
         &--left {
             padding: 60px 0;
         }

@@ -3409,6 +3409,11 @@ section {
   padding-bottom: 4px;
   margin: 0 auto 16px;
 }
+@media screen and (max-width: 991px) {
+  .cta--title {
+    font-size: 40px;
+  }
+}
 @media screen and (max-width: 767px) {
   .cta--title {
     font-size: 30px;
@@ -3419,6 +3424,11 @@ section {
   line-height: 1.5;
   color: color-mix(in srgb, var(--light-1), transparent 20%);
   margin-bottom: 32px;
+}
+@media screen and (max-width: 991px) {
+  .cta p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 767px) {
   .cta p {
@@ -3452,6 +3462,21 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .footer {
+    border-radius: 50px 50px 0 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer {
+    border-radius: 35px 35px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    border-radius: 15px 15px 0 0;
+  }
 }
 .footer::before {
   content: "";
@@ -3491,6 +3516,21 @@ section {
   width: 155px;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .footer--vector {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer--vector {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer--vector {
+    width: 100px;
+  }
+}
 .footer--top {
   border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
 }
@@ -3506,6 +3546,11 @@ section {
           align-items: center;
   gap: 150px;
   color: var(--white-1);
+}
+@media screen and (max-width: 767px) {
+  .footer--content {
+    gap: 30px;
+  }
 }
 .footer--content--left {
   padding: 60px 0;
