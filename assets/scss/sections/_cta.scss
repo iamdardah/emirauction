@@ -9,6 +9,17 @@
         position: relative;
         overflow: hidden;
         z-index: 2;
+        @include lg-screen {
+            padding: 75px 40px;
+        }
+        @include md-screen {
+            padding: 60px 30px;
+            border-radius: 20px;
+        }
+        @include sm-screen {
+            padding: 45px 20px;
+            border-radius: 10px;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -24,9 +35,15 @@
         background-size: cover;
         border-radius: 30px;
         z-index: -1;
+        @include md-screen {
+            border-radius: 20px;
+        }
+        @include sm-screen {
+            border-radius: 10px;
+        }
     }
     &--title {
-        width: max-content;
+        max-width: max-content;
         font-size: 48px;
         line-height: 1;
         font-weight: 600;
@@ -36,12 +53,18 @@
         background-clip: text;
         padding-bottom: 4px;
         margin: 0 auto 16px;
+        @include sm-screen {
+            font-size: 30px;
+        }
     }
     p {
         font-size: 18px;
         line-height: 1.5;
         color: color-mix(in srgb, var(--light-1), transparent 20%);
         margin-bottom: 32px;
+        @include sm-screen {
+            font-size: 14px;
+        }
     }
     .btn {
         position: relative;

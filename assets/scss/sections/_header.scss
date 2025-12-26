@@ -27,6 +27,9 @@
                 display: flex;
                 align-items: flex-end;
                 gap: 30px;
+                @include md-screen {
+                    gap: 20px;
+                }
                 @include msm-screen {
                     flex-direction: column;
                     align-items: center;
@@ -38,7 +41,7 @@
                 color: var(--black-9);
                 line-height: 1;
                 margin-bottom: 5px;
-                @include sm-screen {
+                @include md-screen {
                     font-size: 14px;
                     margin-bottom: 0;
                 }
@@ -95,6 +98,9 @@
                 height: 100%;
                 background: linear-gradient(var(--base-2), var(--base-1), var(--base-2));
                 transform: skewX(-32deg);
+                @include lg-screen {
+                    left: calc(100% + 20px);
+                }
                 @include sm-screen {
                     left: calc(100% + 15px);
                 }
@@ -128,6 +134,9 @@
                 height: 100%;
                 background: linear-gradient(var(--base-2), var(--base-1), var(--base-2));
                 transform: skewX(32deg);
+                @include lg-screen {
+                    right: calc(100% + 20px);
+                }
                 @include sm-screen {
                     right: calc(100% + 15px);
                 }
@@ -137,6 +146,9 @@
             display: flex;
             justify-content: center;
             gap: 40px;
+            @include lg-screen {
+                gap: 20px;
+            }
             &--item {
                 font-size: 16px;
                 line-height: 1;
@@ -220,6 +232,10 @@
             justify-content: center;
             margin-top: -62px;
             margin-bottom: -30px;
+            @include lg-screen {
+                max-width: 120px;
+                margin: -40px auto -20px;
+            }
             @include sm-screen {
                 height: 80px;
                 margin-top: -10px;
