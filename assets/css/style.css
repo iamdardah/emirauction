@@ -4045,7 +4045,7 @@ section {
 .dashboard {
   width: 100%;
   min-height: 100vh;
-  padding: 112px 30px 30px 360px;
+  padding: 82px 0 0 300px;
   position: relative;
   overflow: visible;
   z-index: 2;
@@ -4065,46 +4065,15 @@ section {
     padding: 74px 12px 12px;
   }
 }
-.dashboard::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 30px;
-  left: 360px;
-  height: 112px;
-  backdrop-filter: blur(20px);
-  border-radius: 0 0 22px 22px;
-  z-index: 1000;
-}
-@media screen and (max-width: 1399px) {
-  .dashboard::after {
-    right: 20px;
-    left: 340px;
-    height: 102px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .dashboard::after {
-    inset-inline: 15px;
-    height: 94px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .dashboard::after {
-    inset-inline: 12px;
-    height: 72px;
-  }
-}
 .dashboard__sidebar {
   position: fixed;
-  top: 30px;
-  left: 30px;
+  top: 0;
+  left: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 300px;
-  height: calc(100vh - 60px);
+  height: 100vh;
   background: var(--black-3);
-  border-radius: 20px;
   padding: 30px;
 }
 @media screen and (max-width: 1399px) {
@@ -4329,14 +4298,13 @@ section {
 }
 .dashboard__header {
   position: fixed;
-  top: 30px;
-  left: 360px;
-  right: 30px;
+  top: 0;
+  left: 300px;
+  right: 0;
   width: auto;
   background: color-mix(in srgb, var(--base-1), transparent 90%);
   padding: 15px;
-  border: 1px solid color-mix(in srgb, var(--base-1), transparent 80%);
-  border-radius: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--base-1), transparent 80%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

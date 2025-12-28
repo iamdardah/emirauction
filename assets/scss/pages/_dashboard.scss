@@ -1,7 +1,7 @@
 .dashboard {
     width: 100%;
     min-height: 100vh;
-    padding: 112px 30px 30px 360px;
+    padding: 82px 0 0 300px;
     position: relative;
     overflow: visible;
     z-index: 2;
@@ -14,39 +14,14 @@
     @include md-screen {
         padding: 74px 12px 12px;
     }
-    &::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        right: 30px;
-        left: 360px;
-        height: 112px;
-        backdrop-filter: blur(20px);
-        border-radius: 0 0 22px 22px;
-        z-index: 1000;
-        @include xl-screen {
-            right: 20px;
-            left: 340px;
-            height: 102px;
-        }
-        @include lg-screen {
-            inset-inline: 15px;
-            height: 94px;
-        }
-        @include md-screen {
-            inset-inline: 12px;
-            height: 72px;
-        }
-    }
     &__sidebar {
         position: fixed;
-        top: 30px;
-        left: 30px;
+        top: 0;
+        left: 0;
         flex-shrink: 0;
         width: 300px;
-        height: calc(100vh - 60px);
+        height: 100vh;
         background: var(--black-3);
-        border-radius: 20px;
         padding: 30px;
         @include xl-screen {
             top: 20px;
@@ -220,14 +195,13 @@
     }
     &__header {
         position: fixed;
-        top: 30px;
-        left: 360px;
-        right: 30px;
+        top: 0;
+        left: 300px;
+        right: 0;
         width: auto;
         background: color-mix(in srgb, var(--base-1), transparent 90%);
         padding: 15px;
-        border: 1px solid color-mix(in srgb, var(--base-1), transparent 80%);
-        border-radius: 20px;
+        border-bottom: 1px solid color-mix(in srgb, var(--base-1), transparent 80%);
         display: flex;
         gap: 20px;
         align-items: center;
