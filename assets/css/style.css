@@ -4143,7 +4143,7 @@ section {
 .dashboard {
   width: 100%;
   min-height: 100vh;
-  padding: 82px 0 0 300px;
+  padding: 82px 0 0 288px;
   position: relative;
   overflow: visible;
   z-index: 2;
@@ -4169,10 +4169,10 @@ section {
   left: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 300px;
+  width: 288px;
   height: 100vh;
   background: var(--black-3);
-  padding: 30px;
+  border-right: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
 }
 @media screen and (max-width: 1399px) {
   .dashboard__sidebar {
@@ -4218,14 +4218,18 @@ section {
   z-index: -1;
 }
 .dashboard__sidebar__logo {
+  height: 258px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 75%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
 }
 @media screen and (max-width: 1199px) {
   .dashboard__sidebar__logo {
@@ -4244,12 +4248,8 @@ section {
   }
 }
 .dashboard__sidebar__logo img {
-  max-height: 70px;
-}
-@media screen and (max-width: 1199px) {
-  .dashboard__sidebar__logo img {
-    max-height: 50px;
-  }
+  max-width: 100%;
+  max-height: 100%;
 }
 .dashboard__sidebar__btn {
   width: 40px;
@@ -4398,12 +4398,12 @@ section {
 .dashboard__header {
   position: fixed;
   top: 0;
-  left: 300px;
+  left: 288px;
   right: 0;
   width: auto;
-  background: color-mix(in srgb, var(--base-1), transparent 90%);
+  background: var(--black-4);
   padding: 15px;
-  border-bottom: 1px solid color-mix(in srgb, var(--base-1), transparent 80%);
+  border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
