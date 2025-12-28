@@ -187,6 +187,7 @@
     }
     &__body {
         width: 100%;
+        padding: 30px;
         .gy-40 {
             @include md-screen {
                 --bs-gutter-y: 30px;

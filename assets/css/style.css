@@ -4290,6 +4290,7 @@ section {
 }
 .dashboard__body {
   width: 100%;
+  padding: 30px;
 }
 @media screen and (max-width: 991px) {
   .dashboard__body .gy-40 {
