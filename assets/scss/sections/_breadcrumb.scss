@@ -1,8 +1,18 @@
 .breadcrumb {
     text-align: center;
     padding-top: 136px;
+    margin-bottom: 0;
     position: relative;
     z-index: 2;
+    @include md-screen {
+        padding-top: 131px;
+    }
+    @include sm-screen {
+        padding-top: 162px;
+    }
+    @include msm-screen {
+        padding-top: 184px;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -57,6 +67,12 @@
     }
     &--content {
         padding: 100px 0;
+        @include md-screen {
+            padding: 70px 0;
+        }
+        @include sm-screen {
+            padding: 50px 0;
+        }
     }
     &--title {
         font-size: 48px;
@@ -64,12 +80,29 @@
         font-weight: 600;
         color: var(--white-1);
         margin-bottom: 16px;
+        @include lg-screen {
+            font-size: 45px;
+        }
+        @include md-screen {
+            font-size: 40px;
+        }
+        @include sm-screen {
+            font-size: 30px;
+            line-height: 1.3;
+        }
     }
     &--desc {
         font-size: 16px;
         line-height: 1.5;
         color: var(--light-1);
         margin-bottom: 32px;
+        @include md-screen {
+            font-size: 15px;
+            margin-bottom: 27px;
+        }
+        @include sm-screen {
+            font-size: 14px;
+        }
     }
     &--list {
         display: flex;
@@ -85,6 +118,10 @@
         margin: auto;
         position: relative;
         z-index: 2;
+        @include sm-screen {
+            column-gap: 4px;
+            padding: 10px 15px;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -99,6 +136,12 @@
             font-weight: 400;
             color: var(--white-1);
             position: relative;
+            @include md-screen {
+                font-size: 14px;
+            }
+            @include sm-screen {
+                font-size: 12px;
+            }
             &::after {
                 display: inline-block;
                 content: "\e12a";
@@ -108,6 +151,13 @@
                 line-height: 1.2;
                 transform: translateY(1px);
                 margin-left: 6px;
+                @include md-screen {
+                    font-size: 12px;
+                }
+                @include sm-screen {
+                    font-size: 11px;
+                    margin-left: 4px;
+                }
             }
             &:not(:first-child) {
                 font-weight: 500;
