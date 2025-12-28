@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emirauctions</title>
+
+    <link rel="stylesheet" href="assets/icon/thin/style.css">
+    <link rel="stylesheet" href="assets/icon/regular/style.css">
+    <link rel="stylesheet" href="assets/icon/bold/style.css">
+    <link rel="stylesheet" href="assets/icon/fill/style.css">
+    <link rel="stylesheet" href="assets/css/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="dashboard">
+        <div class="dashboard__sidebar">
+            <div class="dashboard__sidebar__bg bg-img" data-background-image="assets/images/thumbs/sidebar-bg.png"></div>
+            <div class="dashboard__sidebar__logo">
+                <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo"></a>
+                <button class="dashboard__sidebar__btn d-xl-none"><i class="ti ti-x"></i></button>
+            </div>
+            <div class="dashboard__sidebar__menu">
+                <ul class="dashboard__sidebar__nav scroll">
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="dashboard.html" class="dashboard__sidebar__nav__link"><i class="flaticon-dashboard dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Dashboard</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="exam-history.html" class="dashboard__sidebar__nav__link"><i class="flaticon-clipboard dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Exam Log</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="exam.html" class="dashboard__sidebar__nav__link"><i class="flaticon-clipboard-1 dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">All Exams</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="deposit.html" class="dashboard__sidebar__nav__link"><i class="flaticon-wallet dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Deposit</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="deposit-history.html" class="dashboard__sidebar__nav__link"><i class="flaticon-statement dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Deposit History</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="transaction-log.html" class="dashboard__sidebar__nav__link"><i class="flaticon-transaction dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Transaction</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="profile-settings.html" class="dashboard__sidebar__nav__link"><i class="flaticon-user-avatar dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Profile Settings</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="change-password.html" class="dashboard__sidebar__nav__link"><i class="flaticon-password dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Change Password</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="two-factor.html" class="dashboard__sidebar__nav__link"><i class="flaticon-shield dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">2FA Security</span></a>
+                    </li>
+                    <li class="dashboard__sidebar__nav__item">
+                        <a href="login.html" class="dashboard__sidebar__nav__link"><i class="flaticon-log-out dashboard__sidebar__nav__icon"></i><span class="dashboard__sidebar__nav__txt">Logout</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard__body">
+            <div class="row gy-40">
+                <div class="col-12">
+                    <div class="header dashboard__header">
+                        <button class="dashboard__header__toggle-btn d-xl-none"><i class="ti ti-menu-2"></i></button>
+                        <h5 class="dashboard__header__page-name"><i class="flaticon-dashboard"></i> Dashboard</h5>
+                        <div class="user-dropdown custom--dropdown ms-auto">
+                            <div class="user-dropdown__txt d-sm-block d-none">
+                                <span class="user-dropdown__name">Mr. John Doe</span>
+                                <span class="user-dropdown__balance">$230.32</span>
+                            </div>
+                            <button class="dashboard__header__user-btn" data-bs-toggle="dropdown" aria-expanded="true">
+                                <img src="assets/images/thumbs/user-profile-1.png" alt="User">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="dropdown-menu__list d-sm-none">
+                                    <div class="user-dropdown__txt">
+                                        <span class="user-dropdown__name">Mr. John Doe</span>
+                                        <span class="user-dropdown__balance">$230.32</span>
+                                    </div>
+                                </li>
+                                <li class="dropdown-menu__list"><a href="#" class="dropdown-menu__link"><i class="ti ti-user-cog"></i> Profile Settings</a></li>
+                                <li class="dropdown-menu__list"><a href="#" class="dropdown-menu__link"><i class="ti ti-password-user"></i> Change Password</a></li>
+                                <li class="dropdown-menu__list"><a href="#" class="dropdown-menu__link"><i class="ti ti-shield-lock"></i> 2FA Security</a></li>
+                                <li class="dropdown-menu__list"><a href="#" class="dropdown-menu__link"><i class="ti ti-power"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row gy-20 justify-content-center">
+                        <div class="col-lg-3 col-sm-6 col-xsm-9">
+                            <a href="#" class="dashboard__widget dashboard__widget-primary">
+                                <div class="dashboard__widget__shape mask-box" data-mask="assets/images/thumbs/dashboard-widget-shape.png"></div>
+                                <div class="dashboard__widget__icon">
+                                    <svg viewBox="0 0 512 512"><g><path d="m512 324.3c0-3.6-1.9-6.9-5-8.6l-23.6-13.5 23.6-13.7c1.9-1.1 3.4-2.8 4.2-4.8.5-1.2.8-2.5.8-3.8 0-3.6-1.9-6.9-5-8.6l-27.7-15.9v-245.4c0-5.5-4.5-10-10-10h-200.7c-5.5 0-10 4.5-10 10v118.5l-81.3-46.7c-3.1-1.8-7-1.8-10.1.1l-162.3 97.3c-3 1.8-4.9 5.1-4.9 8.7 0 1.3.3 2.6.8 3.8.8 2 2.3 3.7 4.2 4.8l114.6 65.7v21.5l-104.6-60c-4.8-2.7-10.9-1.1-13.6 3.7s-1.1 10.9 3.7 13.6l114.6 65.7v18l-104.7-60c-4.8-2.7-10.9-1.1-13.6 3.7s-1.1 10.9 3.7 13.7l114.6 65.7v18l-104.7-60.1c-4.8-2.7-10.9-1.1-13.6 3.7s-1.1 10.9 3.7 13.6l114.6 65.7v8.8c0 3.6 1.9 6.9 5 8.6l83.9 48.7c1.6.9 3.3 1.4 5 1.4s3.4-.4 5-1.3c2.5-1.5 4.2-3.9 4.8-6.7l108.8 62.4c1.5.9 3.3 1.3 5 1.3s3.5-.5 5-1.4l164.8-95.4c3.1-1.8 5-5.1 5-8.7s-1.9-6.9-5-8.6l-20.6-11.8 20.6-12c3.1-1.8 5-5.1 5-8.7s-1.9-6.9-5-8.6l-20.6-11.8 20.6-12c3.1-1.7 5-5 5-8.6zm-30.2.1-144.8 84-113.5-65.1v-21.5l9.4 5.4 99.2 56.9c1.2.7 2.4 1.1 3.7 1.2.4.1.9.1 1.3.1 1.7 0 3.5-.5 5-1.4l121.3-70.3zm-355.3-151.1 23.1-13.9c6.9 2.7 14.8 4.2 23.1 4.2 8.6 0 16.8-1.6 23.8-4.5l42.1 24.2-71.1 40.2-41.8-24c3-4.1 4.7-8.7 4.7-13.7.1-4.4-1.3-8.7-3.9-12.5zm46 70.4 133.9-75.7 63.9 36-156.7 89-63.7-36.5zm247.3-22.6-20.7-11.9c.9-1.5 1.5-3.3 1.5-5.2 0-.6-.1-1.1-.2-1.7 3.4-5.8 5.3-12.5 5.3-19.5 0-21.2-17.2-38.4-38.4-38.4-13 0-24.9 6.6-31.8 17l-17.4-9.8v-73.9c11.4-3.4 20.5-12.4 23.8-23.8h54.1c3.4 11.4 12.4 20.5 23.8 23.8zm-35.2-31.9-31.6-17.9c3.4-4.2 8.6-6.9 14.3-6.9 10.1 0 18.4 8.3 18.4 18.4 0 2.3-.4 4.4-1.1 6.4zm-1.7 104.7-19.5 11.3c-7.6-3.8-17-5.8-26.8-5.8-9.7 0-19.1 2.1-26.7 5.8l-38.4-22 70.8-40.2 39.8 22.9c-3 4.1-4.6 8.7-4.6 13.6.1 5.2 1.9 10.1 5.4 14.4zm-45.9 69.9-103.3-59.3 17.7-10 53.7 30.8c3.4 1.9 7.6 1.7 10.8-.5 4.8-3.4 12.6-5.5 20.8-5.5 8.3 0 16.1 2.1 20.9 5.5 1.7 1.3 3.8 1.9 5.9 1.9 1.7 0 3.5-.4 5-1.4l37.6-21.8c3.3-1.9 5.2-5.4 5-9.2s-2.5-7.1-5.9-8.6c-5.4-2.4-7.4-5.2-7.4-6.5 0-1.2 1.7-3.7 6.5-6 3.3-1.6 5.5-4.9 5.6-8.6s-1.8-7.2-5-9l-42.1-24.2 17.6-10 101.6 58.4zm-58.4-343.8h180.7v223.8l-19.5-11.2v-163.4c0-5.5-4.5-10-10-10-8.4 0-15.3-6.9-15.3-15.3 0-5.5-4.5-10-10-10h-71.2c-5.5 0-10 4.5-10 10 0 8.4-6.9 15.3-15.3 15.3-5.5 0-10 4.5-10 10v80.6l-1.2.7-18.3-10.5v-120zm-106.2 82 104.2 59.9-17.7 10-57-32.8c-3.1-1.8-6.9-1.8-10 0-4.9 2.8-11.9 4.4-19.2 4.4-7.1 0-14-1.5-18.9-4.2-3.1-1.7-6.9-1.6-10 .2l-39.1 23.5c-3.1 1.8-4.9 5.2-4.9 8.8.1 3.6 2.1 6.9 5.2 8.6 3.7 2 5.5 4.3 5.5 5.5s-1.8 3.7-6.6 6.1c-3.3 1.6-5.5 4.9-5.7 8.7-.1 3.7 1.8 7.2 5 9l44.1 25.3-17.7 10-99.9-57.3zm-32.8 289.9v-118.2l63.9 36.6v118.7zm342.2 14.5-144.8 84-113.5-65.1v-18l108.6 62.3c1.5.9 3.3 1.3 5 1.3s3.5-.5 5-1.4l124.3-72zm0-41-144.8 84-113.5-65.1v-18l108.6 62.3c1.5.9 3.3 1.3 5 1.3s3.5-.5 5-1.4l124.3-72z"></path><path d="m171.3 196.9c1.8.8 3.9 1.3 6 1.3 7.3 0 12.7-4.7 12.7-10.8s-5.4-10.8-12.7-10.8c-2.3 0-4.5.5-6.4 1.4-3.9 1.9-6.3 5.4-6.3 9.4s2.6 7.7 6.7 9.5z"></path><path d="m332.4 263.3c-2.1 0-4.2.5-6 1.3-3.6 1.8-5.8 5-5.8 8.7 0 3.8 2.4 7.2 6.2 8.9 1.7.8 3.6 1.2 5.6 1.2 6.7 0 11.8-4.3 11.8-10.1s-5.1-10-11.8-10z"></path><path d="m364.7 91.3c-6.7 0-12.2 5.4-12.2 12.2 0 6.7 5.4 12.2 12.2 12.2s12.2-5.4 12.2-12.2c0-6.6-5.5-12.2-12.2-12.2z"></path></g></svg>
+                                </div>
+                                <div class="dashboard__widget__txt">
+                                    <span class="dashboard__widget__name">Total Balance</span>
+                                    <span class="dashboard__widget__number">$6,645.64</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xsm-9">
+                            <a href="#" class="dashboard__widget dashboard__widget-success">
+                                <div class="dashboard__widget__shape mask-box" data-mask="assets/images/thumbs/dashboard-widget-shape.png"></div>
+                                <div class="dashboard__widget__icon">
+                                    <svg viewBox="0 0 48 48"><path d="M40.34082,45H7.65918a1.99769,1.99769,0,0,1-1.83887-1.21289l-2.1416-4.999A1.99972,1.99972,0,0,1,5.5166,36H42.4834a1.99972,1.99972,0,0,1,1.83789,2.78809l-2.14258,5A1.996,1.996,0,0,1,40.34082,45Zm0-2v0ZM5.5166,38l2.14258,5H40.34082l2.14258-5Z"></path><path d="M40,38H8a3.00328,3.00328,0,0,1-3-3V14a3.00328,3.00328,0,0,1,3-3h3a1,1,0,0,1,0,2H8a1.001,1.001,0,0,0-1,1V35a1.001,1.001,0,0,0,1,1H40a1.001,1.001,0,0,0,1-1V14a1.001,1.001,0,0,0-1-1H37a1,1,0,0,1,0-2h3a3.00328,3.00328,0,0,1,3,3V35A3.00328,3.00328,0,0,1,40,38Z"></path><path d="M28,41H20a2.00229,2.00229,0,0,1-2-2V38a2.00229,2.00229,0,0,1,2-2h8a2.00229,2.00229,0,0,1,2,2v1A2.00229,2.00229,0,0,1,28,41Zm-8-3v1h8.001L28,38Z"></path><circle cx="9" cy="40" r="1"></circle><circle cx="12" cy="40" r="1"></circle><circle cx="15" cy="40" r="1"></circle><path d="M38,41H33a1,1,0,0,1,0-2h5a1,1,0,0,1,0,2Z"></path><path d="M36,33H12a2.00229,2.00229,0,0,1-2-2V9.41406A1.98633,1.98633,0,0,1,10.58594,8L15,3.58594A2.01231,2.01231,0,0,1,16.41406,3H36a2.00229,2.00229,0,0,1,2,2V31A2.00229,2.00229,0,0,1,36,33ZM16.41406,5,12,9.41406V31H36.001L36,5Z"></path><path d="M32.5,28h-12a1,1,0,0,1,0-2h12a1,1,0,0,1,0,2Z"></path><path d="M16,11H11a1,1,0,0,1,0-2h5V4a1,1,0,0,1,2,0V9A2.00229,2.00229,0,0,1,16,11Z"></path><circle cx="16.5" cy="26.99999" r="1.5"></circle><path d="M32.5,23h-12a1,1,0,0,1,0-2h12a1,1,0,0,1,0,2Z"></path><circle cx="16.5" cy="21.99999" r="1.5"></circle><path d="M24.5,16a.99974.99974,0,0,1-1-1v-.581a2.051,2.051,0,0,1,1.42676-1.98,1.50162,1.50162,0,0,0,1.01953-1.855A1.47565,1.47565,0,0,0,24.916,9.5542a1.51723,1.51723,0,0,0-1.333.25879A1.49337,1.49337,0,0,0,23,11a1,1,0,0,1-2,0,3.47776,3.47776,0,0,1,1.3584-2.76807A3.52147,3.52147,0,0,1,25.416,7.61768a3.5021,3.5021,0,0,1,.07714,6.73925L25.5,15A.99974.99974,0,0,1,24.5,16Z"></path><circle cx="24.50001" cy="17.49999" r="1"></circle></svg>
+                                </div>
+                                <div class="dashboard__widget__txt">
+                                    <span class="dashboard__widget__name">Total Exam</span>
+                                    <span class="dashboard__widget__number">53</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xsm-9">
+                            <a href="#" class="dashboard__widget dashboard__widget-base-two">
+                                <div class="dashboard__widget__shape mask-box" data-mask="assets/images/thumbs/dashboard-widget-shape.png"></div>
+                                <div class="dashboard__widget__icon">
+                                    <svg viewBox="0 0 32 32"><g><path d="m29.69 10.368v-2.599c0-2.476-2.015-4.49-4.49-4.49h-17.55c-2.477 0-4.491 2.015-4.491 4.49v5.78c0 .497.403.9.9.9s.9-.403.9-.9v-5.78c0-1.483 1.207-2.689 2.69-2.689h17.551c1.483 0 2.689 1.206 2.689 2.689v2.479h-3.015c-2.266 0-4.109 1.844-4.109 4.109v.617c0 2.266 1.844 4.109 4.109 4.109h3.015v2.485c0 1.483-1.206 2.689-2.689 2.689h-9.03c-.497 0-.9.403-.9.9s.403.9.9.9h9.03c2.476 0 4.49-2.015 4.49-4.49v-2.606c.704-.262 1.21-.935 1.21-1.729v-5.137c0-.792-.506-1.465-1.21-1.727zm-7.124 4.606v-.617c0-1.273 1.035-2.309 2.309-2.309l4.225.049v5.137c0 .026-.022.049-.049.049h-4.176c-1.273-.001-2.309-1.036-2.309-2.309z"></path><path d="m7.331 15.815c-3.001 0-6.231.928-6.231 2.965v3.488 1 2.488c0 1.187 1.129 2.117 3.179 2.622.916.224 1.972.343 3.053.343 1.078 0 2.136-.118 3.062-.343 2.049-.504 3.178-1.436 3.178-2.622v-2.488-1-3.488c-.002-2.037-3.236-2.965-6.241-2.965zm4.439 6.442c-.042.106-.466.555-1.811.88-1.548.388-3.708.39-5.255-.002-1.361-.329-1.776-.787-1.804-.866v-1.337c.404.183.867.34 1.392.464.919.225 1.97.344 3.039.344 1.074 0 2.128-.119 3.04-.342.527-.125.993-.283 1.398-.467v1.326zm-4.439-4.641c2.764 0 4.279.824 4.434 1.163-.066.126-.51.559-1.814.868-1.556.38-3.658.384-5.237-.002-1.35-.319-1.773-.774-1.813-.843v-.008c.111-.328 1.627-1.178 4.43-1.178zm4.44 8.124c-.029.096-.444.555-1.806.89-1.573.381-3.705.38-5.259.001-1.364-.336-1.779-.795-1.807-.874v-1.33c.396.178.854.331 1.371.456 1.813.456 4.302.458 6.117.002.521-.126.983-.28 1.383-.459v1.314z"></path><path d="m14.094 7.963h-5.157c-.497 0-.9.403-.9.9s.403.9.9.9h5.156c.497 0 .9-.403.9-.9s-.402-.9-.899-.9z"></path></g></svg>
+                                </div>
+                                <div class="dashboard__widget__txt">
+                                    <span class="dashboard__widget__name">Total Deposit</span>
+                                    <span class="dashboard__widget__number">$2,350.00</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-xsm-9">
+                            <a href="#" class="dashboard__widget dashboard__widget-warning">
+                                <div class="dashboard__widget__shape mask-box" data-mask="assets/images/thumbs/dashboard-widget-shape.png"></div>
+                                <div class="dashboard__widget__icon">
+                                    <svg viewBox="0 0 64 64"><g><g><path d="m26 28.5c-6.89258 0-12.5-5.60742-12.5-12.5s5.60742-12.5 12.5-12.5 12.5 5.60742 12.5 12.5-5.60742 12.5-12.5 12.5zm0-22c-5.23828 0-9.5 4.26172-9.5 9.5s4.26172 9.5 9.5 9.5 9.5-4.26172 9.5-9.5-4.26172-9.5-9.5-9.5z"></path><path d="m30 36.5h-19c-.82861 0-1.5-.67139-1.5-1.5s.67139-1.5 1.5-1.5h19c.82861 0 1.5.67139 1.5 1.5s-.67139 1.5-1.5 1.5z"></path><path d="m36.6001 54.5h-28.6001c-2.48145 0-4.5-2.01855-4.5-4.5v-34c0-2.48145 2.01855-4.5 4.5-4.5h7.41992c.82861 0 1.5.67139 1.5 1.5s-.67139 1.5-1.5 1.5h-7.41992c-.82715 0-1.5.67285-1.5 1.5v34c0 .82715.67285 1.5 1.5 1.5h28.6001c.82861 0 1.5.67139 1.5 1.5s-.67139 1.5-1.5 1.5z"></path><path d="m47 30.5c-.82861 0-1.5-.67139-1.5-1.5v-13c0-.82715-.67285-1.5-1.5-1.5h-7.41992c-.82861 0-1.5-.67139-1.5-1.5s.67139-1.5 1.5-1.5h7.41992c2.48145 0 4.5 2.01855 4.5 4.5v13c0 .82861-.67139 1.5-1.5 1.5z"></path><g><path d="m26 22.33838c-1.55322 0-2.96826-.91455-3.52148-2.27637-.31201-.76709.05762-1.64209.8252-1.9541.76611-.31348 1.64209.05713 1.9541.8252.0957.23486.40771.40527.74219.40527.60986 0 1.125-.39453 1.125-.86133v-.11572c0-.47754-1.02734-.81934-1.38135-.8833-1.43066-.23828-3.86865-1.31787-3.86865-3.83936v-.11572c0-2.12891 1.85059-3.86133 4.125-3.86133 1.55322 0 2.96826.91455 3.52148 2.27637.31201.76709-.05762 1.64209-.8252 1.9541-.76758.31104-1.64258-.05713-1.9541-.8252-.0957-.23486-.40771-.40527-.74219-.40527-.60986 0-1.125.39453-1.125.86133v.11572c0 .47754 1.02734.81934 1.38135.8833 1.43066.23828 3.86865 1.31787 3.86865 3.83936v.11572c0 2.12891-1.85059 3.86133-4.125 3.86133z"></path><path d="m26 12.66162c-.82861 0-1.5-.67139-1.5-1.5v-2.16162c0-.82861.67139-1.5 1.5-1.5s1.5.67139 1.5 1.5v2.16162c0 .82861-.67139 1.5-1.5 1.5z"></path><path d="m26 24.5c-.82861 0-1.5-.67139-1.5-1.5v-2.16162c0-.82861.67139-1.5 1.5-1.5s1.5.67139 1.5 1.5v2.16162c0 .82861-.67139 1.5-1.5 1.5z"></path></g><path d="m27 39.5c-.38379 0-.76758-.14648-1.06055-.43945-.58594-.58545-.58594-1.53564 0-2.12109l1.93945-1.93945-1.93945-1.93945c-.58594-.58545-.58594-1.53564 0-2.12109.58594-.58594 1.53516-.58594 2.12109 0l3 3c.58594.58545.58594 1.53564 0 2.12109l-3 3c-.29297.29297-.67676.43945-1.06055.43945z"></path><path d="m30 45.5h-19c-.82861 0-1.5-.67139-1.5-1.5s.67139-1.5 1.5-1.5h19c.82861 0 1.5.67139 1.5 1.5s-.67139 1.5-1.5 1.5z"></path><path d="m14 48.5c-.38379 0-.76758-.14648-1.06055-.43945l-3-3c-.58594-.58545-.58594-1.53564 0-2.12109l3-3c.58594-.58594 1.53516-.58594 2.12109 0 .58594.58545.58594 1.53564 0 2.12109l-1.93945 1.93945 1.93945 1.93945c.58594.58545.58594 1.53564 0 2.12109-.29297.29297-.67676.43945-1.06055.43945z"></path></g><path d="m47 60.5c-7.44385 0-13.5-6.05615-13.5-13.5s6.05615-13.5 13.5-13.5 13.5 6.05615 13.5 13.5-6.05615 13.5-13.5 13.5zm0-24c-5.78955 0-10.5 4.71045-10.5 10.5s4.71045 10.5 10.5 10.5 10.5-4.71045 10.5-10.5-4.71045-10.5-10.5-10.5z"></path><path d="m45.25 52.50049c-.39795 0-.7793-.1582-1.06055-.43945l-4.5-4.5c-.58594-.58545-.58594-1.53564 0-2.12109.58594-.58594 1.53516-.58594 2.12109 0l3.43945 3.43896 6.93945-6.93994c.58496-.58594 1.53516-.58594 2.12109 0 .58594.58545.58594 1.53516 0 2.12109l-8 8.00098c-.28125.28125-.6626.43945-1.06055.43945z"></path></g></svg>
+                                </div>
+                                <div class="dashboard__widget__txt">
+                                    <span class="dashboard__widget__name">Total Transactions</span>
+                                    <span class="dashboard__widget__number">$4,500.00</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="custom--card table-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between gap-x-3 gap-y-2 flex-wrap mb-lg-4 mb-3">
+                                <h5 class="mb-0">Purchased Exams</h5>
+                                <a href="purchased-exam.html" class="btn btn--sm btn--base">View All <span class="btn__icon"><i class="ti ti-arrow-right"></i></span></a>
+                            </div>
+                            <div class="table-responsive scroll">
+                                <table class="table table-borderless table--responsive--md">
+                                    <thead>
+                                        <tr>
+                                            <th>S.N.</th>
+                                            <th>Title</th>
+                                            <th>Grade</th>
+                                            <th>Subject</th>
+                                            <th>Practice Set</th>
+                                            <th>Questions</th>
+                                            <th>Total Marks</th>
+                                            <th>Time</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Fundamentals of Programming</td>
+                                            <td>Grade 6</td>
+                                            <td>Computer Science</td>
+                                            <td><span class="badge bg--secondary">2</span></td>
+                                            <td><span class="badge bg--base">15</span></td>
+                                            <td><span class="fw-bold text--base">100</span></td>
+                                            <td><span class="badge badge--base">1 hr</span></td>
+                                            <td>
+                                                <div>
+                                                    <a href="participation.html" class="btn btn--sm btn-lite--base">Attend</a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#examDetailsModal" class="btn btn--icon btn--sm btn--base" title="Details"><i class="ti ti-device-desktop"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Introduction to Accounting</td>
+                                            <td>Grade 6</td>
+                                            <td>Mathematics</td>
+                                            <td><span class="badge bg--secondary">2</span></td>
+                                            <td><span class="badge bg--base">15</span></td>
+                                            <td><span class="fw-bold text--base">100</span></td>
+                                            <td><span class="badge badge--base">1 hr</span></td>
+                                            <td>
+                                                <div>
+                                                    <a role="button" class="btn btn--sm btn-lite--base disabled">Attended</a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#examDetailsModal" class="btn btn--icon btn--sm btn--base" title="Details"><i class="ti ti-device-desktop"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>General Physics I</td>
+                                            <td>Grade 6</td>
+                                            <td>Physics</td>
+                                            <td><span class="badge bg--secondary">2</span></td>
+                                            <td><span class="badge bg--base">15</span></td>
+                                            <td><span class="fw-bold text--base">100</span></td>
+                                            <td><span class="badge badge--base">1 hr</span></td>
+                                            <td>
+                                                <div>
+                                                    <a href="participation.html" class="btn btn--sm btn-lite--base">Attend</a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#examDetailsModal" class="btn btn--icon btn--sm btn--base" title="Details"><i class="ti ti-device-desktop"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>World History Basics</td>
+                                            <td>Grade 6</td>
+                                            <td>History</td>
+                                            <td><span class="badge bg--secondary">2</span></td>
+                                            <td><span class="badge bg--base">15</span></td>
+                                            <td><span class="fw-bold text--base">100</span></td>
+                                            <td><span class="badge badge--base">1 hr</span></td>
+                                            <td>
+                                                <div>
+                                                    <a role="button" class="btn btn--sm btn-lite--base disabled">Attended</a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#examDetailsModal" class="btn btn--icon btn--sm btn--base" title="Details"><i class="ti ti-device-desktop"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Business Communication</td>
+                                            <td>O-Level</td>
+                                            <td>Management</td>
+                                            <td><span class="badge bg--secondary">3</span></td>
+                                            <td><span class="badge bg--base">10</span></td>
+                                            <td><span class="fw-bold text--base">50</span></td>
+                                            <td><span class="badge badge--base">30 mins</span></td>
+                                            <td>
+                                                <div>
+                                                    <a href="participation.html" class="btn btn--sm btn-lite--base">Attend</a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#examDetailsModal" class="btn btn--icon btn--sm btn--base" title="Details"><i class="ti ti-device-desktop"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Organic Chemistry Basics</td>
+                                            <td>O-Level</td>
+                                            <td>Chemistry</td>
+                                            <td><span class="badge bg--secondary">3</span></td>
+                                            <td><span class="badge bg--base">10</span></td>
+                                            <td><span class="fw-bold text--base">50</span></td>
+                                            <td><span class="badge badge--base">30 mins</span></td>
+                                            <td>
+                                                <div>
+                                                    <a href="participation.html" class="btn btn--sm btn-lite--base">Attend</a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#examDetailsModal" class="btn btn--icon btn--sm btn--base" title="Details"><i class="ti ti-device-desktop"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.bxslider.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
