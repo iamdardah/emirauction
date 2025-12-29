@@ -235,6 +235,19 @@
                 color: var(--base-1);
             }
         }
+        &--txt {
+            font-size: 18px;
+            line-height: 1.3;
+            color: var(--white-1);
+            margin-bottom: 0;
+            margin-right: 16px;
+            span {
+                font-weight: 700;
+                color: transparent;
+                background: linear-gradient(to right, var(--base-1), var(--base-2));
+                background-clip: text;
+            }
+        }
         &--btn {
             width: 52px;
             height: 52px;
