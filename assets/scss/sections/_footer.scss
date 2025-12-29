@@ -23,6 +23,18 @@
         background: var(--gradient-1);
         filter: blur(100px);
         z-index: 1;
+        @include lg-screen {
+            width: 100px;
+            height: 260px;
+        }
+        @include md-screen {
+            width: 80px;
+            height: 230px;
+        }
+        @include sm-screen {
+            width: 60px;
+            height: 200px;
+        }
     }
     &::after {
         content: "";
@@ -34,6 +46,18 @@
         background: var(--gradient-1);
         filter: blur(100px);
         z-index: 1;
+        @include lg-screen {
+            width: 100px;
+            height: 260px;
+        }
+        @include md-screen {
+            width: 80px;
+            height: 230px;
+        }
+        @include sm-screen {
+            width: 60px;
+            height: 200px;
+        }
     }
     &--bg {
         position: absolute;

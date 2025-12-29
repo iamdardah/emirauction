@@ -3589,6 +3589,24 @@ section {
           filter: blur(100px);
   z-index: 1;
 }
+@media screen and (max-width: 1199px) {
+  .footer::before {
+    width: 100px;
+    height: 260px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer::before {
+    width: 80px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer::before {
+    width: 60px;
+    height: 200px;
+  }
+}
 .footer::after {
   content: "";
   position: absolute;
@@ -3600,6 +3618,24 @@ section {
   -webkit-filter: blur(100px);
           filter: blur(100px);
   z-index: 1;
+}
+@media screen and (max-width: 1199px) {
+  .footer::after {
+    width: 100px;
+    height: 260px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer::after {
+    width: 80px;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer::after {
+    width: 60px;
+    height: 200px;
+  }
 }
 .footer--bg {
   position: absolute;
@@ -4012,17 +4048,17 @@ section {
 }
 @media screen and (max-width: 1199px) {
   .breadcrumb--title {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 991px) {
   .breadcrumb--title {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 767px) {
   .breadcrumb--title {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.3;
   }
 }
@@ -4407,7 +4443,7 @@ section {
 .dashboard--header--page-name {
   font-size: 30px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--white-1);
   margin-top: -3px;
   margin-bottom: 0;

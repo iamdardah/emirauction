@@ -81,13 +81,13 @@
         color: var(--white-1);
         margin-bottom: 16px;
         @include lg-screen {
-            font-size: 45px;
-        }
-        @include md-screen {
             font-size: 40px;
         }
-        @include sm-screen {
+        @include md-screen {
             font-size: 30px;
+        }
+        @include sm-screen {
+            font-size: 20px;
             line-height: 1.3;
         }
     }
