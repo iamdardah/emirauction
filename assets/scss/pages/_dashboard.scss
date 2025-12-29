@@ -14,7 +14,7 @@
     @include md-screen {
         padding: 74px 12px 12px;
     }
-    &__sidebar {
+    &--sidebar {
         position: fixed;
         top: 0;
         left: 0;
@@ -48,22 +48,16 @@
             padding: 15px;
             border-radius: 15px;
         }
-        &__bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.04;
-            z-index: -1;
-        }
-        &__logo {
+        &--logo {
             height: 258px;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
             @include lg-screen {
                 justify-content: space-between;
                 align-items: center;
@@ -72,12 +66,32 @@
             @include md-screen {
                 padding-bottom: 15px;
             }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -60px;
+                right: -60px;
+                width: 200px;
+                height: 90px;
+                background: var(--base-2);
+                transform: rotate(-10deg);
+                filter: blur(40px);
+                opacity: 0.5;
+                z-index: -1;
+            }
+            &--bg {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                opacity: 0.2;
+                z-index: -1;
+            }
             img {
                 max-width: 100%;
                 max-height: 100%;
             }
         }
-        &__btn {
+        &--btn {
             width: 40px;
             height: 40px;
             background: var(--base-2);
@@ -88,113 +102,71 @@
                 transform: translateY(10%);
             }
         }
-        &__menu {
-            height: calc(100% - 71px);
-            @include lg-screen {
-                height: calc(100% - 61px);
-            }
-            @include md-screen {
-                height: calc(100% - 56px);
-            }
+        &--menu {
+            height: calc(100% - 258px);
         }
-        &__nav {
+        &--nav {
             padding-top: 10px;
-            padding: 10px 30px 0;
-            margin: 0 -30px;
+            padding: 45px 30px;
             height: 100%;
             overflow-y: auto;
             scrollbar-width: thin;
-            @include lg-screen {
-                padding: 10px 20px 0;
-                margin: 0 -20px;
-            }
-            @include md-screen {
-                padding: 10px 20px 0;
-                margin: 0 -15px;
-            }
-            .vScrollbarHandle,
-            .hScrollbarHandle {
-                background: color-mix(in srgb, var(--white-1), transparent 60%) !important;
-                &:hover, &:focus, &:focus-within, &:focus-visible, &:active {
-                    background: color-mix(in srgb, var(--white-1), transparent 40%) !important;
+            &--item {
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
-            &__item {
-                padding: 15px 0;
-                @include md-screen {
-                    padding: 12px 0;
-                }
-            }
-            &__link {
-                padding: 5px 0;
+            &--link {
+                padding: 12px;
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                background: color-mix(in srgb, var(--white-1), transparent 30%);
+                color: var(--white-1);
+                border-radius: 12px;
                 position: relative;
+                z-index: 2;
                 &.active {
-                    color: transparent;
-                    background-image: var(--gradient-1);
-                    background-clip: text;
+                    color: var(--black-2);
                     &::after {
-                        width: 6px;
-                    }
-                    .dashboard__sidebar__nav__icon {
-                        color: transparent;
-                        background-image: var(--gradient-1);
-                        background-clip: text;
-                    }
-                    &:hover {
-                        color: transparent;
+                        opacity: 1;
                     }
                 }
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 0;
-                    left: -30px;
-                    width: 0;
-                    height: 100%;
-                    background: var(--base-2);
-                    border-radius: 0 5px 5px 0;
+                    inset: 0;
+                    background: var(--gradient-1);
+                    border-radius: 12px;
+                    opacity: 0;
                     transition: .3s;
-                    @include lg-screen {
-                        left: -20px;
-                    }
-                    @include md-screen {
-                        left: -20px;
-                    }
+                    z-index: -1;
                 }
                 &:hover {
-                    color: var(--white-1);
+                    color: var(--black-2);
                     &::after {
-                        width: 6px;
+                        opacity: 1;
                     }
                 }
             }
-            &__icon {
-                font-size: 1.1em;
+            &--icon {
+                display: block;
+                font-size: 22px;
                 line-height: 1;
-                transform: translateY(10%);
             }
-            &__txt {
+            &--txt {
                 display: block;
                 font-size: 16px;
-                line-height: 1;
+                line-height: 1.3;
                 font-weight: 500;
             }
         }
     }
-    &__body {
+    &--body {
         width: 100%;
         padding: 30px;
-        .gy-40 {
-            @include md-screen {
-                --bs-gutter-y: 30px;
-            }
-        }
     }
-    &__header {
+    &--header {
         position: fixed;
         top: 0;
         left: 288px;
@@ -226,7 +198,7 @@
             border-radius: 15px;
             gap: 10px;
         }
-        &__toggle-btn {
+        &--toggle-btn {
             flex-shrink: 0;
             width: 40px;
             height: 40px;
@@ -238,7 +210,7 @@
                 transform: translateY(10%);
             }
         }
-        &__page-name {
+        &--page-name {
             font-size: 30px;
             line-height: 1.2;
             font-weight: 700;
@@ -268,32 +240,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            &__txt {
+            &--txt {
                 text-align: right;
             }
-            &__name {
-                display: block;
-                font-family: var(--heading-font);
-                font-size: 18px;
-                line-height: 1;
-                font-weight: 700;
-                color: var(--base-1);
-                margin-bottom: 5px;
-            }
-            &__balance {
-                display: block;
-                font-size: 15px;
-                line-height: 1;
-                font-weight: 600;
-            }
-            .dropdown-menu__list {
-                .user-dropdown__txt {
-                    text-align: center;
-                    padding: 20px 0;
-                }
-            }
         }
-        &__user-btn {
+        &--user-btn {
             width: 50px;
             height: 50px;
             border: 2px solid var(--base-1);
