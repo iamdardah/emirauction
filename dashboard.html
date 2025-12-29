@@ -66,26 +66,41 @@
                         <div class="dashboard--header">
                             <button class="dashboard--header--toggle-btn d-xl-none"><i class="ti ti-menu-2"></i></button>
                             <h5 class="dashboard--header--page-name"><i class="flaticon-dashboard"></i> Dashboard</h5>
-                            <div class="user-dropdown custom--dropdown ms-auto">
-                                <div class="user-dropdown--txt d-sm-block d-none">
-                                    <span class="user-dropdown__name">Mr. John Doe</span>
-                                    <span class="user-dropdown__balance">$230.32</span>
+                            <div class="dashboard--header--content d-flex align-items-center gap-2 ms-auto">
+                                <div class="custom--dropdown">
+                                    <button class="dashboard--header--btn" data-bs-toggle="dropdown" aria-expanded="true">
+                                        <i class="ph ph-bell-simple-ringing"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li class="dropdown-menu--list d-sm-none">
+                                            <div class="user-dropdown--txt">
+                                                <span class="user-dropdown--name">Mr. John Doe</span>
+                                                <span class="user-dropdown--balance">$230.32</span>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-user-cog"></i> Profile Settings</a></li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-password-user"></i> Change Password</a></li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-shield-lock"></i> 2FA Security</a></li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-power"></i> Logout</a></li>
+                                    </ul>
                                 </div>
-                                <button class="dashboard--header--user-btn" data-bs-toggle="dropdown" aria-expanded="true">
-                                    <img src="assets/images/thumbs/user-profile-1.png" alt="User">
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li class="dropdown-menu--list d-sm-none">
-                                        <div class="user-dropdown--txt">
-                                            <span class="user-dropdown__name">Mr. John Doe</span>
-                                            <span class="user-dropdown__balance">$230.32</span>
-                                        </div>
-                                    </li>
-                                    <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-user-cog"></i> Profile Settings</a></li>
-                                    <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-password-user"></i> Change Password</a></li>
-                                    <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-shield-lock"></i> 2FA Security</a></li>
-                                    <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-power"></i> Logout</a></li>
-                                </ul>
+                                <div class="user-dropdown custom--dropdown">
+                                    <button class="dashboard--header--user-btn" data-bs-toggle="dropdown" aria-expanded="true">
+                                        <img src="assets/images/user.png" alt="User">
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li class="dropdown-menu--list d-sm-none">
+                                            <div class="user-dropdown--txt">
+                                                <span class="user-dropdown--name">Mr. John Doe</span>
+                                                <span class="user-dropdown--balance">$230.32</span>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-user-cog"></i> Profile Settings</a></li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-password-user"></i> Change Password</a></li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-shield-lock"></i> 2FA Security</a></li>
+                                        <li class="dropdown-menu--list"><a href="#" class="dropdown-menu--link"><i class="ti ti-power"></i> Logout</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

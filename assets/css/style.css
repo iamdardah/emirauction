@@ -4143,7 +4143,7 @@ section {
 .dashboard {
   width: 100%;
   min-height: 100vh;
-  padding: 82px 0 0 288px;
+  padding: 93px 0 0 288px;
   position: relative;
   overflow: visible;
   z-index: 2;
@@ -4354,7 +4354,7 @@ section {
   right: 0;
   width: auto;
   background: var(--black-4);
-  padding: 15px;
+  padding: 20px;
   border-bottom: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4438,6 +4438,35 @@ section {
           transform: translateY(10%);
   color: var(--base-1);
 }
+.dashboard--header--btn {
+  width: 52px;
+  height: 52px;
+  line-height: 56px;
+  font-size: 22px;
+  color: var(--white-1);
+  background: var(--gradient-1);
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 2;
+}
+.dashboard--header--btn::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--black-4);
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+.dashboard--header--btn:hover {
+  color: var(--black-2);
+}
+.dashboard--header--btn:hover::after {
+  opacity: 0;
+}
 .dashboard--header .user-dropdown {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -4453,11 +4482,9 @@ section {
   text-align: right;
 }
 .dashboard--header--user-btn {
-  width: 50px;
-  height: 50px;
-  border: 2px solid var(--base-1);
-  padding: 1px;
-  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   overflow: hidden;
 }
 @media screen and (max-width: 991px) {
@@ -4472,7 +4499,6 @@ section {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  border-radius: 7px;
 }
 @media screen and (max-width: 991px) {
   .dashboard--header--user-btn img {
