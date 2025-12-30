@@ -174,6 +174,67 @@
         }
     }
     overlayScroll();
+
+    // Recent Earning chart
+    if($('#recentEarnings').length) {
+        var categories = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var recentEarningsOptions = {
+            series: [{
+                name: 'Deposit',
+                color: 'var(--base-1)',
+                data: [34, 45, 37, 47, 38, 47, 35, 41, 18, 47, 27, 0]
+            },{
+                name: 'Withdraw',
+                color: '#ff3d3d',
+                data: [24, 35, 47, 37, 28, 37, 25, 51, 28, 37, 37, 10]
+            }],
+            chart: {
+                height: 250,
+                type: 'line',
+                toolbar: {
+                    show: false,
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth',
+                width: 4
+            },
+            xaxis: {
+                categories: categories
+            },
+            legend: {
+                show: false
+            },
+            tooltip: {
+                x: {
+                    formatter: function(value, { dataPointIndex }) {
+                        const currentYear = new Date().getFullYear();
+                        return `${categories[dataPointIndex]} - ${currentYear}`;
+                    }
+                },
+            },
+            responsive: [{
+                breakpoint: 768,
+                options: {
+                    chart: {
+                        height: 300,
+                    }
+                },
+            },{
+                breakpoint: 576,
+                options: {
+                    chart: {
+                        height: 250,
+                    }
+                },
+            }]
+        };
+        var recentEarningsChart = new ApexCharts(document.querySelector("#recentEarnings"), recentEarningsOptions);
+        recentEarningsChart.render();
+    }
     // ==========================================
     //      End Document Ready function
     // ==========================================

@@ -416,3 +416,20 @@
         }
     }
 }
+
+#SvgjsLine1030 {
+    display: none;
+}
+#SvgjsLine1024,
+#SvgjsLine1071 {
+    stroke: var(--black-5);
+    stroke-dasharray: 5px;
+}
+.apexcharts-gridlines-horizontal line {
+    stroke: var(--black-5);
+    stroke-dasharray: 5px;
+}
+.apexcharts-xaxis-texts-g text,
+.apexcharts-yaxis-texts-g text {
+    fill: var(--light-1);
+}
