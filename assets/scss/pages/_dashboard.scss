@@ -312,7 +312,7 @@
         background: var(--black-3);
         padding: 30px;
         border: 1px solid var(--black-4);
-        border-radius: 15px;
+        border-radius: 20px;
         position: relative;
         overflow: hidden;
         z-index: 2;
@@ -404,7 +404,8 @@
             display: block;
             font-size: 16px;
             line-height: 1;
-            font-weight: 400;
+            letter-spacing: .5px;
+            font-weight: 300;
             @include sm-screen {
                 font-size: 14px;
             }
