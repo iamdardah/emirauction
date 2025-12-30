@@ -158,6 +158,22 @@
 
         $(this).css('width', width);
     });
+
+    // Dashboard menu collapse
+    $('.dashboard--header--toggle-btn').on('click', function(){
+        $('.dashboard--sidebar').toggleClass('active');
+    });
+    $('.dashboard--sidebar--btn').on('click', function(){
+        $('.dashboard--sidebar').removeClass('active');
+    });
+
+    // Overlayscroll
+    function overlayScroll() {
+        if($('.scroll').length) {
+            $('.scroll').overlayScrollbars({});
+        }
+    }
+    overlayScroll();
     // ==========================================
     //      End Document Ready function
     // ==========================================
