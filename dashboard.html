@@ -171,7 +171,18 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Recent <span>Earnings</span></h3>
+                                <div class="d-flex align-items-center justify-content-between gap-x-3 gap-y-2 flex-wrap">
+                                    <h3 class="card-title">Recent <span>Earnings</span></h3>
+                                    <div class="card--select">
+                                        <span>Sort By :</span>
+                                        <select name="">
+                                            <option value="1">Last 7 Days</option>
+                                            <option value="2">Last 14 Days</option>
+                                            <option value="3">Last 1 Month</option>
+                                            <option value="4">This Year</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div id="recentEarnings"></div>
