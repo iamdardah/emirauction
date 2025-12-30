@@ -121,6 +121,11 @@
         @include sm-screen {
             column-gap: 4px;
             padding: 10px 15px;
+            border-radius: 6px;
+        }
+        @include msm-screen {
+            column-gap: 3px;
+            padding: 6px 10px;
         }
         &::after {
             content: "";
@@ -129,6 +134,9 @@
             background: var(--black-2);
             border-radius: 8px;
             z-index: -1;
+            @include sm-screen {
+                border-radius: 6px;
+            }
         }
         li {
             font-size: 15px;
@@ -157,6 +165,9 @@
                 @include sm-screen {
                     font-size: 11px;
                     margin-left: 4px;
+                }
+                @include msm-screen {
+                    margin-left: 3px;
                 }
             }
             &:not(:first-child) {
