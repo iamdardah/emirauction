@@ -104,11 +104,11 @@
         }
         &--menu {
             height: calc(100% - 258px);
+            padding-block: 45px;
         }
         &--nav {
-            padding-top: 10px;
-            padding: 45px 30px;
             height: 100%;
+            padding-inline: 30px;
             overflow-y: auto;
             &--item {
                 margin-bottom: 16px;

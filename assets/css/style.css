@@ -504,6 +504,31 @@ section {
   font-size: 1.5em;
 }
 
+.scroll.os-theme-dark > .os-scrollbar, .scroll .os-theme-light > .os-scrollbar {
+  padding: 0;
+}
+.scroll.os-theme-dark > .os-scrollbar-vertical, .scroll .os-theme-light > .os-scrollbar-vertical {
+  width: 6px;
+  background: transparent;
+  border-radius: 3px;
+}
+.scroll.os-theme-dark > .os-scrollbar-horizontal, .scroll .os-theme-light > .os-scrollbar-horizontal {
+  height: 6px;
+  background: transparent;
+  border-radius: 3px;
+}
+.scroll.os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: var(--black-6);
+  -webkit-transition: background 0.3s !important;
+  transition: background 0.3s !important;
+}
+.scroll.os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle.active {
+  background: var(--black-7);
+}
+.scroll.os-theme-dark > .os-scrollbar:hover > .os-scrollbar-track > .os-scrollbar-handle {
+  background: var(--black-7);
+}
+
 .btn {
   padding: 8px 24px;
   border: 0;
@@ -4336,11 +4361,11 @@ section {
 }
 .dashboard--sidebar--menu {
   height: calc(100% - 258px);
+  padding-block: 45px;
 }
 .dashboard--sidebar--nav {
-  padding-top: 10px;
-  padding: 45px 30px;
   height: 100%;
+  padding-inline: 30px;
   overflow-y: auto;
 }
 .dashboard--sidebar--nav--item {

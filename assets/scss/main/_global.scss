@@ -374,3 +374,29 @@ section {
         }
     }
 }
+
+.scroll {
+    &.os-theme-dark>.os-scrollbar, .os-theme-light>.os-scrollbar {
+        padding: 0;
+    }
+    &.os-theme-dark>.os-scrollbar-vertical, .os-theme-light>.os-scrollbar-vertical {
+        width: 6px;
+        background: transparent;
+        border-radius: 3px;
+    }
+    &.os-theme-dark>.os-scrollbar-horizontal, .os-theme-light>.os-scrollbar-horizontal {
+        height: 6px;
+        background: transparent;
+        border-radius: 3px;
+    }
+    &.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+        background: var(--black-6);
+        transition: background .3s !important;
+        &.active {
+            background: var(--black-7);
+        }
+    }
+    &.os-theme-dark>.os-scrollbar:hover>.os-scrollbar-track>.os-scrollbar-handle {
+        background: var(--black-7);
+    }
+}
