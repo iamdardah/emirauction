@@ -4,6 +4,15 @@
     padding-top: 136px;
     position: relative;
     z-index: 2;
+    @include md-screen {
+        padding-top: 131px;
+    }
+    @include sm-screen {
+        padding-top: 162px;
+    }
+    @include msm-screen {
+        padding-top: 184px;
+    }
     &--overlay {
         position: absolute;
         top: 0;
@@ -36,6 +45,21 @@
     &--content {
         text-align: center;
         padding: 200px 0;
+        @include xl-screen {
+            padding: 160px 0;
+        }
+        @include lg-screen {
+            padding: 130px 0;
+        }
+        @include md-screen {
+            padding: 100px 0;
+        }
+        @include sm-screen {
+            padding: 80px 0;
+        }
+        @include msm-screen {
+            padding: 60px 0;
+        }
         &--title {
             font-size: 110px;
             line-height: 1.1;
@@ -43,6 +67,22 @@
             letter-spacing: -5px;
             color: var(--white-1);
             margin-bottom: 31px;
+            @include md-screen {
+                font-size: 55px;
+                font-weight: 600;
+                letter-spacing: normal;
+            }
+            @include sm-screen {
+                font-size: 40px;
+                font-weight: 600;
+                letter-spacing: normal;
+                margin-bottom: 21px;
+            }
+            @include msm-screen {
+                font-size: 30px;
+                font-weight: 600;
+                letter-spacing: normal;
+            }
             span {
                 color: transparent;
                 background: var(--gradient-1);
@@ -56,10 +96,28 @@
                 font-size: 170px;
                 line-height: 1;
                 color: var(--white-1);
+                @include md-screen {
+                    font-size: 120px;
+                }
+                @include sm-screen {
+                    font-size: 100px;
+                }
+                @include msm-screen {
+                    font-size: 70px;
+                }
             }
             &--content {
                 width: 475px;
                 text-align: left;
+                @include md-screen {
+                    width: 400px;
+                }
+                @include sm-screen {
+                    width: calc(100% - 100px);
+                }
+                @include msm-screen {
+                    width: calc(100% - 70px);
+                }
                 p {
                     font-size: 18px;
                     line-height: 1.5;
@@ -69,6 +127,14 @@
                     border-bottom: 1px solid var(--white-1);
                     margin-bottom: 40px;
                     position: relative;
+                    @include md-screen {
+                        font-size: 16px;
+                    }
+                    @include sm-screen {
+                        font-size: 14px;
+                        padding-bottom: 15px;
+                        margin-bottom: 30px;
+                    }
                     &::after {
                         content: "";
                         position: absolute;
@@ -82,6 +148,7 @@
             }
             &--btn {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 12px;
             }
         }

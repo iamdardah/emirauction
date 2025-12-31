@@ -9,6 +9,15 @@
     background-size: 150% !important;
     background-position-x: left !important;
     transition: .3s;
+    @include md-screen {
+        padding: 6px 20px;
+        font-size: 15px;
+    }
+    @include sm-screen {
+        padding: 4px 12px;
+        font-size: 14px;
+        line-height: 2;
+    }
     &--icon {
         text-align: center;
         width: 36px;
@@ -19,6 +28,15 @@
         color: initial;
         transform: translateX(16px);
         transition: .3s;
+        @include md-screen {
+            transform: translateX(14px);
+        }
+        @include sm-screen {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            transform: translateX(8px);
+        }
         i {
             transform: translateY(5%);
         }
@@ -61,6 +79,12 @@
         background-position-x: right !important;
         .btn--icon {
             transform: translateX(16px) rotate(45deg);
+            @include md-screen {
+                transform: translateX(14px) rotate(45deg);
+            }
+            @include sm-screen {
+                transform: translateX(8px) rotate(45deg);
+            }
         }
     }
 }

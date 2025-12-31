@@ -618,6 +618,19 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 991px) {
+  .btn {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn {
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 2;
+  }
+}
 .btn--icon {
   text-align: center;
   width: 36px;
@@ -630,6 +643,21 @@ section {
           transform: translateX(16px);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media screen and (max-width: 991px) {
+  .btn--icon {
+    -webkit-transform: translateX(14px);
+            transform: translateX(14px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn--icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
 }
 .btn--icon i {
   -webkit-transform: translateY(5%);
@@ -680,6 +708,18 @@ section {
 .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon {
   -webkit-transform: translateX(16px) rotate(45deg);
           transform: translateX(16px) rotate(45deg);
+}
+@media screen and (max-width: 991px) {
+  .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon {
+    -webkit-transform: translateX(14px) rotate(45deg);
+            transform: translateX(14px) rotate(45deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon {
+    -webkit-transform: translateX(8px) rotate(45deg);
+            transform: translateX(8px) rotate(45deg);
+  }
 }
 
 .table-wrap {
@@ -1114,6 +1154,21 @@ section {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 991px) {
+  .banner {
+    padding-top: 131px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner {
+    padding-top: 162px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner {
+    padding-top: 184px;
+  }
+}
 .banner--overlay {
   position: absolute;
   top: 0;
@@ -1149,6 +1204,31 @@ section {
   text-align: center;
   padding: 200px 0;
 }
+@media screen and (max-width: 1399px) {
+  .banner--content {
+    padding: 160px 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .banner--content {
+    padding: 130px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .banner--content {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner--content {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner--content {
+    padding: 60px 0;
+  }
+}
 .banner--content--title {
   font-size: 110px;
   line-height: 1.1;
@@ -1156,6 +1236,28 @@ section {
   letter-spacing: -5px;
   color: var(--white-1);
   margin-bottom: 31px;
+}
+@media screen and (max-width: 991px) {
+  .banner--content--title {
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner--content--title {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: normal;
+    margin-bottom: 21px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner--content--title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
 }
 .banner--content--title span {
   color: transparent;
@@ -1176,9 +1278,39 @@ section {
   line-height: 1;
   color: var(--white-1);
 }
+@media screen and (max-width: 991px) {
+  .banner--content--desc--icon {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner--content--desc--icon {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner--content--desc--icon {
+    font-size: 70px;
+  }
+}
 .banner--content--desc--content {
   width: 475px;
   text-align: left;
+}
+@media screen and (max-width: 991px) {
+  .banner--content--desc--content {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner--content--desc--content {
+    width: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner--content--desc--content {
+    width: calc(100% - 70px);
+  }
 }
 .banner--content--desc--content p {
   font-size: 18px;
@@ -1189,6 +1321,18 @@ section {
   border-bottom: 1px solid var(--white-1);
   margin-bottom: 40px;
   position: relative;
+}
+@media screen and (max-width: 991px) {
+  .banner--content--desc--content p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner--content--desc--content p {
+    font-size: 14px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
 }
 .banner--content--desc--content p::after {
   content: "";
@@ -1203,6 +1347,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 12px;
 }
 
