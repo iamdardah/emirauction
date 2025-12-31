@@ -92,6 +92,11 @@
         position: relative;
         overflow: hidden;
         z-index: 2;
+        @include sm-screen {
+            max-width: 320px;
+            padding: 5px;
+            margin: auto;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -137,6 +142,13 @@
             color: var(--white-1);
             padding: 25px;
             margin-bottom: 0;
+            @include lg-screen {
+                font-size: 27px;
+            }
+            @include sm-screen {
+                font-size: 22px;
+                padding: 20px;
+            }
         }
         &--list {
             display: flex;
@@ -147,6 +159,9 @@
             border: 1px solid color-mix(in srgb, var(--base-2), transparent 70%);
             border-radius: 20px;
             padding: 4px;
+            @include sm-screen {
+                gap: 5px;
+            }
             li {
                 background:color-mix(in srgb, var(--white-1), transparent 94%);
                 border-radius: 16px;
@@ -156,6 +171,13 @@
                 color: var(--white-1);
                 font-weight: 500;
                 padding: 12px;
+                @include lg-screen {
+                    font-size: 14px;
+                }
+                @include sm-screen {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
                 span {
                     width: max-content;
                     display: block;
@@ -165,6 +187,12 @@
                     background: var(--gradient-1);
                     background-clip: text;
                     margin: 8px auto 0;
+                    @include lg-screen {
+                        font-size: 16px;
+                    }
+                    @include sm-screen {
+                        font-size: 15px;
+                    }
                 }
             }
         }

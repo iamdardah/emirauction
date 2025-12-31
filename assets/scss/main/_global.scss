@@ -329,6 +329,15 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 60px;
+    @include lg-screen {
+        padding-top: 50px;
+    }
+    @include md-screen {
+        padding-top: 40px;
+    }
+    @include sm-screen {
+        padding-top: 30px;
+    }
 }
 
 .pagination {
