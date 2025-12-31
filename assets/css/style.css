@@ -3830,6 +3830,26 @@ section {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose {
+    margin: 0 40px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose {
+    margin: 0 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .why-choose {
+    margin: 0 10px;
+  }
+}
 .why-choose::before {
   content: "";
   position: absolute;
@@ -3841,6 +3861,16 @@ section {
   border-radius: 60px;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose::before {
+    border-radius: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose::before {
+    border-radius: 30px;
+  }
+}
 .why-choose--bg {
   position: absolute;
   inset: 0 0 1px;
@@ -3850,6 +3880,16 @@ section {
   border-radius: 60px;
   overflow: hidden;
   z-index: -1;
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--bg {
+    border-radius: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--bg {
+    border-radius: 30px;
+  }
 }
 .why-choose--bg::before {
   content: "";
@@ -3865,6 +3905,36 @@ section {
   opacity: 0.7;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--bg::before {
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    -webkit-filter: blur(200px);
+            filter: blur(200px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--bg::before {
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--bg::before {
+    bottom: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+}
 .why-choose--bg::after {
   content: "";
   position: absolute;
@@ -3879,11 +3949,55 @@ section {
   opacity: 0.7;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--bg::after {
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    -webkit-filter: blur(200px);
+            filter: blur(200px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--bg::after {
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--bg::after {
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+}
 .why-choose--cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
+}
+@media screen and (max-width: 991px) {
+  .why-choose--cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .why-choose--card {
   width: 120px;
@@ -3893,14 +4007,56 @@ section {
   transition: 0.6s;
   z-index: 2;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--card {
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card {
+    width: calc(50% - 12px);
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
 .why-choose--card.active {
   width: calc(100% - 432px);
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card.active {
+    width: calc(50% - 12px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card.active {
+    width: 100%;
+  }
 }
 .why-choose--card.active::before {
   border-radius: 30px;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--card.active::before {
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card.active::before {
+    border-radius: 15px;
+  }
+}
 .why-choose--card.active::after {
   inset: 1px;
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card.active::after {
+    inset: 0;
+  }
 }
 .why-choose--card.active .why-choose--card--img {
   opacity: 1;
@@ -3909,6 +4065,11 @@ section {
 }
 .why-choose--card.active .why-choose--card--number {
   color: transparent;
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card.active .why-choose--card--number {
+    color: var(--white-1);
+  }
 }
 .why-choose--card.active .why-choose--card--title {
   opacity: 1;
@@ -3930,6 +4091,23 @@ section {
   transition: 0.6s;
   z-index: -2;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--card::before {
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card::before {
+    border-radius: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card::before {
+    border-radius: 15px;
+  }
+}
 .why-choose--card::after {
   content: "";
   position: absolute;
@@ -3940,6 +4118,23 @@ section {
   transition: 0.6s;
   z-index: -2;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--card::after {
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card::after {
+    border-radius: 15px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card::after {
+    border-radius: 10px;
+  }
+}
 .why-choose--card--bg {
   position: absolute;
   inset: 0;
@@ -3947,6 +4142,21 @@ section {
   background-position: center center;
   border-radius: 30px;
   z-index: -1;
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--card--bg {
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--bg {
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--bg {
+    border-radius: 10px;
+  }
 }
 .why-choose--card--bg::before {
   content: "";
@@ -3964,6 +4174,30 @@ section {
   opacity: 0.5;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--card--bg::before {
+    right: 30px;
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--bg::before {
+    right: 30px;
+    width: 200px;
+    height: 200px;
+    opacity: 0.7;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--bg::before {
+    right: 20px;
+    width: 150px;
+    height: 150px;
+  }
+}
 .why-choose--card--img {
   position: absolute;
   top: -40px;
@@ -3975,12 +4209,68 @@ section {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
+@media screen and (max-width: 1599px) {
+  .why-choose--card--img {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .why-choose--card--img {
+    top: -30px;
+    right: 45px;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--card--img {
+    top: -25px;
+    right: 35px;
+    max-width: 180px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--img {
+    top: -15px;
+    right: 25px;
+    max-width: 140px;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--img {
+    top: -10px;
+    right: 25px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .why-choose--card--img {
+    max-width: 120px;
+  }
+}
 .why-choose--card--content {
   width: 100%;
   padding: 40px 50px;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--card--content {
+    padding: 35px 40px;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--content {
+    padding: 30px 35px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--content {
+    padding: 20px 25px;
+    border-radius: 10px;
+  }
 }
 .why-choose--card--number {
   display: block;
@@ -3999,6 +4289,26 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 1399px) {
+  .why-choose--card--number {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--card--number {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--number {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--number {
+    font-size: 60px;
+  }
+}
 .why-choose--card--title {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -4016,9 +4326,42 @@ section {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
+@media screen and (max-width: 1199px) {
+  .why-choose--card--title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--title {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--title {
+    font-size: 18px;
+  }
+}
 .why-choose--card--title span {
   display: block;
   margin-left: 100px;
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--card--title span {
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--title span {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--title span {
+    margin-left: 40px;
+  }
 }
 .why-choose--card--desc {
   width: -webkit-max-content;
@@ -4036,6 +4379,43 @@ section {
   transition-property: opacity;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+}
+@media screen and (max-width: 1199px) {
+  .why-choose--card--desc {
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card--desc {
+    width: 100%;
+    font-size: 15px;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card--desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card:hover::before {
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .why-choose--card:hover::before {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card:hover::after {
+    inset: 1px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-choose--card:hover .why-choose--card--number {
+    color: transparent;
+  }
 }
 
 .testimonial {

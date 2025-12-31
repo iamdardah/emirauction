@@ -48,33 +48,39 @@
     });
 
     // Why choose us hover effects
-    var totalWidth = $('.why-choose--cards').width();
-    var textWidth = totalWidth - 532;
-    var hoverTimer;
-    $('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
-    $('.why-choose--card').each(function() {
-        $(this).on('mouseenter', function() {
-            var $self = $(this);
-            
-            clearTimeout(hoverTimer);
+    if ($(window).width() > 991) {
+        var totalWidth = $('.why-choose--cards').width();
+        var textWidth = $(window).width() < 1200
+            ? totalWidth - 512
+            : totalWidth - 532;
+        var hoverTimer;
+        $('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
+        $('.why-choose--card').each(function() {
+            $(this).on('mouseenter', function() {
+                var $self = $(this);
+                
+                clearTimeout(hoverTimer);
 
-            $self.addClass('active').siblings().removeClass('active');
-            
-            $self.siblings().find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
+                $self.addClass('active').siblings().removeClass('active');
+                
+                $self.siblings().find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
 
-            hoverTimer = setTimeout(function() {
-                if ($self.hasClass('active')) {
-                    $self.find('.why-choose--card--title, .why-choose--card--desc').css('width', '100%');
+                hoverTimer = setTimeout(function() {
+                    if ($self.hasClass('active')) {
+                        $self.find('.why-choose--card--title, .why-choose--card--desc').css('width', '100%');
+                    }
+                }, 650);
+            });
+
+            $(this).on('mouseleave', function() {
+                clearTimeout(hoverTimer);
+                
+                if (!$(this).hasClass('active')) {
+                    $(this).find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
                 }
-            }, 650);
+            });
         });
-
-        $(this).on('mouseleave', function() {
-            clearTimeout(hoverTimer);
-            
-            $(this).find('.why-choose--card--title, .why-choose--card--desc').css('width', textWidth);
-        });
-    });
+    }
 
     // Testimonial Slider
     $('.testimonial--slider').each(function () {
