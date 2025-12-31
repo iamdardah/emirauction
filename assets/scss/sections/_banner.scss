@@ -67,6 +67,13 @@
             letter-spacing: -5px;
             color: var(--white-1);
             margin-bottom: 31px;
+            @include xl-screen {
+                font-size: 90px;
+                letter-spacing: -3px;
+            }
+            @include lg-screen {
+                font-size: 70px;
+            }
             @include md-screen {
                 font-size: 55px;
                 font-weight: 600;
@@ -74,13 +81,11 @@
             }
             @include sm-screen {
                 font-size: 40px;
-                font-weight: 600;
                 letter-spacing: normal;
                 margin-bottom: 21px;
             }
             @include msm-screen {
                 font-size: 30px;
-                font-weight: 600;
                 letter-spacing: normal;
             }
             span {
@@ -96,6 +101,9 @@
                 font-size: 170px;
                 line-height: 1;
                 color: var(--white-1);
+                @include lg-screen {
+                    font-size: 130px;
+                }
                 @include md-screen {
                     font-size: 120px;
                 }
