@@ -240,8 +240,14 @@ section {
         margin-bottom: 40px;
     }
     &.text-start {
+        @include sm-screen {
+            text-align: center !important;
+        }
         .section-heading--subtitle {
             margin-left: 0;
+            @include sm-screen {
+                margin-left: auto;
+            }
         }
     }
     &--subtitle {

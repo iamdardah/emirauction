@@ -333,8 +333,18 @@ section {
     margin-bottom: 40px;
   }
 }
+@media screen and (max-width: 767px) {
+  .section-heading.text-start {
+    text-align: center !important;
+  }
+}
 .section-heading.text-start .section-heading--subtitle {
   margin-left: 0;
+}
+@media screen and (max-width: 767px) {
+  .section-heading.text-start .section-heading--subtitle {
+    margin-left: auto;
+  }
 }
 .section-heading--subtitle {
   width: -webkit-max-content;
