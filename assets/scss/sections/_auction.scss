@@ -13,6 +13,12 @@
     }
     .section-heading--desc {
         margin-bottom: 30px;
+        @include md-screen {
+            margin-bottom: 20px;
+        }
+        @include sm-screen {
+            margin-bottom: 10px;
+        }
     }
     &--card {
         background: color-mix(in srgb, var(--black-3), transparent 50%);

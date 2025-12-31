@@ -2022,6 +2022,16 @@ section {
 .auction .section-heading--desc {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 991px) {
+  .auction .section-heading--desc {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction .section-heading--desc {
+    margin-bottom: 10px;
+  }
+}
 .auction--card {
   background: color-mix(in srgb, var(--black-3), transparent 50%);
   border: 1px solid var(--black-4);
