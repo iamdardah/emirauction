@@ -323,6 +323,16 @@ section {
   text-align: center;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 991px) {
+  .section-heading {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-heading {
+    margin-bottom: 40px;
+  }
+}
 .section-heading.text-start .section-heading--subtitle {
   margin-left: 0;
 }
@@ -339,8 +349,28 @@ section {
   font-weight: 500;
   margin: 0 auto 16px;
 }
+@media screen and (max-width: 991px) {
+  .section-heading--subtitle {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-heading--subtitle {
+    font-size: 14px;
+  }
+}
 .section-heading--subtitle img {
   height: 19px;
+}
+@media screen and (max-width: 991px) {
+  .section-heading--subtitle img {
+    height: 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-heading--subtitle img {
+    height: 15px;
+  }
 }
 .section-heading--subtitle span {
   color: transparent;
@@ -355,6 +385,18 @@ section {
   letter-spacing: -1px;
   color: var(--white-1);
   margin-bottom: 16px;
+}
+@media screen and (max-width: 991px) {
+  .section-heading--title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-heading--title {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
 }
 .section-heading--title span {
   color: transparent;
@@ -377,6 +419,16 @@ section {
   line-height: 1.5;
   color: var(--light-1);
   margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  .section-heading--desc {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-heading--desc {
+    font-size: 14px;
+  }
 }
 
 .section-btn {
