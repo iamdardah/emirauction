@@ -488,6 +488,16 @@
         filter: blur(200px);
         opacity: 0.5;
         z-index: -1;
+        @include sm-screen {
+            top: 50px;
+            width: 150px;
+            height: 150px;
+            filter: blur(100px);
+        }
+        @include msm-screen {
+            width: 100px;
+            height: 100px;
+        }
     }
     &::after {
         content: "";
@@ -502,6 +512,16 @@
         filter: blur(200px);
         opacity: 0.5;
         z-index: -1;
+        @include sm-screen {
+            top: 50px;
+            width: 150px;
+            height: 150px;
+            filter: blur(100px);
+        }
+        @include msm-screen {
+            width: 100px;
+            height: 100px;
+        }
     }
     &--title {
         font-size: 40px;
@@ -510,6 +530,11 @@
         letter-spacing: -1px;
         color: var(--white-1);
         margin-bottom: 12px;
+        @include sm-screen {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: normal;
+        }
     }
     &--desc {
         font-size: 18px;
@@ -517,6 +542,9 @@
         font-weight: 300;
         color: var(--light-1);
         margin-bottom: 24px;
+        @include sm-screen {
+            font-size: 14px;
+        }
     }
     &--return {
         font-family: var(--body-font);
@@ -525,15 +553,25 @@
         font-weight: 700;
         color: var(--base-2);
         margin-bottom: 40px;
+        @include sm-screen {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
         span {
             font-size: 16px;
             font-weight: 400;
             color: var(--light-1);
             margin-left: 5px;
+            @include sm-screen {
+                font-size: 12px;
+            }
         }
     }
     &--list {
         margin-bottom: 40px;
+        @include sm-screen {
+            margin-bottom: 30px;
+        }
         &--title {
             font-family: var(--heading-font);
             font-size: 28px;
@@ -542,11 +580,19 @@
             color: var(--white-1);
             padding-bottom: 24px;
             margin-bottom: 0;
+            @include sm-screen {
+                font-size: 18px;
+                font-weight: 400;
+                padding-bottom: 14px;
+            }
             span {
                 color: transparent;
                 background: linear-gradient(to right, var(--base-1), var(--base-2));
                 background-clip: text;
                 position: relative;
+                @include sm-screen {
+                    font-weight: 500;
+                }
                 &::after {
                     content: "";
                     position: absolute;
@@ -555,6 +601,9 @@
                     width: 100%;
                     height: 1px;
                     background: var(--gradient-1);
+                    @include sm-screen {
+                        bottom: 3px;
+                    }
                 }
             }
         }
@@ -565,6 +614,10 @@
             color: var(--white-1);
             padding: 13px 0;
             position: relative;
+            @include sm-screen {
+                font-size: 14px;
+                padding: 10px 0;
+            }
             &:last-child {
                 &::after {
                     content: "";
@@ -592,6 +645,10 @@
                 font-weight: 400;
                 color: color-mix(in srgb, var(--white-1), transparent 40%);
                 margin-left: 25px;
+                @include sm-screen {
+                    font-size: 12px;
+                    margin-left: 15px;
+                }
             }
         }
     }
@@ -605,6 +662,9 @@
         background-clip: text;
         margin-bottom: 16px;
         position: relative;
+        @include sm-screen {
+            font-size: 16px;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -622,10 +682,18 @@
         font-weight: 500;
         color: var(--white-1);
         margin-bottom: 20px;
+        @include sm-screen {
+            font-size: 24px;
+        }
         span {
             font-size: 18px;
             font-weight: 400;
             margin-left: 5px;
+            @include sm-screen {
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 0.5px;
+            }
         }
     }
     &--rules {
@@ -637,6 +705,10 @@
                 color: var(--white-1);
                 padding: 13px 0;
                 position: relative;
+                @include sm-screen {
+                    font-size: 12px;
+                    padding: 10px 0;
+                }
                 &::before {
                     content: "";
                     position: absolute;
@@ -665,6 +737,10 @@
                     background: var(--gradient-1);
                     background-clip: text;
                     margin: 0 12px;
+                    @include sm-screen {
+                        font-size: 14px;
+                        margin: 0 6px;
+                    }
                 }
             }
         }
@@ -675,6 +751,9 @@
         position: relative;
         overflow: hidden;
         z-index: 2;
+        @include sm-screen {
+            border-radius: 15px 15px 10px 10px;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -682,6 +761,9 @@
             background: var(--black-2);
             border-radius: 32px 32px 20px 20px;
             z-index: -1;
+            @include sm-screen {
+                border-radius: 15px 15px 10px 10px;
+            }
         }
         &--title {
             text-align: center;
@@ -692,6 +774,12 @@
             padding: 32px;
             margin-bottom: 0;
             position: relative;
+            @include sm-screen {
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                padding: 15px;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -704,6 +792,9 @@
         }
         &--body {
             padding: 32px;
+            @include sm-screen {
+                padding: 15px;
+            }
         }
         &--subtitle {
             width: max-content;
