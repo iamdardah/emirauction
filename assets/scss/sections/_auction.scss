@@ -488,6 +488,15 @@
         filter: blur(200px);
         opacity: 0.5;
         z-index: -1;
+        @include lg-screen {
+            width: 350px;
+            height: 350px;
+        }
+        @include md-screen {
+            top: 100px;
+            width: 250px;
+            height: 250px;
+        }
         @include sm-screen {
             top: 50px;
             width: 150px;
@@ -512,6 +521,15 @@
         filter: blur(200px);
         opacity: 0.5;
         z-index: -1;
+        @include lg-screen {
+            width: 350px;
+            height: 350px;
+        }
+        @include md-screen {
+            top: 100px;
+            width: 250px;
+            height: 250px;
+        }
         @include sm-screen {
             top: 50px;
             width: 150px;
@@ -530,10 +548,16 @@
         letter-spacing: -1px;
         color: var(--white-1);
         margin-bottom: 12px;
-        @include sm-screen {
-            font-size: 20px;
+        @include lg-screen {
+            font-size: 30px;
+        }
+        @include md-screen {
+            font-size: 25px;
             font-weight: 500;
             letter-spacing: normal;
+        }
+        @include sm-screen {
+            font-size: 20px;
         }
     }
     &--desc {
@@ -542,6 +566,9 @@
         font-weight: 300;
         color: var(--light-1);
         margin-bottom: 24px;
+        @include lg-screen {
+            font-size: 16px;
+        }
         @include sm-screen {
             font-size: 14px;
         }
@@ -553,6 +580,13 @@
         font-weight: 700;
         color: var(--base-2);
         margin-bottom: 40px;
+        @include lg-screen {
+            font-size: 45px;
+            margin-bottom: 35px;
+        }
+        @include md-screen {
+            font-size: 40px;
+        }
         @include sm-screen {
             font-size: 35px;
             margin-bottom: 30px;
@@ -562,6 +596,9 @@
             font-weight: 400;
             color: var(--light-1);
             margin-left: 5px;
+            @include lg-screen {
+                font-size: 14px;
+            }
             @include sm-screen {
                 font-size: 12px;
             }
@@ -569,6 +606,9 @@
     }
     &--list {
         margin-bottom: 40px;
+        @include lg-screen {
+            margin-bottom: 35px;
+        }
         @include sm-screen {
             margin-bottom: 30px;
         }
@@ -580,17 +620,24 @@
             color: var(--white-1);
             padding-bottom: 24px;
             margin-bottom: 0;
-            @include sm-screen {
-                font-size: 18px;
+            @include lg-screen {
+                font-size: 22px;
+                padding-bottom: 18px;
+            }
+            @include md-screen {
+                font-size: 20px;
                 font-weight: 400;
                 padding-bottom: 14px;
+            }
+            @include sm-screen {
+                font-size: 18px;
             }
             span {
                 color: transparent;
                 background: linear-gradient(to right, var(--base-1), var(--base-2));
                 background-clip: text;
                 position: relative;
-                @include sm-screen {
+                @include md-screen {
                     font-weight: 500;
                 }
                 &::after {
@@ -601,6 +648,9 @@
                     width: 100%;
                     height: 1px;
                     background: var(--gradient-1);
+                    @include lg-screen {
+                        bottom: 4px;
+                    }
                     @include sm-screen {
                         bottom: 3px;
                     }
@@ -614,9 +664,15 @@
             color: var(--white-1);
             padding: 13px 0;
             position: relative;
+            @include xl-screen {
+                font-size: 18px;
+            }
+            @include lg-screen {
+                font-size: 16px;
+                padding: 10px 0;
+            }
             @include sm-screen {
                 font-size: 14px;
-                padding: 10px 0;
             }
             &:last-child {
                 &::after {
@@ -645,6 +701,13 @@
                 font-weight: 400;
                 color: color-mix(in srgb, var(--white-1), transparent 40%);
                 margin-left: 25px;
+                @include xl-screen {
+                    font-size: 16px;
+                }
+                @include lg-screen {
+                    font-size: 14px;
+                    margin-left: 20px;
+                }
                 @include sm-screen {
                     font-size: 12px;
                     margin-left: 15px;
@@ -662,6 +725,15 @@
         background-clip: text;
         margin-bottom: 16px;
         position: relative;
+        @include xl-screen {
+            font-size: 22px;
+        }
+        @include lg-screen {
+            font-size: 20px;
+        }
+        @include md-screen {
+            font-size: 18px;
+        }
         @include sm-screen {
             font-size: 16px;
         }
@@ -682,6 +754,15 @@
         font-weight: 500;
         color: var(--white-1);
         margin-bottom: 20px;
+        @include xl-screen {
+            font-size: 30px;
+        }
+        @include lg-screen {
+            font-size: 28px;
+        }
+        @include md-screen {
+            font-size: 26px;
+        }
         @include sm-screen {
             font-size: 24px;
         }
@@ -689,6 +770,13 @@
             font-size: 18px;
             font-weight: 400;
             margin-left: 5px;
+            @include xl-screen {
+                font-size: 16px;
+            }
+            @include lg-screen {
+                font-size: 14px;
+                font-weight: 300;
+            }
             @include sm-screen {
                 font-size: 12px;
                 font-weight: 300;
@@ -705,9 +793,15 @@
                 color: var(--white-1);
                 padding: 13px 0;
                 position: relative;
+                @include xl-screen {
+                    font-size: 16px;
+                }
+                @include lg-screen {
+                    font-size: 14px;
+                    padding: 10px 0;
+                }
                 @include sm-screen {
                     font-size: 12px;
-                    padding: 10px 0;
                 }
                 &::before {
                     content: "";
@@ -737,6 +831,14 @@
                     background: var(--gradient-1);
                     background-clip: text;
                     margin: 0 12px;
+                    @include xl-screen {
+                        font-size: 18px;
+                        margin: 0 10px;
+                    }
+                    @include lg-screen {
+                        font-size: 16px;
+                        margin: 0 8px;
+                    }
                     @include sm-screen {
                         font-size: 14px;
                         margin: 0 6px;
@@ -751,6 +853,12 @@
         position: relative;
         overflow: hidden;
         z-index: 2;
+        @include lg-screen {
+            border-radius: 25px 25px 15px 15px;
+        }
+        @include md-screen {
+            border-radius: 20px 20px 15px 15px;
+        }
         @include sm-screen {
             border-radius: 15px 15px 10px 10px;
         }
@@ -761,6 +869,12 @@
             background: var(--black-2);
             border-radius: 32px 32px 20px 20px;
             z-index: -1;
+            @include lg-screen {
+                border-radius: 25px 25px 15px 15px;
+            }
+            @include md-screen {
+                border-radius: 20px 20px 15px 15px;
+            }
             @include sm-screen {
                 border-radius: 15px 15px 10px 10px;
             }
@@ -774,10 +888,18 @@
             padding: 32px;
             margin-bottom: 0;
             position: relative;
-            @include sm-screen {
-                font-size: 16px;
+            @include lg-screen {
+                font-size: 20px;
+                padding: 25px;
+            }
+            @include md-screen {
+                font-size: 18px;
                 font-weight: 500;
                 letter-spacing: 0.5px;
+                padding: 20px;
+            }
+            @include sm-screen {
+                font-size: 16px;
                 padding: 15px;
             }
             &::after {
@@ -792,6 +914,12 @@
         }
         &--body {
             padding: 32px;
+            @include lg-screen {
+                padding: 25px;
+            }
+            @include md-screen {
+                padding: 20px;
+            }
             @include sm-screen {
                 padding: 15px;
             }
@@ -806,6 +934,12 @@
             background-clip: text;
             margin-bottom: 12px;
             position: relative;
+            @include lg-screen {
+                font-size: 18px;
+            }
+            @include md-screen {
+                font-size: 16px;
+            }
             @include sm-screen {
                 font-size: 14px;
             }
@@ -817,13 +951,19 @@
                 width: 100%;
                 height: 1px;
                 background: var(--gradient-1);
-                @include sm-screen {
+                @include lg-screen {
+                    bottom: 3px;
+                }
+                @include md-screen {
                     bottom: 2px;
                 }
             }
         }
         &--list {
             margin-bottom: 32px;
+            @include lg-screen {
+                margin-bottom: 27px;
+            }
             @include sm-screen {
                 margin-bottom: 22px;
             }
@@ -849,11 +989,15 @@
                     color: var(--white-1);
                     padding: 13px 0;
                     position: relative;
+                    @include lg-screen {
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 10px 0;
+                    }
                     @include sm-screen {
                         font-size: 12px;
                         font-weight: 300;
                         letter-spacing: 0.5px;
-                        padding: 10px 0;
                     }
                     &::before {
                         content: "";
@@ -880,6 +1024,12 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 12px;
+            @include xl-screen {
+                font-size: 18px;
+            }
+            @include lg-screen {
+                font-size: 16px;
+            }
             @include sm-screen {
                 font-size: 14px;
                 font-weight: 400;
@@ -898,9 +1048,18 @@
             -moz-appearance: textfield;
             appearance: textfield;
             margin-bottom: 32px;
+            @include xl-screen {
+                height: 45px;
+                border-radius: 10px;
+            }
+            @include lg-screen {
+                height: 40px;
+                padding: 0 15px;
+                border-radius: 8px;
+                margin-bottom: 27px;
+            }
             @include sm-screen {
                 height: 35px;
-                padding: 0 15px;
                 border-radius: 6px;
                 font-size: 12px;
                 margin-bottom: 22px;
@@ -916,6 +1075,13 @@
             row-gap: 20px;
             justify-content: space-between;
             margin-bottom: 32px;
+            @include xl-screen {
+                column-gap: 20px;
+            }
+            @include lg-screen {
+                column-gap: 15px;
+                margin-bottom: 27px;
+            }
             @include sm-screen {
                 column-gap: 20px;
                 margin-bottom: 22px;
@@ -929,6 +1095,9 @@
                 justify-content: flex-end;
                 flex-wrap: wrap;
                 gap: 8px;
+                @include lg-screen {
+                    gap: 6px;
+                }
                 @include sm-screen {
                     gap: 4px;
                 }
@@ -945,11 +1114,22 @@
                 border-radius: 6px;
                 position: relative;
                 z-index: 2;
+                @include xl-screen {
+                    height: 45px;
+                    line-height: 45px;
+                    font-size: 12px;
+                    padding: 0 13px;
+                }
+                @include lg-screen {
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 10px;
+                    border-radius: 4px;
+                }
                 @include sm-screen {
                     height: 35px;
                     line-height: 35px;
                     font-size: 10px;
-                    padding: 0 10px;
                     border-radius: 3px;
                 }
                 &::before {
@@ -961,6 +1141,9 @@
                     opacity: 0;
                     transition: .6s;
                     z-index: -1;
+                    @include lg-screen {
+                        border-radius: 4px;
+                    }
                     @include sm-screen {
                         border-radius: 3px;
                     }
@@ -972,6 +1155,9 @@
                     background: var(--black-3);
                     border-radius: 6px;
                     z-index: -1;
+                    @include lg-screen {
+                        border-radius: 4px;
+                    }
                     @include sm-screen {
                         border-radius: 3px;
                     }
@@ -988,6 +1174,9 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 32px;
+            @include lg-screen {
+                margin-bottom: 27px;
+            }
             @include sm-screen {
                 margin-bottom: 22px;
             }
@@ -999,6 +1188,9 @@
                 line-height: 1.5;
                 font-weight: 500;
                 color: var(--light-1);
+                @include lg-screen {
+                    font-size: 14px;
+                }
                 @include sm-screen {
                     font-size: 12px;
                     font-weight: 400;
@@ -1009,6 +1201,12 @@
             width: 100%;
             border-radius: 12px;
             margin-bottom: 24px;
+            @include xl-screen {
+                border-radius: 10px;
+            }
+            @include lg-screen {
+                border-radius: 8px;
+            }
             @include sm-screen {
                 border-radius: 6px;
             }
@@ -1024,6 +1222,10 @@
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
+                @include lg-screen {
+                    padding-left: 25px;
+                    font-size: 14px;
+                }
                 @include sm-screen {
                     padding-left: 20px;
                     font-size: 12px;
