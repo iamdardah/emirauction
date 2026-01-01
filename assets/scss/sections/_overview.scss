@@ -1,8 +1,12 @@
 .overview {
     &--content {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 10px;
+        @include sm-screen {
+            justify-content: center;
+        }
         &--img {
             display: flex;
             span {
@@ -15,8 +19,17 @@
                 background: var(--gradient-1);
                 border-radius: 50%;
                 overflow: hidden;
+                @include sm-screen {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    font-size: 12px;
+                }
                 &:not(:first-child) {
                     margin-left: -16px;
+                    @include sm-screen {
+                        margin-left: -10px;
+                    }
                 }
             }
         }
@@ -25,12 +38,18 @@
             line-height: 1.2;
             font-weight: 400;
             color: var(--white-1);
+            @include sm-screen {
+                font-size: 12px;
+            }
             span {
                 display: block;
                 font-size: 24px;
                 line-height: 1.1;
                 font-weight: 700;
                 margin-bottom: 2px;
+                @include sm-screen {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -46,6 +65,16 @@
         border-radius: 30px;
         position: relative;
         z-index: 2;
+        @include sm-screen {
+            padding: 25px 30px;
+            border-radius: 10px;
+        }
+        @include xsm-screen {
+            padding: 25px 20px;
+        }
+        @include xxsm-screen {
+            width: 100%;
+        }
         &.overview--card-sm {
             h3 {
                 font-size: 40px;
@@ -54,10 +83,15 @@
         &--bg {
             position: absolute;
             inset: 12px;
+            background-size: cover;
             border-radius: 26px;
             overflow: hidden;
             opacity: 0.25;
             z-index: -1;
+            @include sm-screen {
+                inset: 6px;
+                border-radius: 6px;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -74,6 +108,13 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 20px;
+            @include sm-screen {
+                font-size: 14px;
+                font-weight: 400;
+            }
+            @include xsm-screen {
+                margin-bottom: 10px;
+            }
         }
         h3 {
             font-size: 48px;
@@ -82,10 +123,20 @@
             letter-spacing: -1px;
             color: var(--base-2);
             margin: -3px 0;
+            @include sm-screen {
+                font-size: 30px;
+                margin: -2px 0;
+            }
             span {
                 margin: -5px 0;
+                @include sm-screen {
+                    margin: -3px 0;
+                }
                 &.odometer-formatting-mark {
                     transform: translateY(-6px);
+                    @include sm-screen {
+                        transform: translateY(-4px);
+                    }
                 }
             }
         }

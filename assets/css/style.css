@@ -4719,10 +4719,19 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .overview--content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .overview--content--img {
   display: -webkit-box;
@@ -4740,8 +4749,21 @@ section {
   border-radius: 50%;
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .overview--content--img span {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+  }
+}
 .overview--content--img span:not(:first-child) {
   margin-left: -16px;
+}
+@media screen and (max-width: 767px) {
+  .overview--content--img span:not(:first-child) {
+    margin-left: -10px;
+  }
 }
 .overview--content--txt {
   font-size: 16px;
@@ -4749,12 +4771,22 @@ section {
   font-weight: 400;
   color: var(--white-1);
 }
+@media screen and (max-width: 767px) {
+  .overview--content--txt {
+    font-size: 12px;
+  }
+}
 .overview--content--txt span {
   display: block;
   font-size: 24px;
   line-height: 1.1;
   font-weight: 700;
   margin-bottom: 2px;
+}
+@media screen and (max-width: 767px) {
+  .overview--content--txt span {
+    font-size: 18px;
+  }
 }
 .overview--grid {
   display: -webkit-box;
@@ -4772,16 +4804,39 @@ section {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 767px) {
+  .overview--card {
+    padding: 25px 30px;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .overview--card {
+    padding: 25px 20px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .overview--card {
+    width: 100%;
+  }
+}
 .overview--card.overview--card-sm h3 {
   font-size: 40px;
 }
 .overview--card--bg {
   position: absolute;
   inset: 12px;
+  background-size: cover;
   border-radius: 26px;
   overflow: hidden;
   opacity: 0.25;
   z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .overview--card--bg {
+    inset: 6px;
+    border-radius: 6px;
+  }
 }
 .overview--card--bg::after {
   content: "";
@@ -4799,6 +4854,17 @@ section {
   color: var(--white-1);
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .overview--card p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 479px) {
+  .overview--card p {
+    margin-bottom: 10px;
+  }
+}
 .overview--card h3 {
   font-size: 48px;
   line-height: 1;
@@ -4807,12 +4873,29 @@ section {
   color: var(--base-2);
   margin: -3px 0;
 }
+@media screen and (max-width: 767px) {
+  .overview--card h3 {
+    font-size: 30px;
+    margin: -2px 0;
+  }
+}
 .overview--card h3 span {
   margin: -5px 0;
+}
+@media screen and (max-width: 767px) {
+  .overview--card h3 span {
+    margin: -3px 0;
+  }
 }
 .overview--card h3 span.odometer-formatting-mark {
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
+}
+@media screen and (max-width: 767px) {
+  .overview--card h3 span.odometer-formatting-mark {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
 }
 
 .cta {
