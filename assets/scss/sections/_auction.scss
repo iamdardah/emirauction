@@ -97,7 +97,7 @@
             &--title {
                 font-family: var(--body-font);
                 font-size: 48px;
-                line-height: 1.2;
+                line-height: 1;
                 font-weight: 700;
                 color: transparent;
                 background: var(--gradient-1);
@@ -116,6 +116,7 @@
                 }
                 span {
                     font-size: 16px;
+                    line-height: 1.3;
                     font-weight: 500;
                     color: var(--white-1);
                     @include xl-screen {
