@@ -1499,11 +1499,20 @@ section {
     font-size: 14px;
   }
 }
-.about--subtitle i, .about--subtitle span {
-  color: transparent;
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-          background-clip: text;
+.about--subtitle img {
+  height: 18px;
+  margin-top: -6px;
+}
+@media screen and (max-width: 991px) {
+  .about--subtitle img {
+    height: 15px;
+    margin-top: -5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about--subtitle img {
+    height: 15px;
+  }
 }
 .about--title {
   font-size: 30px;
@@ -4749,6 +4758,22 @@ section {
   border-radius: 50%;
   overflow: hidden;
 }
+@media screen and (max-width: 1399px) {
+  .overview--content--img span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--content--img span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 767px) {
   .overview--content--img span {
     width: 35px;
@@ -4771,6 +4796,11 @@ section {
   font-weight: 400;
   color: var(--white-1);
 }
+@media screen and (max-width: 1399px) {
+  .overview--content--txt {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 767px) {
   .overview--content--txt {
     font-size: 12px;
@@ -4782,6 +4812,16 @@ section {
   line-height: 1.1;
   font-weight: 700;
   margin-bottom: 2px;
+}
+@media screen and (max-width: 1399px) {
+  .overview--content--txt span {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--content--txt span {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 767px) {
   .overview--content--txt span {
@@ -4803,6 +4843,24 @@ section {
   border-radius: 30px;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 1399px) {
+  .overview--card {
+    padding: 30px 35px;
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--card {
+    padding: 30px;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .overview--card {
+    padding: 30px 35px;
+    border-radius: 15px;
+  }
 }
 @media screen and (max-width: 767px) {
   .overview--card {
@@ -4832,6 +4890,23 @@ section {
   opacity: 0.25;
   z-index: -1;
 }
+@media screen and (max-width: 1399px) {
+  .overview--card--bg {
+    inset: 10px;
+    border-radius: 21px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--card--bg {
+    inset: 8px;
+    border-radius: 16px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .overview--card--bg {
+    border-radius: 11px;
+  }
+}
 @media screen and (max-width: 767px) {
   .overview--card--bg {
     inset: 6px;
@@ -4854,6 +4929,16 @@ section {
   color: var(--white-1);
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1399px) {
+  .overview--card p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--card p {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 767px) {
   .overview--card p {
     font-size: 14px;
@@ -4873,6 +4958,17 @@ section {
   color: var(--base-2);
   margin: -3px 0;
 }
+@media screen and (max-width: 1399px) {
+  .overview--card h3 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--card h3 {
+    font-size: 35px;
+    margin: -2px 0;
+  }
+}
 @media screen and (max-width: 767px) {
   .overview--card h3 {
     font-size: 30px;
@@ -4881,6 +4977,16 @@ section {
 }
 .overview--card h3 span {
   margin: -5px 0;
+}
+@media screen and (max-width: 1399px) {
+  .overview--card h3 span {
+    margin: -4.5px 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview--card h3 span {
+    margin: -3.5px 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .overview--card h3 span {
@@ -4891,7 +4997,7 @@ section {
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .overview--card h3 span.odometer-formatting-mark {
     -webkit-transform: translateY(-4px);
             transform: translateY(-4px);

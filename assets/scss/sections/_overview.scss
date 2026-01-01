@@ -19,6 +19,18 @@
                 background: var(--gradient-1);
                 border-radius: 50%;
                 overflow: hidden;
+                @include xl-screen {
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    font-size: 15px;
+                }
+                @include lg-screen {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 14px;
+                }
                 @include sm-screen {
                     width: 35px;
                     height: 35px;
@@ -38,6 +50,9 @@
             line-height: 1.2;
             font-weight: 400;
             color: var(--white-1);
+            @include xl-screen {
+                font-size: 14px;
+            }
             @include sm-screen {
                 font-size: 12px;
             }
@@ -47,6 +62,12 @@
                 line-height: 1.1;
                 font-weight: 700;
                 margin-bottom: 2px;
+                @include xl-screen {
+                    font-size: 22px;
+                }
+                @include lg-screen {
+                    font-size: 20px;
+                }
                 @include sm-screen {
                     font-size: 18px;
                 }
@@ -65,6 +86,18 @@
         border-radius: 30px;
         position: relative;
         z-index: 2;
+        @include xl-screen {
+            padding: 30px 35px;
+            border-radius: 25px;
+        }
+        @include lg-screen {
+            padding: 30px;
+            border-radius: 20px;
+        }
+        @include md-screen {
+            padding: 30px 35px;
+            border-radius: 15px;
+        }
         @include sm-screen {
             padding: 25px 30px;
             border-radius: 10px;
@@ -88,6 +121,17 @@
             overflow: hidden;
             opacity: 0.25;
             z-index: -1;
+            @include xl-screen {
+                inset: 10px;
+                border-radius: 21px;
+            }
+            @include lg-screen {
+                inset: 8px;
+                border-radius: 16px;
+            }
+            @include md-screen {
+                border-radius: 11px;
+            }
             @include sm-screen {
                 inset: 6px;
                 border-radius: 6px;
@@ -108,6 +152,12 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 20px;
+            @include xl-screen {
+                font-size: 17px;
+            }
+            @include lg-screen {
+                font-size: 16px;
+            }
             @include sm-screen {
                 font-size: 14px;
                 font-weight: 400;
@@ -123,18 +173,31 @@
             letter-spacing: -1px;
             color: var(--base-2);
             margin: -3px 0;
+            @include xl-screen {
+                font-size: 40px;
+            }
+            @include lg-screen {
+                font-size: 35px;
+                margin: -2px 0;
+            }
             @include sm-screen {
                 font-size: 30px;
                 margin: -2px 0;
             }
             span {
                 margin: -5px 0;
+                @include xl-screen {
+                    margin: -4.5px 0;
+                }
+                @include lg-screen {
+                    margin: -3.5px 0;
+                }
                 @include sm-screen {
                     margin: -3px 0;
                 }
                 &.odometer-formatting-mark {
                     transform: translateY(-6px);
-                    @include sm-screen {
+                    @include lg-screen {
                         transform: translateY(-4px);
                     }
                 }

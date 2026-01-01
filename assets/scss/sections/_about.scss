@@ -37,10 +37,16 @@
         @include sm-screen {
             font-size: 14px;
         }
-        i, span {
-            color: transparent;
-            background: var(--gradient-1);
-            background-clip: text;
+        img {
+            height: 18px;
+            margin-top: -6px;
+            @include md-screen {
+                height: 15px;
+                margin-top: -5px;
+            }
+            @include sm-screen {
+                height: 15px;
+            }
         }
     }
     &--title {
