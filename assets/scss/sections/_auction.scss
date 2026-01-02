@@ -1257,11 +1257,30 @@
         background: var(--black-2);
         border-radius: 60px;
         z-index: -1;
+        @include lg-screen {
+            border-radius: 50px;
+        }
+        @include md-screen {
+            border-radius: 35px;
+        }
+        @include sm-screen {
+            border-radius: 15px;
+        }
     }
     &--slot {
         display: flex;
         align-items: center;
         gap: 32px;
+        @include md-screen {
+            gap: 25px;
+        }
+        @include sm-screen {
+            gap: 20px;
+        }
+        @include xsm-screen {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
         &--txt {
             flex-shrink: 0;
             font-family: var(--heading-font);
@@ -1270,6 +1289,21 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 0;
+            @include xxl-screen {
+                font-size: 30px;
+            }
+            @include xl-screen {
+                font-size: 28px;
+            }
+            @include lg-screen {
+                font-size: 26px;
+            }
+            @include md-screen {
+                font-size: 24px;
+            }
+            @include sm-screen {
+                font-size: 20px;
+            }
             span {
                 color: transparent;
                 background: var(--gradient-1);
@@ -1284,6 +1318,24 @@
             padding: 6px;
             position: relative;
             z-index: 2;
+            @include xl-screen {
+                height: 30px;
+            }
+            @include lg-screen {
+                height: 28px;
+                padding: 5px;
+            }
+            @include md-screen {
+                height: 25px;
+                padding: 4px;
+            }
+            @include sm-screen {
+                height: 22px;
+                padding: 3px;
+            }
+            @include xsm-screen {
+                height: 17px;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -1294,7 +1346,7 @@
             }
         }
         &--progressbar {
-            height: 20px;
+            height: 100%;
             background: var(--gradient-1);
             border-radius: 10px;
             position: relative;
@@ -1305,10 +1357,22 @@
                 top: 0;
                 right: 0;
                 bottom: 0;
-                width: 250px;
+                width: 30%;
                 background: linear-gradient(to right, var(--black-2) 40%, transparent 40%);
                 background-size: 20px 100%;
                 transform: skewX(-35deg);
+                @include xl-screen {
+                    background-size: 18px 100%;
+                }
+                @include lg-screen {
+                    background-size: 16px 100%;
+                }
+                @include md-screen {
+                    background-size: 13px 100%;
+                }
+                @include sm-screen {
+                    background-size: 10px 100%;
+                }
             }
         }
     }
