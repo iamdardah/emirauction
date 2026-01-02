@@ -4210,6 +4210,11 @@ section {
   background: var(--gradient-1);
   z-index: -1;
 }
+@media screen and (max-width: 767px) {
+  .auction-timeline--grid::after {
+    top: 69px;
+  }
+}
 @media screen and (max-width: 575px) {
   .auction-timeline--grid::after {
     top: 50%;
@@ -4250,6 +4255,13 @@ section {
   background: var(--gradient-1);
   border-radius: 50%;
 }
+@media screen and (max-width: 767px) {
+  .auction-timeline--card::after {
+    top: 65px;
+    width: 10px;
+    height: 10px;
+  }
+}
 @media screen and (max-width: 575px) {
   .auction-timeline--card::after {
     top: 50%;
@@ -4271,12 +4283,17 @@ section {
   position: relative;
   z-index: 2;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   .auction-timeline--card--number {
     width: 42px;
     height: 48px;
     line-height: 48px;
     font-size: 16px;
+    margin-bottom: 46px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .auction-timeline--card--number {
     margin-bottom: 0;
   }
 }

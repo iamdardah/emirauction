@@ -1610,6 +1610,9 @@
             height: 2px;
             background: var(--gradient-1);
             z-index: -1;
+            @include sm-screen {
+                top: 69px;
+            }
             @include msm-screen {
                 top: 50%;
                 left: 72px;
@@ -1640,6 +1643,11 @@
             height: 12px;
             background: var(--gradient-1);
             border-radius: 50%;
+            @include sm-screen {
+                top: 65px;
+                width: 10px;
+                height: 10px;
+            }
             @include msm-screen {
                 top: 50%;
                 left: 72px;
@@ -1658,11 +1666,14 @@
             margin-bottom: 66px;
             position: relative;
             z-index: 2;
-            @include msm-screen {
+            @include sm-screen {
                 width: 42px;
                 height: 48px;
                 line-height: 48px;
                 font-size: 16px;
+                margin-bottom: 46px;
+            }
+            @include msm-screen {
                 margin-bottom: 0;
             }
             &::before {
