@@ -1414,6 +1414,23 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 32px;
+            @include xl-screen {
+                font-size: 30px;
+            }
+            @include lg-screen {
+                font-size: 28px;
+                margin-bottom: 27px;
+            }
+            @include md-screen {
+                font-size: 26px;
+                font-weight: 400;
+                margin-bottom: 22px;
+            }
+            @include sm-screen {
+                font-size: 22px;
+                font-weight: 400;
+                margin-bottom: 17px;
+            }
         }
         &--desc {
             font-family: var(--heading-font);
@@ -1422,6 +1439,20 @@
             font-weight: 300;
             color: var(--light-1);
             margin-bottom: 32px;
+            @include xl-screen {
+                font-size: 22px;
+            }
+            @include lg-screen {
+                font-size: 20px;
+                margin-bottom: 27px;
+            }
+            @include md-screen {
+                font-size: 18px;
+            }
+            @include sm-screen {
+                font-size: 14px;
+                margin-bottom: 22px;
+            }
         }
         &--subtitle {
             font-size: 24px;
@@ -1429,6 +1460,18 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 24px;
+            @include xl-screen {
+                font-size: 22px;
+                margin-bottom: 21px;
+            }
+            @include md-screen {
+                font-size: 20px;
+                margin-bottom: 19px;
+            }
+            @include sm-screen {
+                font-size: 18px;
+                margin-bottom: 14px;
+            }
         }
         &--list {
             font-size: 17px;
@@ -1437,6 +1480,15 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+            @include xl-screen {
+                font-size: 16px;
+            }
+            @include md-screen {
+                font-size: 15px;
+            }
+            @include sm-screen {
+                font-size: 13px;
+            }
             span {
                 font-size: 20px;
                 line-height: 1;
@@ -1444,6 +1496,18 @@
                 background: var(--gradient-1);
                 background-clip: text;
                 margin-right: 12px;
+                @include xl-screen {
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+                @include md-screen {
+                    font-size: 17px;
+                    margin-right: 8px;
+                }
+                @include sm-screen {
+                    font-size: 15px;
+                    margin-right: 6px;
+                }
             }
         }
     }
