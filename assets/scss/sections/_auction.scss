@@ -1556,6 +1556,9 @@
         gap: 12px;
         position: relative;
         z-index: 2;
+        @include msm-screen {
+            flex-direction: column;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -1572,6 +1575,10 @@
         width: calc(100% / 5 - 9.6px);
         text-align: center;
         position: relative;
+        @include msm-screen {
+            width: 100%;
+            display: flex;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -1623,6 +1630,9 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 12px;
+            @include sm-screen {
+                font-size: 14px;
+            }
         }
         &--info {
             font-size: 16px;
