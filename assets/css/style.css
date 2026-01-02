@@ -3920,6 +3920,40 @@ section {
   opacity: 0.3;
   z-index: -1;
 }
+@media screen and (max-width: 1399px) {
+  .auction-information--content::before {
+    width: 450px;
+    height: 450px;
+    -webkit-filter: blur(175px);
+            filter: blur(175px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--content::before {
+    width: 350px;
+    height: 350px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction-information--content::before {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(125px);
+            filter: blur(125px);
+    opacity: 0.4;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--content::before {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.5;
+  }
+}
 .auction-information--content::after {
   content: "";
   position: absolute;
@@ -3935,6 +3969,34 @@ section {
           filter: blur(200px);
   opacity: 0.7;
   z-index: -1;
+}
+@media screen and (max-width: 1399px) {
+  .auction-information--content::after {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--content::after {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .auction-information--content::after {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(125px);
+            filter: blur(125px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--content::after {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
 }
 .auction-information--content--title {
   font-size: 32px;
@@ -4133,6 +4195,7 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 24px;
   }
 }
 .auction-timeline--grid::after {
@@ -4147,6 +4210,16 @@ section {
   background: var(--gradient-1);
   z-index: -1;
 }
+@media screen and (max-width: 575px) {
+  .auction-timeline--grid::after {
+    top: 50%;
+    left: 72px;
+    width: 2px;
+    height: calc(80% + 24px);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
 .auction-timeline--card {
   width: calc(20% - 9.6px);
   text-align: center;
@@ -4158,6 +4231,11 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+    text-align: left;
   }
 }
 .auction-timeline--card::after {
@@ -4172,6 +4250,16 @@ section {
   background: var(--gradient-1);
   border-radius: 50%;
 }
+@media screen and (max-width: 575px) {
+  .auction-timeline--card::after {
+    top: 50%;
+    left: 72px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+  }
+}
 .auction-timeline--card--number {
   text-align: center;
   width: 56px;
@@ -4182,6 +4270,15 @@ section {
   margin-bottom: 66px;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 575px) {
+  .auction-timeline--card--number {
+    width: 42px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
 }
 .auction-timeline--card--number::before {
   content: "";
@@ -4214,11 +4311,11 @@ section {
   line-height: 1.2;
   font-weight: 500;
   color: var(--white-1);
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 767px) {
   .auction-timeline--card--title {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .auction-timeline--card--info {
@@ -4226,7 +4323,14 @@ section {
   line-height: 1.3;
   font-weight: 400;
   color: var(--light-1);
+  margin-top: 12px;
   margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .auction-timeline--card--info {
+    font-size: 12px;
+    margin-top: 6px;
+  }
 }
 .auction-timeline--card:hover .auction-timeline--card--number::after {
   opacity: 0;
