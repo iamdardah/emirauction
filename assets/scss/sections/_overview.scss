@@ -111,6 +111,45 @@
         &.overview--card-sm {
             h3 {
                 font-size: 40px;
+                @include xl-screen {
+                    font-size: 35px;
+                }
+                @include lg-screen {
+                    font-size: 30px;
+                    margin: -2px 0;
+                }
+                @include sm-screen {
+                    font-size: 25px;
+                    margin: -2px 0;
+                }
+                span {
+                    @include xxl-screen {
+                        margin: -4px 0;
+                    }
+                    @include xl-screen {
+                        margin: -3.5px 0;
+                    }
+                    @include lg-screen {
+                        margin: -3px 0;
+                    }
+                    @include sm-screen {
+                        margin: -2px 0;
+                    }
+                    &.odometer-formatting-mark {
+                        @include xxl-screen {
+                            transform: translateY(-5px);
+                        }
+                        @include lg-screen {
+                            transform: translateY(-4px);
+                        }
+                        @include md-screen {
+                            transform: translateY(-3px);
+                        }
+                        @include sm-screen {
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
             }
         }
         &--bg {
