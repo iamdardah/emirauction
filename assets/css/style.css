@@ -7084,17 +7084,23 @@ section {
   border: 0;
   border-radius: 40px;
   position: relative;
+  overflow: hidden;
   z-index: 2;
 }
 .faq .accordion-item::after {
   content: "";
   position: absolute;
-  inset: 2px 2px 0;
+  inset: 1px;
   background: var(--black-2);
   background-image: -webkit-gradient(linear, left top, left bottom, from(color-mix(in srgb, var(--black-3), transparent 70%)), to(color-mix(in srgb, var(--black-3), transparent 70%)));
   background-image: linear-gradient(color-mix(in srgb, var(--black-3), transparent 70%), color-mix(in srgb, var(--black-3), transparent 70%));
   border-radius: 40px;
-  z-index: -1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -2;
+}
+.faq .accordion-item .show .accordion-body::before, .faq .accordion-item .show .accordion-body::after {
+  opacity: 1;
 }
 .faq .accordion-button {
   background: transparent;
@@ -7111,6 +7117,34 @@ section {
   line-height: 1.5;
   color: var(--light-1);
   padding: 0 50px 24px;
+}
+.faq .accordion-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-1);
+  border-radius: 40px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -2;
+}
+.faq .accordion-body::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -150px;
+  width: 250px;
+  height: 100px;
+  background: var(--gradient-1);
+  -webkit-filter: blur(70px);
+          filter: blur(70px);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
 }
 .faq .accordion-body p {
   font-size: 16px;
