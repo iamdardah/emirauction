@@ -7103,6 +7103,12 @@ section {
   opacity: 1;
 }
 .faq .accordion-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: transparent;
   -webkit-box-shadow: 0 0;
           box-shadow: 0 0;
@@ -7111,6 +7117,54 @@ section {
   font-weight: 500;
   color: var(--white-1);
   padding: 28px;
+}
+.faq .accordion-button.collapsed span {
+  color: var(--white-1);
+  border-color: var(--white-1);
+}
+.faq .accordion-button.collapsed span::before {
+  opacity: 0;
+}
+.faq .accordion-button.collapsed span::after {
+  content: "\e3d4";
+  font-weight: normal;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.faq .accordion-button::after {
+  display: none;
+}
+.faq .accordion-button span {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 20px;
+  color: var(--black-2);
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-block: -8px;
+  margin-right: -8px;
+  position: relative;
+  z-index: 2;
+}
+.faq .accordion-button span::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+.faq .accordion-button span::after {
+  display: inline-block;
+  content: "\e32a";
+  font-family: "Phosphor";
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .faq .accordion-body {
   font-size: 16px;
