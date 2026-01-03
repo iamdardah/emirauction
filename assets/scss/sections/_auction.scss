@@ -1574,6 +1574,22 @@
         font-weight: 600;
         color: var(--white-1);
         margin-bottom: 60px;
+        @include xl-screen {
+            font-size: 28px;
+            margin-bottom: 55px;
+        }
+        @include lg-screen {
+            font-size: 26px;
+            margin-bottom: 50px;
+        }
+        @include md-screen {
+            font-size: 24px;
+            margin-bottom: 45px;
+        }
+        @include sm-screen {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
         span {
             color: transparent;
             background: var(--gradient-1);
@@ -1811,6 +1827,7 @@
             z-index: -1;
         }
         .table {
+            min-width: max-content;
             margin-bottom: 0;
             th {
                 font-family: var(--heading-font);
@@ -1823,9 +1840,37 @@
                 border-bottom: 5px solid transparent;
                 position: relative;
                 z-index: 2;
+                @include xl-screen {
+                    font-size: 22px;
+                    border-bottom-width: 4px;
+                }
+                @include md-screen {
+                    font-size: 20px;
+                    padding: 15px 24px;
+                    border-bottom-width: 3px;
+                }
+                @include sm-screen {
+                    font-size: 18px;
+                    font-weight: 400;
+                    padding: 10px 16px;
+                }
+                @include msm-screen {
+                    font-size: 16px;
+                    padding: 8px 10px;
+                    border-bottom-width: 2px;
+                }
                 &:first-child {
                     &::after {
                         border-right-width: 6px;
+                        @include xl-screen {
+                            border-right-width: 5px;
+                        }
+                        @include md-screen {
+                            border-right-width: 4px;
+                        }
+                        @include msm-screen {
+                            border-right-width: 3px;
+                        }
                     }
                 }
                 &:last-child {
@@ -1857,9 +1902,33 @@
                 border: 0;
                 position: relative;
                 z-index: 2;
+                @include xl-screen {
+                    font-size: 17px;
+                }
+                @include md-screen {
+                    font-size: 16px;
+                    padding: 15px 24px;
+                }
+                @include sm-screen {
+                    font-size: 14px;
+                    padding: 10px 16px;
+                }
+                @include msm-screen {
+                    font-size: 12px;
+                    padding: 8px 10px;
+                }
                 &:first-child {
                     &::after {
                         border-right-width: 6px;
+                        @include xl-screen {
+                            border-right-width: 5px;
+                        }
+                        @include md-screen {
+                            border-right-width: 4px;
+                        }
+                        @include msm-screen {
+                            border-right-width: 3px;
+                        }
                     }
                 }
                 &:last-child {
