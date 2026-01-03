@@ -4151,6 +4151,82 @@ section {
 .auction-information--list--group {
   width: calc(50% - 60px);
 }
+.auction-information--list--group ul {
+  position: relative;
+  z-index: 2;
+}
+.auction-information--list--group ul::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--base-2)), color-stop(var(--base-1)), to(var(--base-2)));
+  background: linear-gradient(var(--base-2), var(--base-1), var(--base-2));
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+.auction-information--list--title {
+  font-family: var(--heading-font);
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--white-1);
+  margin-bottom: 32px;
+}
+.auction-information--list--title span {
+  color: transparent;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+          background-clip: text;
+  position: relative;
+  z-index: 2;
+}
+.auction-information--list--title span::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gradient-1);
+  z-index: -1;
+}
+.auction-information--list--item {
+  font-size: 18px;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  padding: 24px 12px;
+  position: relative;
+}
+.auction-information--list--item:last-child::after {
+  display: none;
+}
+.auction-information--list--item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--gradient-1);
+}
+.auction-information--list--item i {
+  display: inline-block;
+  font-size: 23px;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  color: transparent;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
 
 .auction-timeline--inner {
   margin-bottom: 2px;
