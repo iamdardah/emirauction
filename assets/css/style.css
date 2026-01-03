@@ -4191,11 +4191,16 @@ section {
 }
 @media screen and (max-width: 575px) {
   .auction-timeline--grid {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 24px;
+    margin: auto;
   }
 }
 .auction-timeline--grid::after {
@@ -4209,6 +4214,11 @@ section {
   height: 2px;
   background: var(--gradient-1);
   z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .auction-timeline--grid::after {
+    top: 78px;
+  }
 }
 @media screen and (max-width: 767px) {
   .auction-timeline--grid::after {
@@ -4255,11 +4265,16 @@ section {
   background: var(--gradient-1);
   border-radius: 50%;
 }
+@media screen and (max-width: 991px) {
+  .auction-timeline--card::after {
+    top: 74px;
+    width: 10px;
+    height: 10px;
+  }
+}
 @media screen and (max-width: 767px) {
   .auction-timeline--card::after {
     top: 65px;
-    width: 10px;
-    height: 10px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -4282,6 +4297,15 @@ section {
   margin-bottom: 66px;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .auction-timeline--card--number {
+    width: 47px;
+    height: 53px;
+    line-height: 53px;
+    font-size: 18px;
+    margin-bottom: 51px;
+  }
 }
 @media screen and (max-width: 767px) {
   .auction-timeline--card--number {
@@ -4330,6 +4354,11 @@ section {
   color: var(--white-1);
   margin-bottom: 0;
 }
+@media screen and (max-width: 991px) {
+  .auction-timeline--card--title {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 767px) {
   .auction-timeline--card--title {
     font-size: 16px;
@@ -4343,16 +4372,22 @@ section {
   margin-top: 12px;
   margin-bottom: 0;
 }
+@media screen and (max-width: 991px) {
+  .auction-timeline--card--info {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
 @media screen and (max-width: 767px) {
   .auction-timeline--card--info {
     font-size: 12px;
     margin-top: 6px;
   }
 }
-.auction-timeline--card:hover .auction-timeline--card--number::after {
+.auction-timeline--card.active .auction-timeline--card--number::after, .auction-timeline--card:hover .auction-timeline--card--number::after {
   opacity: 0;
 }
-.auction-timeline--card:hover .auction-timeline--card--number span {
+.auction-timeline--card.active .auction-timeline--card--number span, .auction-timeline--card:hover .auction-timeline--card--number span {
   color: var(--black-2);
 }
 

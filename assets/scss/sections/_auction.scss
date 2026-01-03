@@ -1597,8 +1597,11 @@
         position: relative;
         z-index: 2;
         @include msm-screen {
+            width: max-content;
+            max-width: 100%;
             flex-direction: column;
             gap: 24px;
+            margin: auto;
         }
         &::after {
             content: "";
@@ -1610,6 +1613,9 @@
             height: 2px;
             background: var(--gradient-1);
             z-index: -1;
+            @include md-screen {
+                top: 78px;
+            }
             @include sm-screen {
                 top: 69px;
             }
@@ -1643,10 +1649,13 @@
             height: 12px;
             background: var(--gradient-1);
             border-radius: 50%;
-            @include sm-screen {
-                top: 65px;
+            @include md-screen {
+                top: 74px;
                 width: 10px;
                 height: 10px;
+            }
+            @include sm-screen {
+                top: 65px;
             }
             @include msm-screen {
                 top: 50%;
@@ -1666,6 +1675,13 @@
             margin-bottom: 66px;
             position: relative;
             z-index: 2;
+            @include md-screen {
+                width: 47px;
+                height: 53px;
+                line-height: 53px;
+                font-size: 18px;
+                margin-bottom: 51px;
+            }
             @include sm-screen {
                 width: 42px;
                 height: 48px;
@@ -1706,6 +1722,9 @@
             font-weight: 500;
             color: var(--white-1);
             margin-bottom: 0;
+            @include md-screen {
+                font-size: 18px;
+            }
             @include sm-screen {
                 font-size: 16px;
             }
@@ -1717,11 +1736,16 @@
             color: var(--light-1);
             margin-top: 12px;
             margin-bottom: 0;
+            @include md-screen {
+                font-size: 14px;
+                margin-top: 8px;
+            }
             @include sm-screen {
                 font-size: 12px;
                 margin-top: 6px;
             }
         }
+        &.active,
         &:hover {
             .auction-timeline--card--number {
                 &::after {
