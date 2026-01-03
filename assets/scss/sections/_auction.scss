@@ -1551,6 +1551,14 @@
             }
         }
     }
+    &--list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 120px;
+        &--group {
+            width: calc(100% / 2 - 60px);
+        }
+    }
 }
 
 .auction-timeline {

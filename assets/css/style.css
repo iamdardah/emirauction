@@ -4140,6 +4140,17 @@ section {
     margin-right: 6px;
   }
 }
+.auction-information--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 120px;
+}
+.auction-information--list--group {
+  width: calc(50% - 60px);
+}
 
 .auction-timeline--inner {
   margin-bottom: 2px;
