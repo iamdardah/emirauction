@@ -7451,7 +7451,7 @@ section {
 .dashboard {
   width: 100%;
   min-height: 100vh;
-  padding: 93px 0 0 288px;
+  padding: 93px 0 0 290px;
   position: relative;
   overflow: visible;
   z-index: 2;
@@ -7487,7 +7487,7 @@ section {
   left: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 288px;
+  width: 290px;
   height: 100%;
   background: var(--black-3);
   border-right: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
@@ -7797,7 +7797,7 @@ section {
 .dashboard--header {
   position: fixed;
   top: 0;
-  left: 288px;
+  left: 290px;
   right: 0;
   width: auto;
   background: var(--black-4);
@@ -8329,11 +8329,6 @@ section {
   .dashboard--widget--name {
     font-size: 14px;
   }
-}
-.dashboard--widget:hover {
-  border-color: color-mix(in srgb, var(--base-1), transparent 70%);
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
 }
 .dashboard--footer {
   position: absolute;
