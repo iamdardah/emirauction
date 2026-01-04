@@ -147,6 +147,7 @@
             gap: 10px;
             @include sm-screen {
                 justify-content: center;
+                gap: 5px;
             }
             a {
                 text-align: center;
@@ -158,6 +159,18 @@
                 border-radius: 50%;
                 position: relative;
                 z-index: 2;
+                @include lg-screen {
+                    width: 37px;
+                    height: 37px;
+                    line-height: 38px;
+                    font-size: 18px;
+                }
+                @include sm-screen {
+                    width: 32px;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 16px;
+                }
                 &::before {
                     content: "";
                     position: absolute;
@@ -176,6 +189,14 @@
                     &::before {
                         width: 45px;
                         height: 45px;
+                        @include lg-screen {
+                            width: 40px;
+                            height: 40px;
+                        }
+                        @include sm-screen {
+                            width: 35px;
+                            height: 35px;
+                        }
                     }
                 }
             }

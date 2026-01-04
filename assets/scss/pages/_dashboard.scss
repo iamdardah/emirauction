@@ -5,14 +5,14 @@
     position: relative;
     overflow: visible;
     z-index: 2;
-    @include xl-screen {
-        padding: 102px 20px 20px 340px;
-    }
     @include lg-screen {
-        padding: 97px 15px 15px;
+        padding: 76px 0 0;
     }
     @include md-screen {
-        padding: 74px 12px 12px;
+        padding: 71px 0 0;
+    }
+    @include sm-screen {
+        padding: 56px 0 0;
     }
     &--sidebar {
         position: fixed;
@@ -20,33 +20,20 @@
         left: 0;
         flex-shrink: 0;
         width: 288px;
-        height: 100vh;
+        height: 100%;
         background: var(--black-3);
         border-right: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
         @include xl-screen {
-            top: 20px;
-            left: 20px;
-            height: calc(100vh - 40px);
+            width: 250px;
         }
         @include lg-screen {
-            top: 15px;
-            left: 15px;
-            height: calc(100vh - 30px);
+            width: 270px;
             transform: translateX(-120%);
-            padding: 20px;
             z-index: 9999;
             transition: .3s;
             &.active {
                 transform: translateX(0);
             }
-        }
-        @include md-screen {
-            top: 12px;
-            left: 12px;
-            width: 296px;
-            height: calc(100vh - 24px);
-            padding: 15px;
-            border-radius: 15px;
         }
         &--logo {
             height: 258px;
@@ -59,12 +46,7 @@
             overflow: hidden;
             z-index: 2;
             @include lg-screen {
-                justify-content: space-between;
-                align-items: center;
-                padding-bottom: 20px;
-            }
-            @include md-screen {
-                padding-bottom: 15px;
+                height: 180px;
             }
             &::after {
                 content: "";
@@ -89,29 +71,60 @@
             img {
                 max-width: 100%;
                 max-height: 100%;
+                @include lg-screen {
+                    max-width: 100px;
+                }
             }
         }
         &--btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
             width: 40px;
             height: 40px;
-            background: var(--base-2);
+            background: var(--gradient-1);
             border-radius: 10px;
             font-size: 25px;
-            color: var(--white-1);
-            .ti {
-                transform: translateY(10%);
+            color: var(--black-1);
+            @include lg-screen {
+                top: 20px;
+                right: 20px;
+                width: 35px;
+                height: 35px;
+                line-height: 39px;
+                border-radius: 7px;
+                font-size: 22px;
+            }
+            @include sm-screen {
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                line-height: 34px;
+                border-radius: 5px;
+                font-size: 20px;
             }
         }
         &--menu {
             height: calc(100% - 258px);
             padding-block: 45px;
+            @include lg-screen {
+                height: calc(100% - 180px);
+                padding-block: 25px;
+            }
         }
         &--nav {
             height: 100%;
             padding-inline: 30px;
             overflow-y: auto;
+            @include lg-screen {
+                padding-inline: 15px;
+            }
             &--item {
                 margin-bottom: 16px;
+                @include lg-screen {
+                    margin-bottom: 10px;
+                }
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -125,6 +138,10 @@
                 border-radius: 12px;
                 position: relative;
                 z-index: 2;
+                @include lg-screen {
+                    gap: 6px;
+                    border-radius: 6px;
+                }
                 &.active {
                     color: var(--black-2);
                     &::after {
@@ -140,6 +157,9 @@
                     opacity: 0;
                     transition: .3s;
                     z-index: -1;
+                    @include lg-screen {
+                        border-radius: 6px;
+                    }
                 }
                 &:hover {
                     color: var(--black-2);
@@ -152,12 +172,24 @@
                 display: block;
                 font-size: 22px;
                 line-height: 1;
+                @include lg-screen {
+                    font-size: 20px;
+                }
+                @include sm-screen {
+                    font-size: 18px;
+                }
             }
             &--txt {
                 display: block;
                 font-size: 16px;
                 line-height: 1.3;
                 font-weight: 500;
+                @include lg-screen {
+                    font-size: 14px;
+                }
+                @include sm-screen {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -165,6 +197,15 @@
         width: 100%;
         padding: 30px 30px 110px;
         position: relative;
+        @include lg-screen {
+            padding: 20px 20px 87px;
+        }
+        @include md-screen {
+            padding: 15px 15px 154px;
+        }
+        @include sm-screen {
+            padding: 10px 10px 118px;
+        }
     }
     &--header {
         position: fixed;
@@ -179,44 +220,47 @@
         gap: 20px;
         align-items: center;
         z-index: 1001;
-        @include xl-screen {
-            top: 20px;
-            left: 340px;
-            right: 20px;
-        }
         @include lg-screen {
-            top: 15px;
-            left: 15px;
-            right: 15px;
+            left: 0;
+            padding: 15px;
+            gap: 15px;
         }
-        @include md-screen {
-            top: 12px;
-            left: 12px;
-            right: 12px;
+        @include sm-screen {
             padding: 10px;
-            border-width: 1px;
-            border-radius: 15px;
             gap: 10px;
         }
         &--toggle-btn {
             flex-shrink: 0;
             width: 40px;
             height: 40px;
-            background: var(--base-1);
+            background: var(--gradient-1);
             border-radius: 10px;
             font-size: 25px;
-            color: var(--white-1);
-            .ti {
-                transform: translateY(10%);
+            color: var(--black-1);
+            @include lg-screen {
+                width: 35px;
+                height: 35px;
+                line-height: 39px;
+                border-radius: 7px;
+                font-size: 22px;
+            }
+            @include sm-screen {
+                width: 30px;
+                height: 30px;
+                line-height: 34px;
+                border-radius: 5px;
+                font-size: 20px;
             }
         }
-        &--page-name {
-            font-size: 30px;
+        &--welcome {
+            font-size: 35px;
             line-height: 1.2;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--white-1);
-            margin-top: -3px;
             margin-bottom: 0;
+            @include xl-screen {
+                font-size: 30px;
+            }
             @include lg-screen {
                 font-size: 25px;
             }
@@ -225,14 +269,18 @@
             }
             @include sm-screen {
                 font-size: 18px;
+                font-weight: 500;
             }
             @include msm-screen {
                 font-size: 16px;
-                line-height: 1;
             }
-            i {
-                transform: translateY(10%);
-                color: var(--base-1);
+            @include xsm-screen {
+                font-size: 14px;
+            }
+            span {
+                color: transparent;
+                background: var(--gradient-1);
+                background-clip: text;
             }
         }
         &--txt {
@@ -241,6 +289,16 @@
             color: var(--white-1);
             margin-bottom: 0;
             margin-right: 16px;
+            @include lg-screen {
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            @include sm-screen {
+                font-size: 14px;
+            }
+            @include msm-screen {
+                display: none;
+            }
             span {
                 font-weight: 700;
                 color: transparent;
@@ -259,6 +317,24 @@
             position: relative;
             transition: .3s;
             z-index: 2;
+            @include xl-screen {
+                width: 45px;
+                height: 45px;
+                line-height: 49px;
+                font-size: 20px;
+            }
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+                line-height: 44px;
+                font-size: 18px;
+            }
+            @include sm-screen {
+                width: 35px;
+                height: 35px;
+                line-height: 39px;
+                font-size: 16px;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -289,10 +365,17 @@
             height: 52px;
             border-radius: 50%;
             overflow: hidden;
+            @include lg-screen {
+                width: 45px;
+                height: 45px;
+            }
             @include md-screen {
                 width: 40px;
                 height: 40px;
-                border-width: 1px;
+            }
+            @include sm-screen {
+                width: 35px;
+                height: 35px;
             }
             img {
                 width: 100%;
@@ -518,16 +601,37 @@
         right: 0;
         background: var(--black-4);
         padding: 19px 24px;
+        @include lg-screen {
+            padding: 15px 18px;
+        }
+        @include md-screen {
+            text-align: center;
+        }
+        @include sm-screen {
+            padding: 10px 12px;
+        }
         p {
             font-size: 16px;
             line-height: 1.5;
             font-weight: 300;
             letter-spacing: 0.5px;
             margin-bottom: 0;
+            @include lg-screen {
+                font-size: 14px;
+            }
+            @include sm-screen {
+                font-size: 12px;
+            }
         }
         &--social {
             display: flex;
             justify-content: center;
+            @include md-screen {
+                padding: 15px 0;
+            }
+            @include sm-screen {
+                padding: 10px 0;
+            }
         }
     }
 }
