@@ -523,11 +523,36 @@ section {
     background: color-mix(in srgb, var(--black-3), transparent 70%);
     border-color: color-mix(in srgb, var(--black-4), transparent 30%);
     border-radius: 16px;
+    @include md-screen {
+        padding: 18px 24px;
+    }
+    @include sm-screen {
+        padding: 12px 16px;
+        border-radius: 10px;
+    }
     &-header {
         color: var(--light-1);
         padding: 0;
         padding-bottom: 24px;
         border-bottom: 2px dashed var(--black-4);
+        @include md-screen {
+            padding-bottom: 18px;
+        }
+        @include sm-screen {
+            padding-bottom: 12px;
+        }
+        .d-flex {
+            column-gap: 24px;
+            row-gap: 12px;
+            @include md-screen {
+                column-gap: 18px;
+                row-gap: 9px;
+            }
+            @include sm-screen {
+                column-gap: 12px;
+                row-gap: 6px;
+            }
+        }
     }
     &-title {
         font-size: 24px;
@@ -535,6 +560,15 @@ section {
         font-weight: 500;
         color: var(--white-1);
         margin-bottom: 0;
+        @include xl-screen {
+            font-size: 22px;
+        }
+        @include md-screen {
+            font-size: 20px;
+        }
+        @include sm-screen {
+            font-size: 18px;
+        }
         span {
             color: transparent;
             background: var(--gradient-1);
@@ -548,6 +582,9 @@ section {
                 width: 100%;
                 height: 1px;
                 background: var(--gradient-1);
+                @include sm-screen {
+                    bottom: 4px;
+                }
             }
         }
     }
@@ -559,6 +596,9 @@ section {
         span {
             font-size: 14px;
             line-height: 1.5;
+            @include sm-screen {
+                font-size: 12px;
+            }
         }
         select {
             height: 34px;
@@ -576,6 +616,12 @@ section {
             border-radius: 20px;
             outline: none;
             transition: .3s;
+            @include sm-screen {
+                height: 30px;
+                font-size: 10px;
+                padding: 0 25px 0 10px;
+                background-size: 13px;
+            }
             option {
                 background: var(--black-3);
             }
@@ -584,5 +630,11 @@ section {
     &-body {
         padding: 0;
         padding-top: 24px;
+        @include md-screen {
+            padding-top: 18px;
+        }
+        @include sm-screen {
+            padding-top: 12px;
+        }
     }
 }

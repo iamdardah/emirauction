@@ -453,6 +453,10 @@
             font-weight: 600;
             color: var(--white-1);
             margin-bottom: 0;
+            @include sm-screen {
+                font-size: 18px;
+                font-weight: 500;
+            }
         }
         &--list {
             display: flex;
@@ -499,6 +503,9 @@
                 @include sm-screen {
                     font-size: 12px;
                 }
+                @include msm-screen {
+                    font-size: 10px;
+                }
                 &::after {
                     display: inline-block;
                     content: "\e12a";
@@ -516,6 +523,7 @@
                         margin-left: 4px;
                     }
                     @include msm-screen {
+                        font-size: 10px;
                         margin-left: 3px;
                     }
                 }
@@ -703,6 +711,9 @@
     }
 }
 
+#recentEarnings {
+    min-height: auto !important;
+}
 #SvgjsLine1030 {
     display: none;
 }
@@ -718,4 +729,12 @@
 .apexcharts-xaxis-texts-g text,
 .apexcharts-yaxis-texts-g text {
     fill: var(--light-1);
+    @include sm-screen {
+        font-size: 10px;
+    }
+}
+.apexcharts-tooltip-text {
+    line-height: 1;
+    display: flex;
+    align-items: center;
 }
