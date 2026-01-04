@@ -10,6 +10,15 @@
             position: relative;
             overflow: hidden;
             z-index: 2;
+            @include lg-screen {
+                border-radius: 30px;
+            }
+            @include md-screen {
+                border-radius: 25px;
+            }
+            @include sm-screen {
+                border-radius: 20px;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -19,6 +28,15 @@
                 border-radius: 40px;
                 transition: .3s;
                 z-index: -2;
+                @include lg-screen {
+                    border-radius: 30px;
+                }
+                @include md-screen {
+                    border-radius: 25px;
+                }
+                @include sm-screen {
+                    border-radius: 20px;
+                }
             }
             .show {
                 .accordion-body {
@@ -38,6 +56,14 @@
             font-weight: 500;
             color: var(--white-1);
             padding: 28px;
+            @include lg-screen {
+                font-size: 18px;
+                padding: 21px;
+            }
+            @include sm-screen {
+                font-size: 16px;
+                padding: 14px;
+            }
             &.collapsed {
                 span {
                     color: var(--white-1);
@@ -56,6 +82,7 @@
                 display: none;
             }
             span {
+                flex-shrink: 0;
                 text-align: center;
                 width: 40px;
                 height: 40px;
@@ -68,6 +95,22 @@
                 margin-right: -8px;
                 position: relative;
                 z-index: 2;
+                @include lg-screen {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 33px;
+                    font-size: 16px;
+                    margin-block: -7px;
+                    margin-right: -7px;
+                }
+                @include sm-screen {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 28px;
+                    font-size: 14px;
+                    margin-block: -6px;
+                    margin-right: -6px;
+                }
                 &::before {
                     content: "";
                     position: absolute;
@@ -91,6 +134,17 @@
             line-height: 1.5;
             color: var(--light-1);
             padding: 0 50px 24px;
+            @include lg-screen {
+                padding: 0 40px 20px;
+            }
+            @include md-screen {
+                font-size: 14px;
+                padding: 0 30px 18px;
+            }
+            @include sm-screen {
+                font-size: 12px;
+                padding: 0 25px 14px;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -100,6 +154,15 @@
                 opacity: 0;
                 transition: .3s;
                 z-index: -2;
+                @include lg-screen {
+                    border-radius: 30px;
+                }
+                @include md-screen {
+                    border-radius: 25px;
+                }
+                @include sm-screen {
+                    border-radius: 20px;
+                }
             }
             &::after {
                 content: "";
@@ -114,12 +177,32 @@
                 opacity: 0;
                 transition: .3s;
                 z-index: -1;
+                @include md-screen {
+                    bottom: -50px;
+                    right: -100px;
+                    width: 200px;
+                    height: 80px;
+                    filter: blur(60px);
+                }
+                @include sm-screen {
+                    bottom: -30px;
+                    right: -80px;
+                    width: 150px;
+                    height: 60px;
+                    filter: blur(50px);
+                }
             }
             p {
                 font-size: 16px;
                 line-height: 1.5;
                 color: var(--light-1);
                 margin-bottom: 0;
+                @include md-screen {
+                    font-size: 14px;
+                }
+                @include sm-screen {
+                    font-size: 12px;
+                }
             }
         }
     }

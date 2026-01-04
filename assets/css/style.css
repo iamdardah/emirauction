@@ -7173,6 +7173,21 @@ section {
   overflow: hidden;
   z-index: 2;
 }
+@media screen and (max-width: 1199px) {
+  .faq .accordion-item {
+    border-radius: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .faq .accordion-item {
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-item {
+    border-radius: 20px;
+  }
+}
 .faq .accordion-item::after {
   content: "";
   position: absolute;
@@ -7184,6 +7199,21 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: -2;
+}
+@media screen and (max-width: 1199px) {
+  .faq .accordion-item::after {
+    border-radius: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .faq .accordion-item::after {
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-item::after {
+    border-radius: 20px;
+  }
 }
 .faq .accordion-item .show .accordion-body::before, .faq .accordion-item .show .accordion-body::after {
   opacity: 1;
@@ -7204,6 +7234,18 @@ section {
   color: var(--white-1);
   padding: 28px;
 }
+@media screen and (max-width: 1199px) {
+  .faq .accordion-button {
+    font-size: 18px;
+    padding: 21px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
 .faq .accordion-button.collapsed span {
   color: var(--white-1);
   border-color: var(--white-1);
@@ -7221,6 +7263,8 @@ section {
   display: none;
 }
 .faq .accordion-button span {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   text-align: center;
   width: 40px;
   height: 40px;
@@ -7233,6 +7277,26 @@ section {
   margin-right: -8px;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .faq .accordion-button span {
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    font-size: 16px;
+    margin-block: -7px;
+    margin-right: -7px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-button span {
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    font-size: 14px;
+    margin-block: -6px;
+    margin-right: -6px;
+  }
 }
 .faq .accordion-button span::before {
   content: "";
@@ -7258,6 +7322,23 @@ section {
   color: var(--light-1);
   padding: 0 50px 24px;
 }
+@media screen and (max-width: 1199px) {
+  .faq .accordion-body {
+    padding: 0 40px 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .faq .accordion-body {
+    font-size: 14px;
+    padding: 0 30px 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-body {
+    font-size: 12px;
+    padding: 0 25px 14px;
+  }
+}
 .faq .accordion-body::before {
   content: "";
   position: absolute;
@@ -7268,6 +7349,21 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: -2;
+}
+@media screen and (max-width: 1199px) {
+  .faq .accordion-body::before {
+    border-radius: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .faq .accordion-body::before {
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-body::before {
+    border-radius: 20px;
+  }
 }
 .faq .accordion-body::after {
   content: "";
@@ -7286,11 +7382,41 @@ section {
   transition: 0.3s;
   z-index: -1;
 }
+@media screen and (max-width: 991px) {
+  .faq .accordion-body::after {
+    bottom: -50px;
+    right: -100px;
+    width: 200px;
+    height: 80px;
+    -webkit-filter: blur(60px);
+            filter: blur(60px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-body::after {
+    bottom: -30px;
+    right: -80px;
+    width: 150px;
+    height: 60px;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+  }
+}
 .faq .accordion-body p {
   font-size: 16px;
   line-height: 1.5;
   color: var(--light-1);
   margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  .faq .accordion-body p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .accordion-body p {
+    font-size: 12px;
+  }
 }
 
 .dashboard {
