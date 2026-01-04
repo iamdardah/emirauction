@@ -1555,8 +1555,26 @@
         display: flex;
         flex-wrap: wrap;
         gap: 120px;
+        @include xl-screen {
+            gap: 100px;
+        }
+        @include lg-screen {
+            gap: 80px;
+        }
+        @include sm-screen {
+            gap: 60px;
+        }
         &--group {
             width: calc(100% / 2 - 60px);
+            @include xl-screen {
+                width: calc(100% / 2 - 50px);
+            }
+            @include lg-screen {
+                width: calc(100% / 2 - 40px);
+            }
+            @include sm-screen {
+                width: 100%;
+            }
             ul {
                 position: relative;
                 z-index: 2;
@@ -1570,6 +1588,12 @@
                     background: linear-gradient(var(--base-2), var(--base-1), var(--base-2));
                     transform: translateX(-50%);
                     z-index: -1;
+                    @include lg-screen {
+                        left: 38px;
+                    }
+                    @include sm-screen {
+                        left: 33px;
+                    }
                 }
             }
         }
@@ -1580,6 +1604,18 @@
             font-weight: 600;
             color: var(--white-1);
             margin-bottom: 32px;
+            @include lg-screen {
+                font-size: 27px;
+                font-weight: 500;
+                margin-bottom: 27px;
+            }
+            @include sm-screen {
+                font-size: 22px;
+                margin-bottom: 22px;
+            }
+            @include msm-screen {
+                font-size: 20px;
+            }
             span {
                 color: transparent;
                 background: var(--gradient-1);
@@ -1595,6 +1631,9 @@
                     height: 1px;
                     background: var(--gradient-1);
                     z-index: -1;
+                    @include lg-screen {
+                        bottom: 2px;
+                    }
                 }
             }
         }
@@ -1605,6 +1644,15 @@
             gap: 40px;
             padding: 24px 12px;
             position: relative;
+            @include lg-screen {
+                font-size: 16px;
+                gap: 20px;
+                padding: 18px 9px;
+            }
+            @include sm-screen {
+                font-size: 14px;
+                padding: 12px 6px;
+            }
             &:last-child {
                 &::after {
                     display: none;
@@ -1627,6 +1675,12 @@
                 color: transparent;
                 background: var(--gradient-1);
                 background-clip: text;
+                @include lg-screen {
+                    font-size: 20px;
+                }
+                @include sm-screen {
+                    font-size: 18px;
+                }
             }
         }
     }

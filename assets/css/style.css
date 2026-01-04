@@ -4148,8 +4148,38 @@ section {
       flex-wrap: wrap;
   gap: 120px;
 }
+@media screen and (max-width: 1399px) {
+  .auction-information--list {
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--list {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--list {
+    gap: 60px;
+  }
+}
 .auction-information--list--group {
   width: calc(50% - 60px);
+}
+@media screen and (max-width: 1399px) {
+  .auction-information--list--group {
+    width: calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--list--group {
+    width: calc(50% - 40px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--list--group {
+    width: 100%;
+  }
 }
 .auction-information--list--group ul {
   position: relative;
@@ -4168,6 +4198,16 @@ section {
           transform: translateX(-50%);
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .auction-information--list--group ul::after {
+    left: 38px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--list--group ul::after {
+    left: 33px;
+  }
+}
 .auction-information--list--title {
   font-family: var(--heading-font);
   font-size: 32px;
@@ -4175,6 +4215,24 @@ section {
   font-weight: 600;
   color: var(--white-1);
   margin-bottom: 32px;
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--list--title {
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 27px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--list--title {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .auction-information--list--title {
+    font-size: 20px;
+  }
 }
 .auction-information--list--title span {
   color: transparent;
@@ -4194,6 +4252,11 @@ section {
   background: var(--gradient-1);
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .auction-information--list--title span::after {
+    bottom: 2px;
+  }
+}
 .auction-information--list--item {
   font-size: 18px;
   line-height: 1.2;
@@ -4203,6 +4266,19 @@ section {
   gap: 40px;
   padding: 24px 12px;
   position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--list--item {
+    font-size: 16px;
+    gap: 20px;
+    padding: 18px 9px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--list--item {
+    font-size: 14px;
+    padding: 12px 6px;
+  }
 }
 .auction-information--list--item:last-child::after {
   display: none;
@@ -4226,6 +4302,16 @@ section {
   background: var(--gradient-1);
   -webkit-background-clip: text;
           background-clip: text;
+}
+@media screen and (max-width: 1199px) {
+  .auction-information--list--item i {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auction-information--list--item i {
+    font-size: 18px;
+  }
 }
 
 .auction-timeline--inner {
