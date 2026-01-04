@@ -7567,6 +7567,7 @@ section {
   position: absolute;
   inset: 0;
   background-size: cover;
+  background-position: cover cover;
   opacity: 0.2;
   z-index: -1;
 }
@@ -8200,22 +8201,24 @@ section {
 }
 @media screen and (max-width: 1699px) {
   .dashboard--widget {
-    padding: 25px;
+    padding: 20px 15px;
   }
 }
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 1399px) {
   .dashboard--widget {
     padding: 25px 15px;
   }
 }
 @media screen and (max-width: 991px) {
   .dashboard--widget {
-    padding: 25px;
+    padding: 20px;
+    border-radius: 15px;
   }
 }
 @media screen and (max-width: 767px) {
   .dashboard--widget {
-    padding: 20px;
+    padding: 15px;
+    border-radius: 10px;
   }
 }
 .dashboard--widget::after {
@@ -8231,30 +8234,27 @@ section {
   border-radius: 50%;
   z-index: -1;
 }
+@media screen and (max-width: 991px) {
+  .dashboard--widget::after {
+    width: 320px;
+    height: 320px;
+    bottom: calc(100% - 50px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard--widget::after {
+    width: 260px;
+    height: 260px;
+    bottom: calc(100% - 40px);
+  }
+}
 .dashboard--widget--bg {
   position: absolute;
   inset: 0;
   background-size: cover;
+  background-position: center center;
   opacity: 0.3;
   z-index: -1;
-}
-@media screen and (max-width: 1399px) {
-  .dashboard--widget--bg {
-    width: 180px;
-    height: 180px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .dashboard--widget--bg {
-    width: 150px;
-    height: 150px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .dashboard--widget--bg {
-    width: 120px;
-    height: 120px;
-  }
 }
 .dashboard--widget--bg::after {
   content: "";
@@ -8281,6 +8281,22 @@ section {
   border-radius: 50%;
   margin-bottom: 13px;
 }
+@media screen and (max-width: 991px) {
+  .dashboard--widget--icon {
+    width: 55px;
+    height: 55px;
+    border-width: 4px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard--widget--icon {
+    width: 50px;
+    height: 50px;
+    padding: 11px;
+    border-width: 3px;
+    margin-bottom: 10px;
+  }
+}
 .dashboard--widget--number {
   display: block;
   width: -webkit-max-content;
@@ -8303,11 +8319,13 @@ section {
 @media screen and (max-width: 991px) {
   .dashboard--widget--number {
     font-size: 16px;
+    margin-bottom: 7px;
   }
 }
 @media screen and (max-width: 767px) {
   .dashboard--widget--number {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 5px;
   }
 }
 .dashboard--widget--name {
@@ -8317,9 +8335,14 @@ section {
   letter-spacing: 0.5px;
   font-weight: 300;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1599px) {
   .dashboard--widget--name {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard--widget--name {
+    font-size: 13px;
   }
 }
 .dashboard--footer {
