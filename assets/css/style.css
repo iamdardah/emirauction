@@ -8205,19 +8205,11 @@ section {
 }
 @media screen and (max-width: 1599px) {
   .dashboard--widget {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding: 25px 15px;
   }
 }
 @media screen and (max-width: 991px) {
   .dashboard--widget {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     padding: 25px;
   }
 }

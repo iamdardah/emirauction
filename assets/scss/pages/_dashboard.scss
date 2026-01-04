@@ -554,11 +554,9 @@
             padding: 25px;
         }
         @include xxl-screen {
-            flex-direction: column;
             padding: 25px 15px;
         }
         @include md-screen {
-            flex-direction: row;
             padding: 25px;
         }
         @include sm-screen {
