@@ -996,6 +996,9 @@ section {
   z-index: -1;
 }
 .table-wrap .table {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   margin-bottom: 0;
 }
 .table-wrap .table th {
@@ -1010,8 +1013,32 @@ section {
   position: relative;
   z-index: 2;
 }
-.table-wrap .table th:first-child::after {
-  border-right-width: 6px;
+@media screen and (max-width: 1399px) {
+  .table-wrap .table th {
+    font-size: 22px;
+    border-bottom-width: 4px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .table-wrap .table th {
+    font-size: 20px;
+    padding: 15px 24px;
+    border-bottom-width: 3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .table-wrap .table th {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .table-wrap .table th {
+    font-size: 16px;
+    padding: 8px 10px;
+    border-bottom-width: 2px;
+  }
 }
 .table-wrap .table th:last-child::after {
   border-right-width: 0;
@@ -1040,8 +1067,28 @@ section {
   position: relative;
   z-index: 2;
 }
-.table-wrap .table td:first-child::after {
-  border-right-width: 6px;
+@media screen and (max-width: 1399px) {
+  .table-wrap .table td {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .table-wrap .table td {
+    font-size: 16px;
+    padding: 15px 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .table-wrap .table td {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .table-wrap .table td {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
 }
 .table-wrap .table td:last-child::after {
   border-right-width: 0;
