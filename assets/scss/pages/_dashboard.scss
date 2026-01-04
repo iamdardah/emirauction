@@ -707,6 +707,65 @@
             @include sm-screen {
                 padding: 10px 0;
             }
+            .footer--content--social {
+                display: flex;
+                gap: 10px;
+                @include sm-screen {
+                    justify-content: center;
+                    gap: 5px;
+                }
+                a {
+                    text-align: center;
+                    width: 42px;
+                    height: 42px;
+                    line-height: 44px;
+                    font-size: 20px;
+                    border: 1px solid color-mix(in srgb, var(--white-1), transparent 90%);
+                    border-radius: 50%;
+                    position: relative;
+                    z-index: 2;
+                    @include lg-screen {
+                        width: 37px;
+                        height: 37px;
+                        line-height: 38px;
+                        font-size: 18px;
+                    }
+                    @include sm-screen {
+                        width: 32px;
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 16px;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        transform: translate(-50%, -50%);
+                        background: var(--gradient-1);
+                        border-radius: 50%;
+                        transition: .3s;
+                        z-index: -1;
+                    }
+                    &:hover {
+                        color: var(--black-1);
+                        &::before {
+                            width: 45px;
+                            height: 45px;
+                            @include lg-screen {
+                                width: 40px;
+                                height: 40px;
+                            }
+                            @include sm-screen {
+                                width: 35px;
+                                height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

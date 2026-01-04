@@ -392,6 +392,7 @@ section {
 }
 
 .pagination {
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 36px;
@@ -403,11 +404,11 @@ section {
     }
     @include sm-screen {
         margin-top: 12px;
+        gap: 5px;
     }
     .page-item {
         &:first-child {
             .page-link {
-                font-size: 12px;
                 background: var(--gradient-1);
                 &::before {
                     content: "";
@@ -421,7 +422,6 @@ section {
         }
         &:last-child {
             .page-link {
-                font-size: 12px;
                 background: var(--gradient-1);
                 &::before {
                     content: "";
@@ -443,7 +443,6 @@ section {
         }
         .page-link {
             background: transparent;
-            margin: 0 5px;
             border: 0;
             border-radius: 25px;
             line-height: 40px;
@@ -458,12 +457,19 @@ section {
             color: var(--white-1);
             position: relative;
             z-index: 2;
-            @include sm-screen {
-                border-radius: 20px;
-                line-height: 34px;
+            @include md-screen {
+                border-radius: 18px;
+                line-height: 35px;
                 height: 35px;
                 min-width: 35px;
                 font-size: 14px;
+            }
+            @include sm-screen {
+                border-radius: 15px;
+                line-height: 30px;
+                height: 30px;
+                min-width: 30px;
+                font-size: 12px;
             }
             &::after {
                 content: "";
@@ -483,10 +489,6 @@ section {
             }
             &:focus {
                 box-shadow: none;
-            }
-            i {
-                transform: translate(0);
-                font-size: 1.5em;
             }
         }
     }
