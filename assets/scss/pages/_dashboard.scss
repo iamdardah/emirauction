@@ -5,6 +5,12 @@
     position: relative;
     overflow: visible;
     z-index: 2;
+    @include xxl-screen {
+        padding: 93px 0 0 265px;
+    }
+    @include xl-screen {
+        padding: 76px 0 0 250px;
+    }
     @include lg-screen {
         padding: 76px 0 0;
     }
@@ -23,6 +29,9 @@
         height: 100%;
         background: var(--black-3);
         border-right: 1px solid color-mix(in srgb, var(--white-1), transparent 95%);
+        @include xxl-screen {
+            width: 265px;
+        }
         @include xl-screen {
             width: 250px;
         }
@@ -45,6 +54,12 @@
             position: relative;
             overflow: hidden;
             z-index: 2;
+            @include xxl-screen {
+                height: 235px;
+            }
+            @include xl-screen {
+                height: 220px;
+            }
             @include lg-screen {
                 height: 180px;
             }
@@ -71,6 +86,15 @@
             img {
                 max-width: 100%;
                 max-height: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @include xxl-screen {
+                    max-width: 135px;
+                }
+                @include xl-screen {
+                    max-width: 120px;
+                }
                 @include lg-screen {
                     max-width: 100px;
                 }
@@ -108,6 +132,14 @@
         &--menu {
             height: calc(100% - 258px);
             padding-block: 45px;
+            @include xxl-screen {
+                height: calc(100% - 235px);
+                padding-block: 40px;
+            }
+            @include xl-screen {
+                height: calc(100% - 220px);
+                padding-block: 30px;
+            }
             @include lg-screen {
                 height: calc(100% - 180px);
                 padding-block: 25px;
@@ -117,12 +149,18 @@
             height: 100%;
             padding-inline: 30px;
             overflow-y: auto;
+            @include xxl-screen {
+                padding-inline: 25px;
+            }
+            @include xl-screen {
+                padding-inline: 20px;
+            }
             @include lg-screen {
                 padding-inline: 15px;
             }
             &--item {
                 margin-bottom: 16px;
-                @include lg-screen {
+                @include xl-screen {
                     margin-bottom: 10px;
                 }
                 &:last-child {
@@ -138,7 +176,11 @@
                 border-radius: 12px;
                 position: relative;
                 z-index: 2;
-                @include lg-screen {
+                @include xl-screen {
+                    gap: 8px;
+                    border-radius: 10px;
+                }
+                @include sm-screen {
                     gap: 6px;
                     border-radius: 6px;
                 }
@@ -157,7 +199,10 @@
                     opacity: 0;
                     transition: .3s;
                     z-index: -1;
-                    @include lg-screen {
+                    @include xl-screen {
+                        border-radius: 10px;
+                    }
+                    @include sm-screen {
                         border-radius: 6px;
                     }
                 }
@@ -172,7 +217,7 @@
                 display: block;
                 font-size: 22px;
                 line-height: 1;
-                @include lg-screen {
+                @include xxl-screen {
                     font-size: 20px;
                 }
                 @include sm-screen {
@@ -184,7 +229,7 @@
                 font-size: 16px;
                 line-height: 1.3;
                 font-weight: 500;
-                @include lg-screen {
+                @include xxl-screen {
                     font-size: 14px;
                 }
                 @include sm-screen {
@@ -197,6 +242,9 @@
         width: 100%;
         padding: 30px 30px 110px;
         position: relative;
+        @include xl-screen {
+            padding: 25px 25px 97px;
+        }
         @include lg-screen {
             padding: 20px 20px 87px;
         }
@@ -220,10 +268,16 @@
         gap: 20px;
         align-items: center;
         z-index: 1001;
-        @include lg-screen {
-            left: 0;
+        @include xxl-screen {
+            left: 265px;
+        }
+        @include xl-screen {
+            left: 250px;
             padding: 15px;
             gap: 15px;
+        }
+        @include lg-screen {
+            left: 0;
         }
         @include sm-screen {
             padding: 10px;
@@ -258,10 +312,10 @@
             font-weight: 600;
             color: var(--white-1);
             margin-bottom: 0;
-            @include xl-screen {
+            @include xxl-screen {
                 font-size: 30px;
             }
-            @include lg-screen {
+            @include xl-screen {
                 font-size: 25px;
             }
             @include md-screen {
@@ -289,7 +343,7 @@
             color: var(--white-1);
             margin-bottom: 0;
             margin-right: 16px;
-            @include lg-screen {
+            @include xl-screen {
                 font-size: 16px;
                 margin-right: 10px;
             }
@@ -365,7 +419,7 @@
             height: 52px;
             border-radius: 50%;
             overflow: hidden;
-            @include lg-screen {
+            @include xl-screen {
                 width: 45px;
                 height: 45px;
             }
@@ -601,7 +655,7 @@
         right: 0;
         background: var(--black-4);
         padding: 19px 24px;
-        @include lg-screen {
+        @include xl-screen {
             padding: 15px 18px;
         }
         @include md-screen {
@@ -616,7 +670,7 @@
             font-weight: 300;
             letter-spacing: 0.5px;
             margin-bottom: 0;
-            @include lg-screen {
+            @include xl-screen {
                 font-size: 14px;
             }
             @include sm-screen {
