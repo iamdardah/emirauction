@@ -1103,6 +1103,56 @@ section {
      border-image: var(--gradient-1);
   border-image-slice: 1;
 }
+.table-wrap .table--btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  padding: 5px 7px;
+  background: var(--gradient-1);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+.table-wrap .table--btn-group::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--black-2);
+  border-radius: 12px;
+  z-index: -1;
+}
+.table-wrap .table--btn {
+  width: calc(50% - 2px);
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 500;
+  padding: 8px 25px;
+  border-radius: 8px;
+}
+.table-wrap .table--btn-primary {
+  color: var(--black-2);
+  background: -webkit-gradient(linear, left top, right top, from(var(--base-2)), color-stop(var(--base-1)), color-stop(var(--base-2)), to(var(--base-1)));
+  background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: left;
+}
+.table-wrap .table--btn-primary:hover, .table-wrap .table--btn-primary:focus, .table-wrap .table--btn-primary:active {
+  background-position-x: right;
+}
+.table-wrap .table--btn-secondary {
+  background: var(--black-4);
+  background: -webkit-gradient(linear, left top, right top, from(var(--black-4)), color-stop(var(--black-4)), color-stop(var(--black-4)), color-stop(var(--black-3)), color-stop(var(--black-5)), to(var(--black-3)));
+  background: linear-gradient(to right, var(--black-4), var(--black-4), var(--black-4), var(--black-3), var(--black-5), var(--black-3));
+  background-repeat: no-repeat;
+  background-size: 250%;
+  background-position-x: left;
+}
+.table-wrap .table--btn-secondary:hover, .table-wrap .table--btn-secondary:focus, .table-wrap .table--btn-secondary:active {
+  background-position-x: right;
+}
 
 .header {
   position: absolute;

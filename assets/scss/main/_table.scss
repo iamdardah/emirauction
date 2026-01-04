@@ -120,5 +120,51 @@
                 border-image-slice: 1;
             }
         }
+        &--btn-group {
+            display: flex;
+            gap: 4px;
+            padding: 5px 7px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            position: relative;
+            z-index: 2;
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 1px;
+                background: var(--black-2);
+                border-radius: 12px;
+                z-index: -1;
+            }
+        }
+        &--btn {
+            width: calc(50% - 2px);
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.1;
+            font-weight: 500;
+            padding: 8px 25px;
+            border-radius: 8px;
+            &-primary {
+                color: var(--black-2);
+                background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+                background-repeat: no-repeat;
+                background-size: 150%;
+                background-position-x: left;
+                &:hover, &:focus, &:active {
+                    background-position-x: right;
+                }
+            }
+            &-secondary {
+                background: var(--black-4);
+                background: linear-gradient(to right, var(--black-4), var(--black-4), var(--black-4), var(--black-3), var(--black-5), var(--black-3));
+                background-repeat: no-repeat;
+                background-size: 250%;
+                background-position-x: left;
+                &:hover, &:focus, &:active {
+                    background-position-x: right;
+                }
+            }
+        }
     }
 }
