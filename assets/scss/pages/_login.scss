@@ -1,4 +1,35 @@
 .auth {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        left: 0;
+        transform: translateX(-50%);
+        width: 500px;
+        height: 500px;
+        background: var(--gradient-1);
+        border-radius: 50%;
+        filter: blur(200px);
+        opacity: 0.4;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: 0;
+        transform: translateX(50%);
+        width: 500px;
+        height: 500px;
+        background: var(--gradient-1);
+        border-radius: 50%;
+        filter: blur(200px);
+        opacity: 0.4;
+        z-index: -1;
+    }
     .g-60 {
         --bs-gutter-x: 60px;
         --bs-gutter-y: 60px;

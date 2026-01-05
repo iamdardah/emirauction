@@ -7808,6 +7808,43 @@ section {
   }
 }
 
+.auth {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.auth::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.4;
+  z-index: -1;
+}
+.auth::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.4;
+  z-index: -1;
+}
 .auth .g-60 {
   --bs-gutter-x: 60px;
   --bs-gutter-y: 60px;
