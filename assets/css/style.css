@@ -845,6 +845,47 @@ section {
   }
 }
 
+.form-control {
+  font-size: 16px;
+  line-height: 1.3;
+  padding: 15px 20px;
+  color: var(--white-1);
+  background: color-mix(in srgb, var(--white-1), transparent 94%);
+  border: 1px solid color-mix(in srgb, var(--white-1), transparent 94%);
+  border-radius: 12px;
+}
+.form-control:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus, .form-control:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.form-control:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: var(--white-1);
+  caret-color: var(--white-1);
+}
+.form-control::-webkit-input-placeholder {
+  color: var(--black-8) !important;
+}
+.form-control::-moz-placeholder {
+  color: var(--black-8) !important;
+}
+.form-control:-ms-input-placeholder {
+  color: var(--black-8) !important;
+}
+.form-control::-ms-input-placeholder {
+  color: var(--black-8) !important;
+}
+.form-control::placeholder {
+  color: var(--black-8) !important;
+}
+.form-control:focus {
+  color: var(--white-1);
+  background: color-mix(in srgb, var(--white-1), transparent 94%);
+  -webkit-box-shadow: 0 0;
+          box-shadow: 0 0;
+  border-color: var(--base-2);
+}
+
 .btn {
   padding: 8px 24px;
   border: 0;
@@ -7672,4 +7713,92 @@ section {
   .faq .accordion-body p {
     font-size: 12px;
   }
+}
+
+.auth--form {
+  padding: 40px;
+  background: var(--gradient-1);
+  border-radius: 32px;
+  position: relative;
+  z-index: 2;
+}
+.auth--form::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--black-2);
+  border-radius: 32px;
+  z-index: -1;
+}
+.auth--form--title {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--white-1);
+  margin-bottom: 48px;
+}
+.auth--form--body {
+  overflow: hidden;
+}
+.auth--form--google {
+  display: block;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 500;
+  padding: 14px 20px;
+  color: var(--white-1);
+  background: color-mix(in srgb, var(--white-1), transparent 96%);
+  border: 1px solid color-mix(in srgb, var(--white-1), transparent 96%);
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.auth--form--google img {
+  width: 23px;
+  height: 23px;
+}
+.auth--form--google:hover {
+  border-color: var(--base-2);
+}
+.auth--form--devider {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 15px;
+  line-height: 1.2;
+  color: color-mix(in srgb, var(--white-1), transparent 60%);
+  padding-inline: 20px;
+  margin: 32px auto;
+  position: relative;
+}
+.auth--form--devider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50vw;
+  height: 1px;
+  background: color-mix(in srgb, var(--white-1), transparent 80%);
+}
+.auth--form--devider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50vw;
+  height: 1px;
+  background: color-mix(in srgb, var(--white-1), transparent 80%);
 }

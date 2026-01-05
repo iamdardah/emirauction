@@ -1,0 +1,79 @@
+.auth {
+    &--form {
+        padding: 40px;
+        background: var(--gradient-1);
+        border-radius: 32px;
+        position: relative;
+        z-index: 2;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            background: var(--black-2);
+            border-radius: 32px;
+            z-index: -1;
+        }
+        &--title {
+            text-align: center;
+            font-size: 40px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--white-1);
+            margin-bottom: 48px;
+        }
+        &--body {
+            overflow: hidden;
+        }
+        &--google {
+            display: block;
+            font-size: 15px;
+            line-height: 1.3;
+            font-weight: 500;
+            padding: 14px 20px;
+            color: var(--white-1);
+            background: color-mix(in srgb, var(--white-1), transparent 96%);
+            border: 1px solid color-mix(in srgb, var(--white-1), transparent 96%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            img {
+                width: 23px;
+                height: 23px;
+            }
+            &:hover {
+                border-color: var(--base-2);
+            }
+        }
+        &--devider {
+            width: max-content;
+            font-size: 15px;
+            line-height: 1.2;
+            color: color-mix(in srgb, var(--white-1), transparent 60%);
+            padding-inline: 20px;
+            margin: 32px auto;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                transform: translateY(-50%);
+                width: 50vw;
+                height: 1px;
+                background: color-mix(in srgb, var(--white-1), transparent 80%);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+                width: 50vw;
+                height: 1px;
+                background: color-mix(in srgb, var(--white-1), transparent 80%);
+            }
+        }
+    }
+}

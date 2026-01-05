@@ -640,3 +640,34 @@ section {
         }
     }
 }
+
+.form-control {
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 15px 20px;
+    color: var(--white-1);
+    background: color-mix(in srgb, var(--white-1), transparent 94%);
+    border: 1px solid color-mix(in srgb, var(--white-1), transparent 94%);
+    border-radius: 12px;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-transition: background-color 5000s ease-in-out 0s;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        -webkit-text-fill-color: var(--white-1);
+        caret-color: var(--white-1);
+    }
+    &::placeholder {
+        color: var(--black-8) !important;
+    }
+    &:focus {
+        color: var(--white-1);
+        background: color-mix(in srgb, var(--white-1), transparent 94%);
+        box-shadow: 0 0;
+        border-color: var(--base-2);
+    }
+}
