@@ -102,11 +102,11 @@
             <div class="breadcrumb--vector bg-img" data-bg="assets/images/breadcrumb-vector.png"></div>
             <div class="container">
                 <div class="breadcrumb--content">
-                    <h2 class="breadcrumb--title">Login</h2>
+                    <h2 class="breadcrumb--title">Registration</h2>
                     <p class="breadcrumb--desc">Auction Frequently Asked Questions</p>
                     <ul class="breadcrumb--list">
                         <li>Home</li>
-                        <li>Login</li>
+                        <li>Registration</li>
                     </ul>
                 </div>
             </div>
@@ -122,38 +122,46 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="auth--form">
-                            <h3 class="auth--form--title">Login</h3>
+                            <h3 class="auth--form--title">Registration</h3>
                             <div class="auth--form--body">
-                                <a href="#" class="auth--form--google"><img src="assets/images/google-icon.png" alt="icon"> Login with google</a>
-                                <div class="auth--form--devider">Or Login with Email</div>
+                                <a href="#" class="auth--form--google"><img src="assets/images/google-icon.png" alt="icon"> Register with google</a>
+                                <div class="auth--form--devider">Or join with Email</div>
                                 <form action="#" class="row g-20">
                                     <div class="col-12">
+                                        <label class="form-label required">Name</label>
+                                        <input type="text" class="form-control" placeholder="your name" required>
+                                    </div>
+                                    <div class="col-12">
                                         <label class="form-label required">Email</label>
-                                        <input type="email" class="form-control" placeholder="Enter email address" required>
+                                        <input type="email" class="form-control" placeholder="e,g johndoe@email.com" required>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label required">Password</label>
                                         <div class="password-field">
-                                            <input type="password" class="form-control" placeholder="Enter email address" required>
+                                            <input type="password" class="form-control" placeholder="Enter your password" required>
                                             <button type="button" class="password-field--btn"></button>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="d-flex justify-content-between align-items-start flex-wrap">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="rememberMe">
-                                                <label class="form-check-label" for="rememberMe">
-                                                    Remember Me
-                                                </label>
-                                            </div>
-                                            <a href="#" class="auth--form--link">Forgot password?</a>
+                                        <label class="form-label required">Confirm Password</label>
+                                        <div class="password-field">
+                                            <input type="password" class="form-control" placeholder="Confirm your password" required>
+                                            <button type="button" class="password-field--btn"></button>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100">Login</button>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="agreeWithAll">
+                                            <label class="form-check-label" for="agreeWithAll">
+                                                I agree with <a href="#" class="auth--form--link">Privacy Policy</a>, <a href="#" class="auth--form--link">Terms of Service</a>, <a href="#" class="auth--form--link">Refund Policy</a>
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="col-12">
-                                        <p class="auth--form--txt">Not registered yet? <a href="registration.html" class="auth--form--link">Create account <i class="ph ph-arrow-up-right"></i></a></p>
+                                        <button class="btn btn-primary w-100">Register</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="auth--form--txt">Already registered? <a href="login.html" class="auth--form--link">Login Here <i class="ph ph-arrow-up-right"></i></a></p>
                                     </div>
                                 </form>
                             </div>

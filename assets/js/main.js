@@ -241,6 +241,16 @@
         var recentEarningsChart = new ApexCharts(document.querySelector("#recentEarnings"), recentEarningsOptions);
         recentEarningsChart.render();
     }
+
+    // Password show hide
+    $('.password-field--btn').on('click', function(){
+        $(this).toggleClass('show');
+        if($(this).hasClass('show')) {
+            $(this).siblings('input').attr('type', 'text');
+        } else {
+            $(this).siblings('input').attr('type', 'password');
+        }
+    });
     // ==========================================
     //      End Document Ready function
     // ==========================================
