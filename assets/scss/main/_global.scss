@@ -647,6 +647,14 @@ section {
     font-weight: 500;
     color: var(--light-1);
     margin-bottom: 16px;
+    @include md-screen {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    @include sm-screen {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
     &.required {
         &::after {
             content: "*";
@@ -662,6 +670,18 @@ section {
     background: color-mix(in srgb, var(--white-1), transparent 94%);
     border: 1px solid color-mix(in srgb, var(--white-1), transparent 94%);
     border-radius: 12px;
+    @include md-screen {
+        font-size: 14px;
+        padding: 13px 16px;
+    }
+    @include sm-screen {
+        padding: 11px 13px;
+        border-radius: 6px;
+    }
+    @include msm-screen {
+        font-size: 12px;
+        padding: 9px 10px;
+    }
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
@@ -687,16 +707,19 @@ section {
 
 .form-check {
     width: max-content;
+    max-width: 100%;
     min-height: auto;
     display: flex;
     padding-left: 25px;
     margin-bottom: 0;
     position: relative;
+    @include sm-screen {
+        padding-left: 20px;
+    }
     .form-check-input {
         position: absolute;
-        top: 50%;
+        top: 2px;
         left: 0;
-        transform: translateY(-50%);
         width: 15px;
         height: 15px;
         box-shadow: 0 0;
@@ -705,6 +728,14 @@ section {
         margin: auto;
         opacity: 0;
         cursor: pointer;
+        @include sm-screen {
+            width: 13px;
+            height: 13px;
+        }
+        @include msm-screen {
+            width: 11px;
+            height: 11px;
+        }
         &:checked + .form-check-label {
             &::before {
                 opacity: 1;
@@ -723,27 +754,39 @@ section {
         color: var(--light-1);
         user-select: none;
         cursor: pointer;
+        @include sm-screen {
+            font-size: 13px;
+        }
+        @include msm-screen {
+            font-size: 11px;
+        }
         &::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 2px;
             left: 0;
-            transform: translateY(-50%);
             width: 15px;
             height: 15px;
             background: var(--gradient-1);
             border-radius: 2px;
             opacity: 0;
             transition: .3s;
+            @include sm-screen {
+                width: 13px;
+                height: 13px;
+            }
+            @include msm-screen {
+                width: 11px;
+                height: 11px;
+            }
         }
         &::after {
             content: "\E182";
             font-family: "Phosphor";
             font-weight: bold;
             position: absolute;
-            top: 50%;
+            top: 2px;
             left: 0;
-            transform: translateY(-50%);
             text-align: center;
             width: 15px;
             height: 15px;
@@ -752,6 +795,18 @@ section {
             border: 1px solid color-mix(in srgb, var(--white-1), transparent 40%);
             border-radius: 2px;
             transition: .3s;
+            @include sm-screen {
+                width: 13px;
+                height: 13px;
+                line-height: 11px;
+                font-size: 8px;
+            }
+            @include msm-screen {
+                width: 11px;
+                height: 11px;
+                line-height: 9px;
+                font-size: 7px;
+            }
         }
     }
 }
@@ -760,6 +815,15 @@ section {
     position: relative;
     .form-control {
         padding-right: 50px;
+        @include md-screen {
+            padding-right: 44px;
+        }
+        @include sm-screen {
+            padding-right: 38px;
+        }
+        @include msm-screen {
+            padding-right: 34px;
+        }
     }
     &--btn {
         position: absolute;
@@ -768,9 +832,23 @@ section {
         width: 20px;
         height: 14px;
         line-height: 14px;
+        font-size: 18px;
         text-align: center;
         color: var(--white-1);
         transform: translateY(-50%);
+        @include md-screen {
+            right: 16px;
+            width: 18px;
+            font-size: 16px;
+        }
+        @include sm-screen {
+            right: 13px;
+            width: 15px;
+            font-size: 14px;
+        }
+        @include msm-screen {
+            right: 9px;
+        }
         &.show {
             &::after {
                 content: "\E224";

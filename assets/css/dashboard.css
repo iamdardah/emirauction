@@ -852,6 +852,18 @@ section {
   color: var(--light-1);
   margin-bottom: 16px;
 }
+@media screen and (max-width: 991px) {
+  .form-label {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
 .form-label.required::after {
   content: "*";
 }
@@ -864,6 +876,24 @@ section {
   background: color-mix(in srgb, var(--white-1), transparent 94%);
   border: 1px solid color-mix(in srgb, var(--white-1), transparent 94%);
   border-radius: 12px;
+}
+@media screen and (max-width: 991px) {
+  .form-control {
+    font-size: 14px;
+    padding: 13px 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-control {
+    padding: 11px 13px;
+    border-radius: 6px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .form-control {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
 }
 .form-control:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus, .form-control:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
@@ -901,6 +931,7 @@ section {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  max-width: 100%;
   min-height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -909,12 +940,15 @@ section {
   margin-bottom: 0;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .form-check {
+    padding-left: 20px;
+  }
+}
 .form-check .form-check-input {
   position: absolute;
-  top: 50%;
+  top: 2px;
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 15px;
   height: 15px;
   -webkit-box-shadow: 0 0;
@@ -924,6 +958,18 @@ section {
   margin: auto;
   opacity: 0;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .form-check .form-check-input {
+    width: 13px;
+    height: 13px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .form-check .form-check-input {
+    width: 11px;
+    height: 11px;
+  }
 }
 .form-check .form-check-input:checked + .form-check-label::before {
   opacity: 1;
@@ -944,13 +990,21 @@ section {
           user-select: none;
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  .form-check .form-check-label {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .form-check .form-check-label {
+    font-size: 11px;
+  }
+}
 .form-check .form-check-label::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 2px;
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 15px;
   height: 15px;
   background: var(--gradient-1);
@@ -959,15 +1013,25 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .form-check .form-check-label::before {
+    width: 13px;
+    height: 13px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .form-check .form-check-label::before {
+    width: 11px;
+    height: 11px;
+  }
+}
 .form-check .form-check-label::after {
   content: "\e182";
   font-family: "Phosphor";
   font-weight: bold;
   position: absolute;
-  top: 50%;
+  top: 2px;
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   text-align: center;
   width: 15px;
   height: 15px;
@@ -978,12 +1042,43 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .form-check .form-check-label::after {
+    width: 13px;
+    height: 13px;
+    line-height: 11px;
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .form-check .form-check-label::after {
+    width: 11px;
+    height: 11px;
+    line-height: 9px;
+    font-size: 7px;
+  }
+}
 
 .password-field {
   position: relative;
 }
 .password-field .form-control {
   padding-right: 50px;
+}
+@media screen and (max-width: 991px) {
+  .password-field .form-control {
+    padding-right: 44px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .password-field .form-control {
+    padding-right: 38px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .password-field .form-control {
+    padding-right: 34px;
+  }
 }
 .password-field--btn {
   position: absolute;
@@ -992,10 +1087,30 @@ section {
   width: 20px;
   height: 14px;
   line-height: 14px;
+  font-size: 18px;
   text-align: center;
   color: var(--white-1);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+@media screen and (max-width: 991px) {
+  .password-field--btn {
+    right: 16px;
+    width: 18px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .password-field--btn {
+    right: 13px;
+    width: 15px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .password-field--btn {
+    right: 9px;
+  }
 }
 .password-field--btn.show::after {
   content: "\e224";
