@@ -33,12 +33,35 @@
     .g-60 {
         --bs-gutter-x: 60px;
         --bs-gutter-y: 60px;
+        @include lg-screen {
+            --bs-gutter-x: 50px;
+            --bs-gutter-y: 50px;
+        }
+        @include md-screen {
+            --bs-gutter-x: 40px;
+            --bs-gutter-y: 40px;
+        }
+        @include sm-screen {
+            --bs-gutter-x: 30px;
+            --bs-gutter-y: 30px;
+        }
     }
     &--img {
         height: 100%;
         border-radius: 32px;
         overflow: hidden;
         position: relative;
+        @include md-screen {
+            border-radius: 24px;
+        }
+        @include sm-screen {
+            height: 250px;
+            border-radius: 16px;
+        }
+        @include msm-screen {
+            height: 200px;
+            border-radius: 10px;
+        }
         img {
             position: absolute;
             top: 0;
@@ -54,6 +77,18 @@
         border-radius: 32px;
         position: relative;
         z-index: 2;
+        @include md-screen {
+            padding: 30px;
+            border-radius: 24px;
+        }
+        @include sm-screen {
+            padding: 25px;
+            border-radius: 16px;
+        }
+        @include msm-screen {
+            padding: 20px;
+            border-radius: 10px;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -61,6 +96,15 @@
             background: var(--black-2);
             border-radius: 32px;
             z-index: -1;
+            @include md-screen {
+                border-radius: 24px;
+            }
+            @include sm-screen {
+                border-radius: 16px;
+            }
+            @include msm-screen {
+                border-radius: 10px;
+            }
         }
         &--title {
             text-align: center;
@@ -69,6 +113,23 @@
             font-weight: 700;
             color: var(--white-1);
             margin-bottom: 48px;
+            @include lg-screen {
+                font-size: 35px;
+                margin-bottom: 43px;
+            }
+            @include md-screen {
+                font-size: 30px;
+                margin-bottom: 38px;
+            }
+            @include sm-screen {
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 33px;
+            }
+            @include msm-screen {
+                font-size: 20px;
+                margin-bottom: 28px;
+            }
         }
         &--body {
             overflow: hidden;
@@ -87,9 +148,29 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            @include md-screen {
+                font-size: 13px;
+                padding: 12px 16px;
+            }
+            @include sm-screen {
+                padding: 10px 13px;
+                border-radius: 6px;
+            }
+            @include msm-screen {
+                font-size: 11px;
+                padding: 8px 10px;
+            }
             img {
                 width: 23px;
                 height: 23px;
+                @include md-screen {
+                    width: 20px;
+                    height: 20px;
+                }
+                @include sm-screen {
+                    width: 18px;
+                    height: 18px;
+                }
             }
             &:hover {
                 border-color: var(--base-2);
@@ -103,6 +184,16 @@
             padding-inline: 20px;
             margin: 32px auto;
             position: relative;
+            @include md-screen {
+                font-size: 13px;
+                padding-inline: 15px;
+                margin: 24px auto;
+            }
+            @include msm-screen {
+                font-size: 11px;
+                padding-inline: 10px;
+                margin: 16px auto;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -125,9 +216,11 @@
             }
         }
         .g-20 {
-            margin-top: -20px;
-            >* {
-                margin-top: 20px;
+            --bs-gutter-x: 20px;
+            --bs-gutter-y: 20px;
+            @include sm-screen {
+                --bs-gutter-x: 15px;
+                --bs-gutter-y: 15px;
             }
         }
         .form-control {
@@ -145,6 +238,12 @@
             background: var(--gradient-1);
             background-clip: text;
             position: relative;
+            @include md-screen {
+                font-size: 13px;
+            }
+            @include msm-screen {
+                font-size: 11px;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -166,6 +265,14 @@
         .btn {
             border-radius: 12px;
             margin-top: 20px;
+            @include md-screen {
+                border-radius: 9px;
+                margin-top: 15px;
+            }
+            @include sm-screen {
+                border-radius: 6px;
+                margin-top: 10px;
+            }
         }
         &--txt {
             text-align: center;
@@ -173,6 +280,12 @@
             line-height: 1.3;
             font-weight: 500;
             margin-bottom: 0;
+            @include md-screen {
+                font-size: 13px;
+            }
+            @include msm-screen {
+                font-size: 11px;
+            }
         }
     }
 }
