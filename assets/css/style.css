@@ -5693,9 +5693,24 @@ section {
           align-items: center;
   width: 105px;
   height: 115px;
+  background: var(--black-4);
+  border-radius: 50%;
   margin-inline: auto;
+  margin-bottom: -27px;
   position: relative;
   z-index: 2;
+}
+.referral--card--level--shadow {
+  position: absolute;
+  inset: -6px;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  background: var(--black-1);
+  z-index: -1;
 }
 .referral--card--level--frame {
   position: absolute;
@@ -5723,7 +5738,74 @@ section {
   display: block;
   font-size: 12px;
   font-weight: 600;
-  margin-top: 8px;
+  margin-top: 6px;
+}
+.referral--card--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border: 1px dashed var(--base-2);
+  border-radius: 24px;
+}
+.referral--card--list--item {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--white-1);
+  padding: 16px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.referral--card--list--item:first-child {
+  padding-top: 43px;
+}
+.referral--card--list--item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 150px;
+  height: 80%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(70px);
+          filter: blur(70px);
+  opacity: 0.7;
+  z-index: -1;
+}
+.referral--card--list--item--bg {
+  position: absolute;
+  inset: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.referral--card--list--item span:not(.bg-img) {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  color: transparent;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+          background-clip: text;
+  margin-top: 12px;
+  margin-inline: auto;
 }
 
 .why-choose {
