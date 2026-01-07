@@ -12,6 +12,12 @@
         });
     });
 
+    // Mask Image
+    $(".mask-box").css("mask-image", function () {
+        var bg = "url(" + $(this).data("mask") + ")";
+        return bg;
+    });
+
     // Countdown
     $(".auction--card--body--counter--countdown").each(function(){
         let $this = $(this);
