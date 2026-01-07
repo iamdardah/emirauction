@@ -88,10 +88,20 @@
     &--grid {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
     }
     &--card {
         width: calc(100% / 5 - 16px);
+        @include lg-screen {
+            width: calc(100% / 3 - 13.4px);
+        }
+        @include sm-screen {
+            width: calc(100% / 2 - 10px);
+        }
+        @include msm-screen {
+            width: 100%;
+        }
         &--level {
             text-align: center;
             display: flex;
@@ -105,6 +115,26 @@
             margin-bottom: -27px;
             position: relative;
             z-index: 3;
+            @include xl-screen {
+                width: 100px;
+                height: 110px;
+            }
+            @include lg-screen {
+                width: 91px;
+                height: 100px;
+            }
+            @include md-screen {
+                width: 82px;
+                height: 90px;
+            }
+            @include sm-screen {
+                width: 73px;
+                height: 80px;
+            }
+            @include msm-screen {
+                width: 65px;
+                height: 70px;
+            }
             &--shadow {
                 position: absolute;
                 inset: -6px;
@@ -113,6 +143,15 @@
                 mask-size: 100% 100%;
                 background: var(--black-1);
                 z-index: -1;
+                @include md-screen {
+                    inset: -5px;
+                }
+                @include sm-screen {
+                    inset: -4px;
+                }
+                @include msm-screen {
+                    inset: -3px;
+                }
             }
             &--frame {
                 position: absolute;
@@ -130,11 +169,41 @@
                 color: transparent;
                 background: var(--gradient-1);
                 background-clip: text;
+                @include xl-screen {
+                    font-size: 30px;
+                }
+                @include lg-screen {
+                    font-size: 28px;
+                }
+                @include md-screen {
+                    font-size: 26px;
+                }
+                @include sm-screen {
+                    font-size: 24px;
+                }
+                @include msm-screen {
+                    font-size: 22px;
+                }
                 span {
                     display: block;
                     font-size: 12px;
                     font-weight: 600;
                     margin-top: 6px;
+                    @include lg-screen {
+                        font-size: 11px;
+                    }
+                    @include md-screen {
+                        font-size: 10px;
+                        margin-top: 5px;
+                    }
+                    @include sm-screen {
+                        font-size: 9px;
+                        margin-top: 4px;
+                    }
+                    @include msm-screen {
+                        font-size: 8px;
+                        margin-top: 3px;
+                    }
                 }
             }
         }
@@ -145,6 +214,14 @@
             padding: 8px;
             border: 1px dashed var(--base-2);
             border-radius: 24px;
+            @include lg-screen {
+                border-radius: 20px;
+            }
+            @include sm-screen {
+                gap: 5px;
+                padding: 5px;
+                border-radius: 15px;
+            }
             &--item {
                 text-align: center;
                 font-size: 14px;
@@ -156,8 +233,20 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 2;
+                @include lg-screen {
+                    font-size: 12px;
+                    border-radius: 15px;
+                }
+                @include sm-screen {
+                    font-size: 10px;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
                 &:first-child {
                     padding-top: 34px;
+                    @include sm-screen {
+                        padding-top: 31px;
+                    }
                 }
                 &::before {
                     content: "";
@@ -192,6 +281,17 @@
                     background-clip: text;
                     margin-top: 12px;
                     margin-inline: auto;
+                    @include lg-screen {
+                        margin-top: 10px;
+                    }
+                    @include md-screen {
+                        font-size: 25px;
+                        margin-top: 8px;
+                    }
+                    @include sm-screen {
+                        font-size: 20px;
+                        margin-top: 6px;
+                    }
                 }
             }
         }

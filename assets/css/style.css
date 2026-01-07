@@ -5675,10 +5675,28 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
 }
 .referral--card {
   width: calc(20% - 16px);
+}
+@media screen and (max-width: 1199px) {
+  .referral--card {
+    width: calc(33.3333333333% - 13.4px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .referral--card {
+    width: 100%;
+  }
 }
 .referral--card--level {
   text-align: center;
@@ -5700,6 +5718,36 @@ section {
   position: relative;
   z-index: 3;
 }
+@media screen and (max-width: 1399px) {
+  .referral--card--level {
+    width: 100px;
+    height: 110px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .referral--card--level {
+    width: 91px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .referral--card--level {
+    width: 82px;
+    height: 90px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--level {
+    width: 73px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .referral--card--level {
+    width: 65px;
+    height: 70px;
+  }
+}
 .referral--card--level--shadow {
   position: absolute;
   inset: -6px;
@@ -5711,6 +5759,21 @@ section {
           mask-size: 100% 100%;
   background: var(--black-1);
   z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .referral--card--level--shadow {
+    inset: -5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--level--shadow {
+    inset: -4px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .referral--card--level--shadow {
+    inset: -3px;
+  }
 }
 .referral--card--level--frame {
   position: absolute;
@@ -5734,11 +5797,59 @@ section {
   -webkit-background-clip: text;
           background-clip: text;
 }
+@media screen and (max-width: 1399px) {
+  .referral--card--level--txt {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .referral--card--level--txt {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .referral--card--level--txt {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--level--txt {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .referral--card--level--txt {
+    font-size: 22px;
+  }
+}
 .referral--card--level--txt span {
   display: block;
   font-size: 12px;
   font-weight: 600;
   margin-top: 6px;
+}
+@media screen and (max-width: 1199px) {
+  .referral--card--level--txt span {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .referral--card--level--txt span {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--level--txt span {
+    font-size: 9px;
+    margin-top: 4px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .referral--card--level--txt span {
+    font-size: 8px;
+    margin-top: 3px;
+  }
 }
 .referral--card--list {
   display: -webkit-box;
@@ -5753,6 +5864,18 @@ section {
   border: 1px dashed var(--base-2);
   border-radius: 24px;
 }
+@media screen and (max-width: 1199px) {
+  .referral--card--list {
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--list {
+    gap: 5px;
+    padding: 5px;
+    border-radius: 15px;
+  }
+}
 .referral--card--list--item {
   text-align: center;
   font-size: 14px;
@@ -5765,8 +5888,26 @@ section {
   overflow: hidden;
   z-index: 2;
 }
+@media screen and (max-width: 1199px) {
+  .referral--card--list--item {
+    font-size: 12px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--list--item {
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
 .referral--card--list--item:first-child {
   padding-top: 34px;
+}
+@media screen and (max-width: 767px) {
+  .referral--card--list--item:first-child {
+    padding-top: 31px;
+  }
 }
 .referral--card--list--item::before {
   content: "";
@@ -5806,6 +5947,23 @@ section {
           background-clip: text;
   margin-top: 12px;
   margin-inline: auto;
+}
+@media screen and (max-width: 1199px) {
+  .referral--card--list--item span:not(.bg-img) {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .referral--card--list--item span:not(.bg-img) {
+    font-size: 25px;
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .referral--card--list--item span:not(.bg-img) {
+    font-size: 20px;
+    margin-top: 6px;
+  }
 }
 
 .why-choose {
