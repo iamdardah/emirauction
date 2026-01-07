@@ -5698,7 +5698,7 @@ section {
   margin-inline: auto;
   margin-bottom: -27px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .referral--card--level--shadow {
   position: absolute;
@@ -5766,7 +5766,7 @@ section {
   z-index: 2;
 }
 .referral--card--list--item:first-child {
-  padding-top: 43px;
+  padding-top: 34px;
 }
 .referral--card--list--item::before {
   content: "";

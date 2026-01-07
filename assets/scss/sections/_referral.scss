@@ -104,7 +104,7 @@
             margin-inline: auto;
             margin-bottom: -27px;
             position: relative;
-            z-index: 2;
+            z-index: 3;
             &--shadow {
                 position: absolute;
                 inset: -6px;
@@ -157,7 +157,7 @@
                 overflow: hidden;
                 z-index: 2;
                 &:first-child {
-                    padding-top: 43px;
+                    padding-top: 34px;
                 }
                 &::before {
                     content: "";
