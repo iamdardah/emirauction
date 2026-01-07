@@ -5680,6 +5680,51 @@ section {
 .referral--card {
   width: calc(20% - 16px);
 }
+.referral--card--level {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 105px;
+  height: 115px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+.referral--card--level--frame {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--base-2)), color-stop(var(--base-1)), to(var(--base-2)));
+  background: linear-gradient(var(--base-2), var(--base-1), var(--base-2));
+  z-index: -1;
+}
+.referral--card--level--txt {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 800;
+  color: transparent;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.referral--card--level--txt span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
 
 .why-choose {
   margin: 0 60px;
