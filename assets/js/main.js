@@ -257,6 +257,18 @@
             $(this).siblings('input').attr('type', 'password');
         }
     });
+
+    // Wallet address copy
+    $('.wallett-address-copy').on('click', function(){
+        var $btn = $(this);
+        var inputElement = $('#walletAddress');
+        inputElement.select();
+        document.execCommand('copy');
+        $btn.html('<i class="ph-fill ph-check-circle"></i>');
+        setTimeout(function() {
+            $btn.html('<i class="ph-fill ph-copy"></i>');
+        }, 2000);
+    });
     // ==========================================
     //      End Document Ready function
     // ==========================================

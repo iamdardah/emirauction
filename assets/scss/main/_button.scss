@@ -75,6 +75,12 @@
     &-info {
         background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
     }
+    &.btn-icon {
+        padding: 0;
+        width: 51.5px;
+        height: 51.5px;
+        font-size: 25px;
+    }
     &:hover, &:focus, &:active {
         background-position-x: right !important;
         .btn--icon {

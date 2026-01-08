@@ -911,7 +911,7 @@ section {
     --bs-modal-width: 550px;
     &-content {
         border: 0;
-        border-radius: 32px;
+        background: transparent;
         position: relative;
         z-index: 2;
         &::before {
@@ -951,6 +951,37 @@ section {
         font-weight: 600;
         color: var(--white-1);
         margin-bottom: 0;
+    }
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        line-height: 55px;
+        transform: translate(40%, -40%);
+        padding: 0;
+        background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position-x: left;
+        border-radius: 50%;
+        opacity: 1;
+        margin: 0;
+        transition: .3s;
+        &::after {
+            content: "\E4F6";
+            font-family: 'Phosphor';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:focus, &:hover {
+            background-position-x: right;
+            box-shadow: 0 0;
+        }
     }
     &-body {
         padding: 32px;

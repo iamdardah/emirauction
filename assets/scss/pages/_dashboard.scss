@@ -845,4 +845,47 @@
             transition: .3s;
         }
     }
+    &--list {
+        list-style: disc;
+        padding-left: 24px;
+        font-size: 16px;
+        line-height: 1.3;
+        color: var(--white-1);
+        &--item {
+            padding: 13px 0 13px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -24px;
+                right: 0;
+                height: 1px;
+                background: var(--gradient-1);
+                opacity: 0.4;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: -24px;
+                right: 0;
+                height: 1px;
+                background: var(--gradient-1);
+                opacity: 0.4;
+            }
+            &:first-child {
+                padding-bottom: 12px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .wallett-address-copy {
+        border-radius: 12px;
+        @include sm-screen {
+            border-radius: 6px;
+        }
+    }
 }

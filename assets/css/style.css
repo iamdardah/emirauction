@@ -1179,7 +1179,7 @@ section {
 }
 .modal-content {
   border: 0;
-  border-radius: 32px;
+  background: transparent;
   position: relative;
   z-index: 2;
 }
@@ -1219,6 +1219,42 @@ section {
   font-weight: 600;
   color: var(--white-1);
   margin-bottom: 0;
+}
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 55px;
+  -webkit-transform: translate(40%, -40%);
+          transform: translate(40%, -40%);
+  padding: 0;
+  background: -webkit-gradient(linear, left top, right top, from(var(--base-2)), color-stop(var(--base-1)), color-stop(var(--base-2)), to(var(--base-1)));
+  background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: left;
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.modal .btn-close::after {
+  content: "\e4f6";
+  font-family: "Phosphor";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.modal .btn-close:focus, .modal .btn-close:hover {
+  background-position-x: right;
+  -webkit-box-shadow: 0 0;
+          box-shadow: 0 0;
 }
 .modal-body {
   padding: 32px;
@@ -1339,6 +1375,12 @@ section {
 .btn-info {
   background: -webkit-gradient(linear, left top, right top, from(var(--base-2)), color-stop(var(--base-1)), color-stop(var(--base-2)), to(var(--base-1)));
   background: linear-gradient(to right, var(--base-2), var(--base-1), var(--base-2), var(--base-1));
+}
+.btn.btn-icon {
+  padding: 0;
+  width: 51.5px;
+  height: 51.5px;
+  font-size: 25px;
 }
 .btn:hover, .btn:focus, .btn:active {
   background-position-x: right !important;
