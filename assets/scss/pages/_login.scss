@@ -15,6 +15,22 @@
         filter: blur(200px);
         opacity: 0.4;
         z-index: -1;
+        @include md-screen {
+            width: 350px;
+            height: 350px;
+            opacity: 0.6;
+        }
+        @include sm-screen {
+            width: 250px;
+            height: 250px;
+            filter: blur(150px);
+        }
+        @include msm-screen {
+            width: 150px;
+            height: 150px;
+            filter: blur(100px);
+            opacity: 0.7;
+        }
     }
     &::after {
         content: "";
@@ -29,6 +45,22 @@
         filter: blur(200px);
         opacity: 0.4;
         z-index: -1;
+        @include md-screen {
+            width: 350px;
+            height: 350px;
+            opacity: 0.6;
+        }
+        @include sm-screen {
+            width: 250px;
+            height: 250px;
+            filter: blur(150px);
+        }
+        @include msm-screen {
+            width: 150px;
+            height: 150px;
+            filter: blur(100px);
+            opacity: 0.7;
+        }
     }
     .g-60 {
         --bs-gutter-x: 60px;

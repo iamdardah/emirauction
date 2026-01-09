@@ -8603,6 +8603,30 @@ section {
   opacity: 0.4;
   z-index: -1;
 }
+@media screen and (max-width: 991px) {
+  .auth::before {
+    width: 350px;
+    height: 350px;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth::before {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .auth::before {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.7;
+  }
+}
 .auth::after {
   content: "";
   position: absolute;
@@ -8618,6 +8642,30 @@ section {
           filter: blur(200px);
   opacity: 0.4;
   z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .auth::after {
+    width: 350px;
+    height: 350px;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth::after {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .auth::after {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.7;
+  }
 }
 .auth .g-60 {
   --bs-gutter-x: 60px;
@@ -8948,5 +8996,259 @@ section {
 @media screen and (max-width: 575px) {
   .auth--form--txt {
     font-size: 11px;
+  }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.4;
+  z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .contact::before {
+    width: 350px;
+    height: 350px;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact::before {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact::before {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.7;
+  }
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.4;
+  z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .contact::after {
+    width: 350px;
+    height: 350px;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact::after {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact::after {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.7;
+  }
+}
+.contact--form {
+  padding: 60px;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .contact--form {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact--form {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact--form {
+    padding: 30px;
+  }
+}
+.contact--form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-1);
+  border-radius: 32px;
+  z-index: -2;
+}
+@media screen and (max-width: 1199px) {
+  .contact--form::before {
+    border-radius: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact--form::before {
+    border-radius: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact--form::before {
+    border-radius: 16px;
+  }
+}
+.contact--form::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--black-2);
+  border-radius: 32px;
+  z-index: -2;
+}
+@media screen and (max-width: 1199px) {
+  .contact--form::after {
+    border-radius: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact--form::after {
+    border-radius: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact--form::after {
+    border-radius: 16px;
+  }
+}
+.contact--form--inner {
+  position: absolute;
+  inset: 1px;
+  border-radius: 32px;
+  overflow: hidden;
+  z-index: -1;
+}
+@media screen and (max-width: 1199px) {
+  .contact--form--inner {
+    border-radius: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact--form--inner {
+    border-radius: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact--form--inner {
+    border-radius: 16px;
+  }
+}
+.contact--form--inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.4;
+  z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .contact--form--inner::before {
+    width: 350px;
+    height: 350px;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact--form--inner::before {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact--form--inner::before {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.7;
+  }
+}
+.contact--form--inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.4;
+  z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .contact--form--inner::after {
+    width: 350px;
+    height: 350px;
+    opacity: 0.6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact--form--inner::after {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(150px);
+            filter: blur(150px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .contact--form--inner::after {
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    opacity: 0.7;
   }
 }
