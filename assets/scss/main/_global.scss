@@ -1041,14 +1041,40 @@ section {
     }
     &-body {
         padding: 32px;
+        border-radius: 32px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
         @include lg-screen {
             padding: 28px;
+            border-radius: 28px;
         }
         @include md-screen {
             padding: 24px;
+            border-radius: 24px;
         }
         @include sm-screen {
             padding: 16px;
+            border-radius: 16px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            transform: translate(50%, 50%);
+            background: var(--gradient-1);
+            border-radius: 50%;
+            filter: blur(150px);
+            opacity: 0.5;
+            z-index: -1;
+            @include msm-screen {
+                width: 150px;
+                height: 150px;
+                filter: blur(70px);
+            }
         }
     }
     &-footer {
