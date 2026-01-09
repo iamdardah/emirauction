@@ -80,9 +80,24 @@
         width: 51.5px;
         height: 51.5px;
         font-size: 25px;
+        @include md-screen {
+            width: 45px;
+            height: 45px;
+            font-size: 22px;
+        }
+        @include sm-screen {
+            width: 41px;
+            height: 41px;
+        }
+        @include msm-screen {
+            width: 36px;
+            height: 36px;
+            font-size: 20px;
+        }
     }
-    &:hover, &:focus, &:active {
+    &:hover, &:focus, &:active, &:focus-visible {
         background-position-x: right !important;
+        box-shadow: 0 0 !important;
         .btn--icon {
             transform: translateX(16px) rotate(45deg);
             @include md-screen {

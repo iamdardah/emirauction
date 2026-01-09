@@ -921,6 +921,15 @@ section {
             background: var(--gradient-1);
             border-radius: 32px;
             z-index: -1;
+            @include lg-screen {
+                border-radius: 28px;
+            }
+            @include md-screen {
+                border-radius: 24px;
+            }
+            @include sm-screen {
+                border-radius: 16px;
+            }
         }
         &::after {
             content: "";
@@ -929,12 +938,30 @@ section {
             background: var(--black-2);
             border-radius: 32px;
             z-index: -1;
+            @include lg-screen {
+                border-radius: 28px;
+            }
+            @include md-screen {
+                border-radius: 24px;
+            }
+            @include sm-screen {
+                border-radius: 16px;
+            }
         }
     }
     &-header {
         border-color: transparent;
         padding: 32px;
         position: relative;
+        @include lg-screen {
+            padding: 28px;
+        }
+        @include md-screen {
+            padding: 24px;
+        }
+        @include sm-screen {
+            padding: 16px;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -951,6 +978,15 @@ section {
         font-weight: 600;
         color: var(--white-1);
         margin-bottom: 0;
+        @include lg-screen {
+            font-size: 22px;
+        }
+        @include md-screen {
+            font-size: 20px;
+        }
+        @include sm-screen {
+            font-size: 18px;
+        }
     }
     .btn-close {
         position: absolute;
@@ -970,6 +1006,26 @@ section {
         opacity: 1;
         margin: 0;
         transition: .3s;
+        @include lg-screen {
+            width: 45px;
+            height: 45px;
+        }
+        @include md-screen {
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+        }
+        @include sm-screen {
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            transform: translate(30%, -30%);
+        }
+        @include msm-screen {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+        }
         &::after {
             content: "\E4F6";
             font-family: 'Phosphor';
@@ -978,16 +1034,34 @@ section {
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        &:focus, &:hover {
+        &:focus, &:hover, &:focus-visible, &:active {
             background-position-x: right;
-            box-shadow: 0 0;
+            box-shadow: 0 0 !important;
         }
     }
     &-body {
         padding: 32px;
+        @include lg-screen {
+            padding: 28px;
+        }
+        @include md-screen {
+            padding: 24px;
+        }
+        @include sm-screen {
+            padding: 16px;
+        }
     }
     &-footer {
         padding: 32px;
+        @include lg-screen {
+            padding: 28px;
+        }
+        @include md-screen {
+            padding: 24px;
+        }
+        @include sm-screen {
+            padding: 16px;
+        }
     }
     &-backdrop {
         --bs-backdrop-opacity: 0.89;

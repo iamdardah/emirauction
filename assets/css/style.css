@@ -1191,6 +1191,21 @@ section {
   border-radius: 32px;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .modal-content::before {
+    border-radius: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal-content::before {
+    border-radius: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-content::before {
+    border-radius: 16px;
+  }
+}
 .modal-content::after {
   content: "";
   position: absolute;
@@ -1199,10 +1214,40 @@ section {
   border-radius: 32px;
   z-index: -1;
 }
+@media screen and (max-width: 1199px) {
+  .modal-content::after {
+    border-radius: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal-content::after {
+    border-radius: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-content::after {
+    border-radius: 16px;
+  }
+}
 .modal-header {
   border-color: transparent;
   padding: 32px;
   position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .modal-header {
+    padding: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal-header {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-header {
+    padding: 16px;
+  }
 }
 .modal-header::after {
   content: "";
@@ -1219,6 +1264,21 @@ section {
   font-weight: 600;
   color: var(--white-1);
   margin-bottom: 0;
+}
+@media screen and (max-width: 1199px) {
+  .modal-title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-title {
+    font-size: 18px;
+  }
 }
 .modal .btn-close {
   position: absolute;
@@ -1242,6 +1302,35 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 1199px) {
+  .modal .btn-close {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal .btn-close {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal .btn-close {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    -webkit-transform: translate(30%, -30%);
+            transform: translate(30%, -30%);
+  }
+}
+@media screen and (max-width: 575px) {
+  .modal .btn-close {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
 .modal .btn-close::after {
   content: "\e4f6";
   font-family: "Phosphor";
@@ -1251,16 +1340,46 @@ section {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.modal .btn-close:focus, .modal .btn-close:hover {
+.modal .btn-close:focus, .modal .btn-close:hover, .modal .btn-close:focus-visible, .modal .btn-close:active {
   background-position-x: right;
-  -webkit-box-shadow: 0 0;
-          box-shadow: 0 0;
+  -webkit-box-shadow: 0 0 !important;
+          box-shadow: 0 0 !important;
 }
 .modal-body {
   padding: 32px;
 }
+@media screen and (max-width: 1199px) {
+  .modal-body {
+    padding: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal-body {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-body {
+    padding: 16px;
+  }
+}
 .modal-footer {
   padding: 32px;
+}
+@media screen and (max-width: 1199px) {
+  .modal-footer {
+    padding: 28px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .modal-footer {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-footer {
+    padding: 16px;
+  }
 }
 .modal-backdrop {
   --bs-backdrop-opacity: 0.89;
@@ -1382,21 +1501,43 @@ section {
   height: 51.5px;
   font-size: 25px;
 }
-.btn:hover, .btn:focus, .btn:active {
-  background-position-x: right !important;
+@media screen and (max-width: 991px) {
+  .btn.btn-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
 }
-.btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon {
+@media screen and (max-width: 767px) {
+  .btn.btn-icon {
+    width: 41px;
+    height: 41px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .btn.btn-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+}
+.btn:hover, .btn:focus, .btn:active, .btn:focus-visible {
+  background-position-x: right !important;
+  -webkit-box-shadow: 0 0 !important;
+          box-shadow: 0 0 !important;
+}
+.btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon, .btn:focus-visible .btn--icon {
   -webkit-transform: translateX(16px) rotate(45deg);
           transform: translateX(16px) rotate(45deg);
 }
 @media screen and (max-width: 991px) {
-  .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon {
+  .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon, .btn:focus-visible .btn--icon {
     -webkit-transform: translateX(14px) rotate(45deg);
             transform: translateX(14px) rotate(45deg);
   }
 }
 @media screen and (max-width: 767px) {
-  .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon {
+  .btn:hover .btn--icon, .btn:focus .btn--icon, .btn:active .btn--icon, .btn:focus-visible .btn--icon {
     -webkit-transform: translateX(8px) rotate(45deg);
             transform: translateX(8px) rotate(45deg);
   }
